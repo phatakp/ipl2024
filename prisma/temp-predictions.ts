@@ -1,0 +1,31 @@
+import { PredictionData } from "@/app/(protected)/_zodSchemas";
+import { MatchStatus, PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
+
+export async function loadPredictions() {
+  const users = await prisma.user.findMany();
+  const matches = await prisma.match.findMany({
+    where: { status: MatchStatus.SCHEDULED },
+  });
+
+  let data = [] as PredictionData[];
+  matches.forEach((match) => {
+    users.forEach((user) => {
+      if (match.team1Id && match.team2Id) {
+        const teamId = [match.team1Id, match.team2Id][
+          Math.floor(Math.random() * 2)
+        ];
+        const amount = [50, 60, 70, 80, 90, 100][Math.floor(Math.random() * 6)];
+        data.push({
+          teamId,
+          userId: user.id,
+          matchId: match.id,
+          amount,
+          isDouble: false,
+        });
+      }
+    });
+  });
+  data = data.filter((item, i) => ![3, 17, 31, 47, 60, 79].includes(i)); // removing random predictions for default bets
+  await prisma.prediction.createMany({ data });
+}
