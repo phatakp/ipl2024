@@ -1,4 +1,4 @@
-import { getMatchStats } from "@/actions/match";
+import { getMatchStats } from "@/actions/stats.actions";
 import { useQuery } from "@tanstack/react-query";
 
 export const useTeamStats = (

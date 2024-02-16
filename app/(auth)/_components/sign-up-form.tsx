@@ -1,11 +1,11 @@
 "use client";
 
-import { createUser } from "@/app/(auth)/_actions/user";
-import { NewUserSchema, NewUserType } from "@/app/(auth)/_zodSchema";
+import { createUser } from "@/actions/user.actions";
 import { FormInput } from "@/components/form-input";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { useToast } from "@/components/ui/use-toast";
+import { RegisterFormData, RegisterSchema } from "@/zodSchemas/user.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -14,8 +14,8 @@ export const SignUpForm = () => {
   const { toast } = useToast();
   const router = useRouter();
 
-  const form = useForm<NewUserType>({
-    resolver: zodResolver(NewUserSchema),
+  const form = useForm<RegisterFormData>({
+    resolver: zodResolver(RegisterSchema),
     defaultValues: {
       email: "",
       password: "",
@@ -23,7 +23,7 @@ export const SignUpForm = () => {
     },
   });
 
-  const onSubmit = async (values: NewUserType) => {
+  const onSubmit = async (values: RegisterFormData) => {
     const { success, data } = await createUser(values);
     if (success) {
       toast({ title: "Success", description: "User Created successfully" });

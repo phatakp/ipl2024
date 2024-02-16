@@ -12,6 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { ComponentPropsWithoutRef } from "react";
 import { useFormContext } from "react-hook-form";
 
 export type SelectOption = {
@@ -19,8 +20,7 @@ export type SelectOption = {
   value: string;
 };
 
-type FormSelectProps = {
-  name: string;
+type FormSelectProps = ComponentPropsWithoutRef<"select"> & {
   label: string;
   isDisabled?: boolean;
   options: SelectOption[];
@@ -30,21 +30,23 @@ export const FormSelect = ({
   name,
   label,
   options,
-  isDisabled = false,
+  disabled,
+  required = false,
 }: FormSelectProps) => {
   const { control } = useFormContext();
 
   return (
     <FormField
       control={control}
-      name={name}
+      name={name!}
       render={({ field }) => (
-        <FormItem>
+        <FormItem className="w-full">
           <FormLabel>{label}</FormLabel>
           <Select
             onValueChange={field.onChange}
             defaultValue={field.value}
-            disabled={isDisabled}
+            disabled={disabled}
+            required={required}
           >
             <FormControl>
               <SelectTrigger>

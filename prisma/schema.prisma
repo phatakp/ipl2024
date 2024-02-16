@@ -51,6 +51,7 @@ model Team {
 
   team1       Match[]        @relation("team1")
   team2       Match[]        @relation("team2")
+  batFirst    Match[]        @relation("batFirst")
   winner      Match[]        @relation("winner")
   predictions Prediction[]
   user        UserProfile[]
@@ -157,6 +158,9 @@ model Match {
   team2Id String?
   team2   Team?   @relation("team2", fields: [team2Id], references: [id], onDelete: Cascade)
 
+  batFirstId String?
+  batFirst   Team?   @relation("batFirst", fields: [batFirstId], references: [id], onDelete: Cascade)
+
   winnerId String?
   winner   Team?   @relation("winner", fields: [winnerId], references: [id], onDelete: Cascade)
 
@@ -164,12 +168,12 @@ model Match {
 }
 
 model Prediction {
-  id       String           @id @default(cuid())
-  amount   Int
-  result   Float            @default(0)
-  status   PredictionStatus @default(PLACED)
-  isDouble Boolean          @default(false)
-  updated  Boolean          @default(false)
+  id        String           @id @default(cuid())
+  amount    Int
+  result    Float            @default(0)
+  status    PredictionStatus @default(PLACED)
+  isDouble  Boolean          @default(false)
+  isUpdated Boolean          @default(false)
 
   matchId String?
   match   Match?  @relation(fields: [matchId], references: [id], onDelete: Cascade)

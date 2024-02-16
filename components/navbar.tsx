@@ -39,15 +39,15 @@ export const Navbar = () => {
                 href={link.href}
                 className={cn(
                   link.isProtected && status !== "authenticated" && "hidden",
-                  "group transition duration-300 font-heading tracking-widest"
+                  "group transition duration-300 font-over text-sm uppercase"
                 )}
               >
                 {link.name}
                 {(!path.includes(link.href) || path === "/") && (
-                  <span className="block max-w-0 group-hover:max-w-[50%] mx-auto transition-all duration-500 h-1 bg-secondary"></span>
+                  <span className="block max-w-0 group-hover:max-w-[50%] mx-auto transition-all duration-500 h-0.5 bg-secondary mt-2"></span>
                 )}
                 {path.includes(link.href) && path !== "/" && (
-                  <span className="block max-w-[50%] mx-auto transition-all duration-500 h-1 bg-primary"></span>
+                  <span className="block max-w-[50%] mx-auto transition-all duration-500 h-0.5 bg-primary mt-2"></span>
                 )}
               </Link>
             ))}

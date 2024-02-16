@@ -70,7 +70,7 @@ export const PredictionsTable = ({ userId, match }: PredictionsTableProps) => {
         <TableHeader>
           <TableRow className="font-medium bg-darkblue hover:bg-darkblue">
             <TableHead className="text-left">
-              {!!match?.id ? "Match" : "User"}
+              {!!match?.id ? "User" : "Match"}
             </TableHead>
             <TableHead className="text-left">Team</TableHead>
             <TableHead className="text-right">Stake</TableHead>
@@ -159,7 +159,7 @@ export const PredictionsTable = ({ userId, match }: PredictionsTableProps) => {
                 <TableCell className="py-2 text-right relative">
                   {prediction.amount.toFixed()}
                   {prediction.isDouble && (
-                    <Badge className="text-sm flex items-center justify-center w-5 h-5 rounded-full">
+                    <Badge className="text-sm flex items-center justify-center w-5 h-5 rounded-full absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2">
                       D
                     </Badge>
                   )}
@@ -172,7 +172,7 @@ export const PredictionsTable = ({ userId, match }: PredictionsTableProps) => {
                       : "text-green-600"
                   )}
                 >
-                  {prediction.result.toFixed()}
+                  {prediction.result.toFixed(2)}
                 </TableCell>
                 <TableCell className="hidden md:table-cell text-center py-2">
                   {DateTime.fromISO(

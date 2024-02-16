@@ -8,7 +8,7 @@ export default function Home() {
         <TeamCarousel />
       </div>
       <div className="w-full max-w-6xl mx-auto py-8 px-4">
-        <div className="uppercase font-extrabold text-3xl my-8 font-heading text-darkblue tracking-wider">
+        <div className=" font-extrabold text-3xl my-8 font-over text-darkblue">
           Points Table
         </div>
         <PointsTable />

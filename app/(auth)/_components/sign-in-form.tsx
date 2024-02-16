@@ -1,10 +1,10 @@
 "use client";
 
-import { LoginSchema, LoginUserData } from "@/app/(auth)/_zodSchema";
 import { FormInput } from "@/components/form-input";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { useToast } from "@/components/ui/use-toast";
+import { LoginFormData, LoginSchema } from "@/zodSchemas/user.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -14,7 +14,7 @@ export const SignInForm = () => {
   const { toast } = useToast();
   const router = useRouter();
 
-  const form = useForm<LoginUserData>({
+  const form = useForm<LoginFormData>({
     resolver: zodResolver(LoginSchema),
     defaultValues: {
       email: "",
@@ -22,7 +22,7 @@ export const SignInForm = () => {
     },
   });
 
-  const onSubmit = async (formData: LoginUserData) => {
+  const onSubmit = async (formData: LoginFormData) => {
     const values = LoginSchema.safeParse(formData);
     if (values.success) {
       const resp = await signIn("credentials", {

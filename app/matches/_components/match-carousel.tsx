@@ -1,7 +1,6 @@
-import { getMatchCarouselData } from "@/actions/match";
-import { getUserPredictionForMatch } from "@/actions/prediction";
+import { getMatchCarouselData } from "@/actions/match.actions";
+import { getUserPredictionForMatch } from "@/actions/prediction.actions";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -17,11 +16,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { getAuthServerSession } from "@/lib/auth";
-import { cn } from "@/lib/utils";
+import { PredictionAPIResult } from "@/types";
 import { MatchStatus } from "@prisma/client";
 import { DateTime } from "luxon";
 import Image from "next/image";
 import Link from "next/link";
+import { ScheduleLink } from "./schedule-link";
 
 export const MatchCarousel = async () => {
   const session = await getAuthServerSession();
@@ -47,23 +47,8 @@ export const MatchCarousel = async () => {
                 className="basis-1/1 sm:basis-1/3 md:basis-1/4"
               >
                 <Link href={`/matches/${match.num}`} className="p-0">
-                  <Card className="bg-secondary text-secondary-foreground shadow-md p-0 rounded-lg relative">
-                    <Badge className="text-sm w-full justify-center font-heading tracking-wider font-light">
-                      {!!prediction ? (
-                        <>
-                          <span className="mr-2 font-medium">
-                            Current Stake:{" "}
-                          </span>
-                          <span>
-                            Rs.{prediction.amount}/- for{" "}
-                            {prediction.team?.shortName}
-                          </span>
-                          )
-                        </>
-                      ) : (
-                        "No Prediction Made"
-                      )}
-                    </Badge>
+                  <Card className="bg-secondary text-secondary-foreground shadow-md p-0 relative">
+                    <PredictionBadge prediction={prediction} />
                     <CardHeader className="p-2">
                       <CardTitle className="text-xs flex items-center justify-between gap-1 text-muted-foreground">
                         <span>Match {match.num}</span>
@@ -71,54 +56,26 @@ export const MatchCarousel = async () => {
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col space-y-2 px-2 pb-1 md:pb-3">
-                      <div className="flex items-center justify-between">
-                        <div className="inline-flex items-center gap-2">
-                          <Image
-                            src={`/${match.team1?.shortName}.png`}
-                            alt=""
-                            width={30}
-                            height={30}
-                          />
-                          <span className="text-xs">
-                            {match.team1?.shortName}
-                          </span>
-                        </div>
-                        <div className="text-sm">
-                          {match.team1Runs ?? 0}/{match.team1Wickets ?? 0}
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="inline-flex items-center gap-2">
-                          <Image
-                            src={`/${match.team2?.shortName}.png`}
-                            alt=""
-                            width={30}
-                            height={30}
-                          />
-                          <span className="text-xs">
-                            {match.team2?.shortName}
-                          </span>
-                        </div>
-                        <div className="text-sm">
-                          {match.team2Runs ?? 0}/{match.team2Wickets ?? 0}
-                        </div>
-                      </div>
+                      <CarouselTeam
+                        shortName={match.team1?.shortName}
+                        runs={match.team1Runs}
+                        wickets={match.team1Wickets}
+                      />
+                      <CarouselTeam
+                        shortName={match.team2?.shortName}
+                        runs={match.team2Runs}
+                        wickets={match.team2Wickets}
+                      />
                       <div className="text-xs font-light px-1">
                         {match.status === MatchStatus.SCHEDULED
                           ? `${DateTime.fromISO(match.date).toFormat("ff")} IST`
-                          : match.result}
+                          : match.status === MatchStatus.COMPLETED
+                          ? `${match.winner?.shortName} won by ${match.result}`
+                          : "Match Abandoned"}
                       </div>
                     </CardContent>
                     <CardFooter className="pb-1 flex items-center justify-between">
-                      <Link
-                        href="/matches"
-                        className={cn(
-                          buttonVariants({ variant: "link", size: "sm" }),
-                          "text-xs p-0"
-                        )}
-                      >
-                        Schedule
-                      </Link>
+                      <ScheduleLink />
                       {match.doublePlayed && (
                         <Badge variant="destructive">Double Played</Badge>
                       )}
@@ -135,3 +92,51 @@ export const MatchCarousel = async () => {
     </div>
   );
 };
+
+const PredictionBadge = ({
+  prediction,
+}: {
+  prediction: PredictionAPIResult | null;
+}) => (
+  <Badge
+    className="text-sm w-full justify-center font-over rounded-none"
+    variant={!!prediction ? "default" : "destructive"}
+  >
+    {!!prediction ? (
+      <>
+        <span className="mr-2 font-medium">Current Stake: </span>
+        <span>
+          Rs.{prediction.amount}/- for {prediction.team?.shortName}
+        </span>
+        )
+      </>
+    ) : (
+      "No Prediction Made"
+    )}
+  </Badge>
+);
+
+const CarouselTeam = ({
+  shortName,
+  runs,
+  wickets,
+}: {
+  shortName: string | undefined;
+  runs: number;
+  wickets: number;
+}) => (
+  <div className="flex items-center justify-between">
+    <div className="inline-flex items-center gap-2">
+      <Image
+        src={`/${shortName ?? "default"}.png`}
+        alt=""
+        width={30}
+        height={30}
+      />
+      <span className="text-xs">{shortName ?? "TBC"}</span>
+    </div>
+    <div className="text-sm">
+      {runs}/{wickets}
+    </div>
+  </div>
+);

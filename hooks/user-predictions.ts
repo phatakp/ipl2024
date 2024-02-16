@@ -1,4 +1,4 @@
-import { getUserPredictions } from "@/actions/prediction";
+import { getUserPredictions } from "@/actions/prediction.actions";
 import { useQuery } from "@tanstack/react-query";
 
 export const useUserPredictions = (userId: string | undefined) => {

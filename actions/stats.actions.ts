@@ -1,88 +1,7 @@
-"use server";
-
 import { prisma } from "@/lib/db";
 import { MatchHistoryAPIResult, StatsResult } from "@/types";
 import { MatchStatus } from "@prisma/client";
-import { DateTime } from "luxon";
-
-export async function getMatches() {
-  const matches = await prisma.match.findMany({
-    orderBy: [{ num: "asc" }],
-    include: {
-      team1: { select: { id: true, shortName: true, longName: true } },
-      team2: { select: { id: true, shortName: true, longName: true } },
-      winner: { select: { id: true, shortName: true, longName: true } },
-    },
-  });
-  return matches;
-}
-
-export async function getMatchFixtures() {
-  const matches = await prisma.match.findMany({
-    where: { status: MatchStatus.SCHEDULED },
-    orderBy: [{ num: "asc" }],
-    include: {
-      team1: { select: { id: true, shortName: true, longName: true } },
-      team2: { select: { id: true, shortName: true, longName: true } },
-      winner: { select: { id: true, shortName: true, longName: true } },
-    },
-  });
-  return matches;
-}
-
-export async function getMatchResults() {
-  const matches = await prisma.match.findMany({
-    where: { NOT: { status: MatchStatus.SCHEDULED } },
-    orderBy: [{ num: "desc" }],
-    include: {
-      team1: { select: { id: true, shortName: true, longName: true } },
-      team2: { select: { id: true, shortName: true, longName: true } },
-      winner: { select: { id: true, shortName: true, longName: true } },
-    },
-  });
-  return matches;
-}
-
-export async function getMatchCarouselData() {
-  const istDate = DateTime.fromISO(new Date().toISOString())
-    .minus({ days: 1 })
-    .setZone("Asia/Kolkata")
-    .toISO();
-  const matches = await prisma.match.findMany({
-    where: { date: { gte: istDate! } },
-    orderBy: [{ num: "asc" }],
-    include: {
-      team1: { select: { id: true, shortName: true, longName: true } },
-      team2: { select: { id: true, shortName: true, longName: true } },
-      winner: { select: { id: true, shortName: true, longName: true } },
-    },
-  });
-  return matches;
-}
-
-export async function getMatchById(id: string) {
-  const match = await prisma.match.findUnique({
-    where: { id },
-    include: {
-      team1: { select: { id: true, shortName: true, longName: true } },
-      team2: { select: { id: true, shortName: true, longName: true } },
-      winner: { select: { id: true, shortName: true, longName: true } },
-    },
-  });
-  return match;
-}
-
-export async function getMatchByNum(num: number) {
-  const match = await prisma.match.findFirst({
-    where: { num },
-    include: {
-      team1: { select: { id: true, shortName: true, longName: true } },
-      team2: { select: { id: true, shortName: true, longName: true } },
-      winner: { select: { id: true, shortName: true, longName: true } },
-    },
-  });
-  return match;
-}
+import { INCLUDE_MATCH_DETAILS } from ".";
 
 export async function getMatchStats(
   team1Id: string | null,
@@ -99,6 +18,10 @@ export async function getMatchStats(
     t1vst2_AwayMatches: 0,
     t1vst2_HomeWins: 0,
     t1vst2_HomeWinPct: 0,
+    t1vst2_AwayWins: 0,
+    t1vst2_AwayWinPct: 0,
+    t2vst1_HomeWins: 0,
+    t2vst1_HomeWinPct: 0,
     t2vst1_AwayWins: 0,
     t2vst1_AwayWinPct: 0,
     t1_AllMatches: 0,
@@ -107,9 +30,15 @@ export async function getMatchStats(
     t1_HomeMatches: 0,
     t1_HomeWins: 0,
     t1_HomeWinPct: 0,
+    t2_HomeMatches: 0,
+    t2_HomeWins: 0,
+    t2_HomeWinPct: 0,
     t2_AllMatches: 0,
     t2_AllWins: 0,
     t2_AllWinPct: 0,
+    t1_AwayMatches: 0,
+    t1_AwayWins: 0,
+    t1_AwayWinPct: 0,
     t2_AwayMatches: 0,
     t2_AwayWins: 0,
     t2_AwayWinPct: 0,
@@ -129,11 +58,7 @@ export async function getMatchStats(
         { team1Id: team2Id, team2Id: team1Id },
       ],
     },
-    include: {
-      team1: { select: { id: true, shortName: true, longName: true } },
-      team2: { select: { id: true, shortName: true, longName: true } },
-      winner: { select: { id: true, shortName: true, longName: true } },
-    },
+    include: INCLUDE_MATCH_DETAILS,
     orderBy: [{ date: "desc" }],
     take: 5,
   });
@@ -143,11 +68,7 @@ export async function getMatchStats(
     where: {
       OR: [{ team1Id }, { team2Id: team1Id }],
     },
-    include: {
-      team1: { select: { id: true, shortName: true, longName: true } },
-      team2: { select: { id: true, shortName: true, longName: true } },
-      winner: { select: { id: true, shortName: true, longName: true } },
-    },
+    include: INCLUDE_MATCH_DETAILS,
     orderBy: [{ date: "desc" }],
     take: 5,
   });
@@ -157,11 +78,7 @@ export async function getMatchStats(
     where: {
       OR: [{ team2Id }, { team1Id: team2Id }],
     },
-    include: {
-      team1: { select: { id: true, shortName: true, longName: true } },
-      team2: { select: { id: true, shortName: true, longName: true } },
-      winner: { select: { id: true, shortName: true, longName: true } },
-    },
+    include: INCLUDE_MATCH_DETAILS,
     orderBy: [{ date: "desc" }],
     take: 5,
   });
@@ -203,6 +120,12 @@ export async function getMatchStats(
   result.t1_HomeMatches = groupMatchesAll
     .filter((obj) => obj.team1Id === team1Id)
     .reduce((a, b) => a + b._count, 0);
+  result.t1_AwayMatches = groupMatchesAll
+    .filter((obj) => obj.team2Id === team1Id)
+    .reduce((a, b) => a + b._count, 0);
+  result.t2_HomeMatches = groupMatchesAll
+    .filter((obj) => obj.team1Id === team2Id)
+    .reduce((a, b) => a + b._count, 0);
   result.t2_AwayMatches = groupMatchesAll
     .filter((obj) => obj.team2Id === team2Id)
     .reduce((a, b) => a + b._count, 0);
@@ -223,6 +146,20 @@ export async function getMatchStats(
         obj.team2Id === team2Id &&
         obj.winnerId === team1Id
     )?._count ?? 0;
+  result.t1vst2_AwayWins =
+    groupedWins.find(
+      (obj) =>
+        obj.team1Id === team2Id &&
+        obj.team2Id === team1Id &&
+        obj.winnerId === team1Id
+    )?._count ?? 0;
+  result.t2vst1_HomeWins =
+    groupedWins.find(
+      (obj) =>
+        obj.team1Id === team2Id &&
+        obj.team2Id === team1Id &&
+        obj.winnerId === team2Id
+    )?._count ?? 0;
   result.t2vst1_AwayWins =
     groupedWins.find(
       (obj) =>
@@ -233,6 +170,12 @@ export async function getMatchStats(
 
   result.t1_HomeWins = groupedWins
     .filter((obj) => obj.team1Id === team1Id && obj.winnerId === team1Id)
+    .reduce((a, b) => a + b._count, 0);
+  result.t1_AwayWins = groupedWins
+    .filter((obj) => obj.team2Id === team1Id && obj.winnerId === team1Id)
+    .reduce((a, b) => a + b._count, 0);
+  result.t2_HomeWins = groupedWins
+    .filter((obj) => obj.team1Id === team2Id && obj.winnerId === team2Id)
     .reduce((a, b) => a + b._count, 0);
   result.t2_AwayWins = groupedWins
     .filter((obj) => obj.team2Id === team2Id && obj.winnerId === team2Id)
@@ -265,10 +208,14 @@ export async function getMatchStats(
   result.t1vst2_WinPct = result.t1vst2_AllWins / result.t1vst2_AllMatches;
   result.t2vst1_WinPct = result.t2vst1_AllWins / result.t1vst2_AllMatches;
   result.t1vst2_HomeWinPct = result.t1vst2_HomeWins / result.t1vst2_HomeMatches;
+  result.t1vst2_AwayWinPct = result.t1vst2_AwayWins / result.t1vst2_AwayMatches;
+  result.t2vst1_HomeWinPct = result.t2vst1_HomeWins / result.t1vst2_AwayMatches;
   result.t2vst1_AwayWinPct = result.t2vst1_AwayWins / result.t1vst2_HomeMatches;
   result.t1_AllWinPct = result.t1_AllWins / result.t1_AllMatches;
   result.t2_AllWinPct = result.t2_AllWins / result.t2_AllMatches;
   result.t1_HomeWinPct = result.t1_HomeWins / result.t1_HomeMatches;
+  result.t1_AwayWinPct = result.t1_AwayWins / result.t1_AwayMatches;
+  result.t2_HomeWinPct = result.t2_HomeWins / result.t2_HomeMatches;
   result.t2_AwayWinPct = result.t2_AwayWins / result.t2_AwayMatches;
 
   result.t1_WinPct =

@@ -1,4 +1,4 @@
-import { getMatchResults } from "@/actions/match";
+import { getMatchResults } from "@/actions/match.actions";
 import { clsx, type ClassValue } from "clsx";
 import { DateTime } from "luxon";
 import { twMerge } from "tailwind-merge";
@@ -21,10 +21,20 @@ export function computeNrr(
   )
     return 0;
 
-  const forDec = (forOvers * 10) % 10;
-  const forNum = parseInt(forOvers.toFixed());
-  const againstDec = (againstOvers * 10) % 10;
-  const againstNum = parseInt(againstOvers.toFixed());
+  let forNum = parseInt(forOvers.toFixed());
+  let forDec = (forOvers * 10) % 10;
+  if (forDec > 5) {
+    forNum += 1;
+    forDec -= 6;
+  }
+
+  let againstNum = parseInt(againstOvers.toFixed());
+  let againstDec = (againstOvers * 10) % 10;
+  if (againstDec > 5) {
+    againstNum += 1;
+    againstDec -= 6;
+  }
+
   const nrr =
     (forRuns / (forNum * 6 + forDec) -
       againstRuns / (againstNum * 6 + againstDec)) *
@@ -52,4 +62,14 @@ export function isPredictionCutoffPassed(matchDate: string) {
 export async function isIPLWinnerUpdatable() {
   const completed = await getMatchResults();
   return completed?.[0]?.num < 35;
+}
+
+export function transformOvers(overs: string) {
+  const [num, den] = overs.split(".");
+  if (parseInt(den) > 5) {
+    const numR = parseInt(num) + 1;
+    const denR = parseInt(den) - 6;
+    return `${numR}.${denR}`;
+  }
+  return overs;
 }

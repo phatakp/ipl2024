@@ -1,5 +1,5 @@
-import { getTeamById } from "@/actions/team";
-import { getUsers } from "@/actions/user";
+import { getTeamById } from "@/actions/team.actions";
+import { getUsers } from "@/actions/user.actions";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { IndianRupeeIcon, ShieldHalfIcon } from "lucide-react";

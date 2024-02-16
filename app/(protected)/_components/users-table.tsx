@@ -19,6 +19,7 @@ import { UserRole } from "@prisma/client";
 import { Session } from "next-auth";
 import Image from "next/image";
 import { useState } from "react";
+import { UserTableFormGuide } from "./user-table-form-guide";
 
 const PAGE_SIZE = 10;
 
@@ -84,18 +85,10 @@ export const UsersTable = ({ session }: UsersTableProps) => {
                   user.balance < 0 ? "text-destructive" : "text-green-600"
                 )}
               >
-                {user.balance.toFixed()}
+                {user.balance.toFixed(2)}
               </TableCell>
               <TableCell className="items-center justify-start gap-x-2 xl:flex hidden py-2">
-                <span className="border rounded-full p-1 w-6 h-6 text-sm flex justify-center items-center border-green-500 text-green-500">
-                  W
-                </span>
-                <span className="border rounded-full p-1 w-6 h-6 text-sm flex justify-center items-center border-destructive/70 text-destructive">
-                  L
-                </span>
-                <span className="border rounded-full p-1 w-6 h-6 text-sm flex justify-center items-center border-muted-foreground text-muted-foreground">
-                  D
-                </span>
+                <UserTableFormGuide userId={user.id} />
               </TableCell>
             </TableRow>
           ))}

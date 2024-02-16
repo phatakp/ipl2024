@@ -1,4 +1,4 @@
-import { PredictionData } from "@/app/(protected)/_zodSchemas";
+import { PredictionFormData } from "@/zodSchemas/prediction.schema";
 import { MatchStatus, PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
@@ -8,7 +8,7 @@ export async function loadPredictions() {
     where: { status: MatchStatus.SCHEDULED },
   });
 
-  let data = [] as PredictionData[];
+  let data = [] as PredictionFormData[];
   matches.forEach((match) => {
     users.forEach((user) => {
       if (match.team1Id && match.team2Id) {

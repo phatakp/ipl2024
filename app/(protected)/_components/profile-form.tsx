@@ -8,8 +8,7 @@ import { cn, isIPLWinnerUpdatable } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
-import { updateProfile } from "@/app/(protected)/_actions";
-import { ProfileData, ProfileSchema } from "@/app/(protected)/_zodSchemas";
+import { updateProfile } from "@/actions/user.actions";
 import { FormSelect } from "@/components/form-select";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -23,7 +22,9 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import { useTeamOptions } from "@/hooks/team-options";
 import { ProfileInfo } from "@/types";
-import { useEffect, useState } from "react";
+import { ProfileFormData, ProfileFormSchema } from "@/zodSchemas/user.schema";
+import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 type ProfileFormProps = {
   profile: ProfileInfo;
@@ -33,14 +34,14 @@ type ProfileFormProps = {
 export const ProfileForm = ({ userId, profile }: ProfileFormProps) => {
   const { data: teamOptions, isLoading } = useTeamOptions();
   const { toast } = useToast();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(!profile.teamId);
 
-  useEffect(() => {
-    if (!profile.teamId) setOpen(true);
-  }, [profile.teamId]);
+  // useEffect(() => {
+  //   if (!profile.teamId) setOpen(true);
+  // }, [profile.teamId]);
 
-  const form = useForm<ProfileData>({
-    resolver: zodResolver(ProfileSchema),
+  const form = useForm<ProfileFormData>({
+    resolver: zodResolver(ProfileFormSchema),
     defaultValues: {
       firstName: profile.firstName ?? "",
       lastName: profile.lastName ?? "",
@@ -49,7 +50,7 @@ export const ProfileForm = ({ userId, profile }: ProfileFormProps) => {
     },
   });
 
-  const onSubmit = async (values: ProfileData) => {
+  const onSubmit = async (values: ProfileFormData) => {
     const { success, data } = await updateProfile(values);
     if (success) {
       toast({ title: "Success", description: "Profile updated successfully" });
@@ -61,7 +62,9 @@ export const ProfileForm = ({ userId, profile }: ProfileFormProps) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="sm">Edit Profile</Button>
+        <Button size="sm" icon={<ArrowRight className="w-4 h-4 ml-2" />}>
+          Edit Profile
+        </Button>
       </DialogTrigger>
 
       {isLoading ? (

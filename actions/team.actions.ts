@@ -1,6 +1,7 @@
 "use server";
 
 import { prisma } from "@/lib/db";
+import { MatchStatus } from "@prisma/client";
 
 export async function getTeams() {
   const teams = await prisma.team.findMany({
@@ -25,4 +26,15 @@ export async function getTeamsInfo() {
     value: t.id,
     label: t.longName,
   }));
+}
+
+export async function getTeamLast5(teamId: string) {
+  return await prisma.match.findMany({
+    where: {
+      OR: [{ team1Id: teamId }, { team2Id: teamId }],
+      NOT: { status: MatchStatus.SCHEDULED },
+    },
+    orderBy: [{ date: "desc" }],
+    take: 5,
+  });
 }

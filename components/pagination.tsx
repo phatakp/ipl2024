@@ -31,7 +31,7 @@ export const TablePagination = ({
           />
         </PaginationItem>
 
-        <span className="text-xs w-full text-right pr-4">
+        <span className="text-sm w-full text-right pr-4">
           Page {page} of {totalPages}
         </span>
 

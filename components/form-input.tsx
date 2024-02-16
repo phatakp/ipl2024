@@ -9,38 +9,34 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { ComponentPropsWithoutRef } from "react";
 import { useFormContext, useFormState } from "react-hook-form";
 
-type FormInputProps = {
-  name: string;
+type FormInputProps = ComponentPropsWithoutRef<"input"> & {
   label: string;
-  type?: "text" | "password" | "email" | "number";
-  placeholder?: string;
   className?: string;
 };
 
 export const FormInput = ({
   name,
   label,
-  placeholder,
   className,
-  type = "text",
+  ...props
 }: FormInputProps) => {
   const { control } = useFormContext();
   const { errors } = useFormState();
-  const isError = !!errors[name];
+  const isError = !!errors[name!];
 
   return (
     <FormField
       control={control}
-      name={name}
+      name={name!}
       render={({ field }) => (
         <FormItem>
           <FormLabel>{label}</FormLabel>
           <FormControl>
             <Input
-              placeholder={placeholder ?? " "}
-              type={type}
+              {...props}
               {...field}
               className={cn(
                 isError &&

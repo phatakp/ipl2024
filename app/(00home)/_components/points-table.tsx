@@ -1,4 +1,4 @@
-import { getTeams } from "@/actions/team";
+import { getTeams } from "@/actions/team.actions";
 import { Card } from "@/components/ui/card";
 import {
   Table,
@@ -9,6 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Image from "next/image";
+import { TeamFormGuide } from "./team-form-guide";
 
 export const PointsTable = async () => {
   const teams = await getTeams();
@@ -67,7 +68,7 @@ export const PointsTable = async () => {
                 {team.draw}
               </TableCell>
               <TableCell className="py-2 text-center">
-                {team.nrr ?? "-"}
+                {team.nrr.toFixed(3) ?? "-"}
               </TableCell>
               <TableCell className="py-2 text-center hidden lg:table-cell">
                 {team.forRuns ?? 0}/{team.forOvers ?? 0}
@@ -77,15 +78,7 @@ export const PointsTable = async () => {
               </TableCell>
               <TableCell className="py-2 text-center">{team.points}</TableCell>
               <TableCell className="items-center justify-start gap-x-2 xl:flex hidden py-2">
-                <span className="border rounded-full p-1 w-6 h-6 text-sm flex justify-center items-center border-green-500 text-green-500">
-                  W
-                </span>
-                <span className="border rounded-full p-1 w-6 h-6 text-sm flex justify-center items-center border-destructive/70 text-destructive">
-                  L
-                </span>
-                <span className="border rounded-full p-1 w-6 h-6 text-sm flex justify-center items-center border-muted-foreground text-muted-foreground">
-                  D
-                </span>
+                <TeamFormGuide teamId={team.id} />
               </TableCell>
             </TableRow>
           ))}

@@ -20,8 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", "sans-serif"],
-        heading: ["var(--font-bebas)", "sans-serif"],
-        title: ["var(--font-rubik)", "sans-serif"],
+        over: ["var(--font-over)", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

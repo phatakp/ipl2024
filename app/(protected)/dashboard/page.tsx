@@ -16,16 +16,10 @@ const DashboardPage = async () => {
 
       <Tabs defaultValue="leaderboard" className="w-full px-4">
         <TabsList>
-          <TabsTrigger
-            value="leaderboard"
-            className="uppercase font-heading tracking-wider text-lg"
-          >
+          <TabsTrigger value="leaderboard" className=" font-over">
             Leaderboard
           </TabsTrigger>
-          <TabsTrigger
-            value="predictions"
-            className="uppercase font-heading tracking-wider text-lg"
-          >
+          <TabsTrigger value="predictions" className=" font-over">
             My Predictions
           </TabsTrigger>
         </TabsList>

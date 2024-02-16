@@ -21,9 +21,7 @@ const SignInPage = () => {
         <div className="flex items-center justify-center w-full p-4">
           <Card className="w-full">
             <CardHeader>
-              <CardTitle className="font-heading text-slate-800 tracking-wide">
-                Login
-              </CardTitle>
+              <CardTitle className="font-over text-slate-800">Login</CardTitle>
               <CardDescription>
                 Enter Credentials to your account.
               </CardDescription>

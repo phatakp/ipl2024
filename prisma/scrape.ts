@@ -103,6 +103,7 @@ export const loadHistory = async () => {
             venue,
             type: MatchType.LEAGUE,
             status: MatchStatus.SCHEDULED,
+            batFirstId: null,
             winnerId: null,
             result: null,
             minStake: 50,
@@ -120,8 +121,8 @@ export const loadHistory = async () => {
       }
     }
   });
-  await prisma.matchHistory.deleteMany();
-  await prisma.matchHistory.createMany({ data });
+  // await prisma.matchHistory.deleteMany();
+  // await prisma.matchHistory.createMany({ data });
   await prisma.match.deleteMany();
   await prisma.match.createMany({ data: mdata });
 };

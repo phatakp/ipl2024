@@ -1,10 +1,6 @@
 "use client";
 
-import { createOrUpdatePrediction } from "@/app/(protected)/_actions";
-import {
-  PredictionData,
-  PredictionSchema,
-} from "@/app/(protected)/_zodSchemas";
+import { createOrUpdatePrediction } from "@/actions/prediction.actions";
 import { FormInput } from "@/components/form-input";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,7 +26,11 @@ import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/components/ui/use-toast";
 import { useTeamStats } from "@/hooks/team-stats";
 import { cn, isMatchStarted } from "@/lib/utils";
-import { MatchAPIResult, PredictionAPIResult } from "@/types";
+import { MatchAPIResult, PredictionAPIResult, TeamShortInfo } from "@/types";
+import {
+  PredictionFormData,
+  PredictionFormSchema,
+} from "@/zodSchemas/prediction.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { MatchStatus } from "@prisma/client";
 import { ArrowRight } from "lucide-react";
@@ -54,8 +54,8 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
     isOpen
   );
 
-  const form = useForm<PredictionData>({
-    resolver: zodResolver(PredictionSchema),
+  const form = useForm<PredictionFormData>({
+    resolver: zodResolver(PredictionFormSchema),
     defaultValues: {
       amount: prediction?.amount ?? match.minStake,
       matchId: match.id ?? "",
@@ -67,7 +67,7 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
 
   const [teamId, amount] = form.watch(["teamId", "amount"]);
 
-  const onSubmit = async (values: PredictionData) => {
+  const onSubmit = async (values: PredictionFormData) => {
     const resp = await createOrUpdatePrediction(values);
 
     if (resp?.success) {
@@ -93,12 +93,20 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
   )
     return null;
 
+  const isCurrPrediction =
+    !!prediction &&
+    prediction.teamId === teamId &&
+    prediction.amount === amount;
+
   return (
     <Dialog open={isOpen} onOpenChange={setisOpen}>
       <DialogTrigger asChild>
-        <Button size="sm" variant="secondary">
+        <Button
+          size="sm"
+          variant="secondary"
+          icon={<ArrowRight className="w-4 h-4 ml-2" />}
+        >
           Predict Now
-          <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
       </DialogTrigger>
 
@@ -108,7 +116,7 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
         <DialogContent className="bg-[url('/bg.png')] bg-cover bg-no-repeat bg-center p-4">
           <Card className="w-full bg-background text-foreground shadow-md border-none">
             <CardHeader>
-              <CardTitle className="font-heading font-normal tracking-wide">
+              <CardTitle className="font-over font-normal">
                 Match {match.num} - {match.team1?.shortName} vs{" "}
                 {match.team2?.shortName}
               </CardTitle>
@@ -122,82 +130,55 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
                 >
                   <Label
                     className={cn(
-                      "tracking-wide font-heading text-lg my-4",
-                      !!prediction &&
-                        prediction.teamId === teamId &&
-                        prediction.amount === amount
-                        ? "text-primary"
-                        : "text-destructive"
+                      "font-over text-lg my-4",
+                      isCurrPrediction ? "text-primary" : "text-destructive"
                     )}
                   >
-                    {!!prediction &&
-                    prediction.teamId === teamId &&
-                    prediction.amount === amount
+                    {isCurrPrediction
                       ? `Current Bet: Rs.${amount}/- for ${
                           teamId === match.team1Id
                             ? match.team1?.shortName
                             : match.team2?.shortName
                         }`
-                      : `Provide Confirmation:  Rs.${amount}/- for ${
+                      : !!teamId
+                      ? `Provide Confirmation:  Rs.${amount}/- for ${
                           teamId === match.team1Id
                             ? match.team1?.shortName
                             : match.team2?.shortName
-                        }`}
+                        }`
+                      : "No Prediction yet"}
                   </Label>
 
                   <Slider
                     defaultValue={[match.minStake]}
                     max={match.minStake * 10}
-                    min={match.minStake}
+                    min={prediction?.amount ?? match.minStake}
                     step={10}
                     onValueChange={(val) => form.setValue("amount", val[0])}
                   />
                   <FormInput name="amount" label="" className="hidden" />
 
                   <div className="flex items-center justify-center">
-                    <Button
-                      type="button"
-                      variant={
-                        teamId === match.team1Id
-                          ? (match.team1!.shortName as any)
-                          : "outline"
+                    <TeamButton
+                      teamId={teamId}
+                      team={match.team1!}
+                      handleClick={() =>
+                        form.setValue("teamId", match.team1Id!)
                       }
-                      size="team"
-                      className="inline-flex items-center gap-4 rounded-r-none"
-                      onClick={() => form.setValue("teamId", match.team1Id!)}
-                    >
-                      {match.team1?.shortName}
-                      <Image
-                        src={`/${match.team1?.shortName}.png`}
-                        alt="team"
-                        width={50}
-                        height={50}
-                      />
-                    </Button>
-                    <Button
-                      type="button"
-                      variant={
-                        teamId === match.team2Id
-                          ? (match.team2!.shortName as any)
-                          : "outline"
+                    />
+                    <TeamButton
+                      teamId={teamId}
+                      team={match.team2!}
+                      handleClick={() =>
+                        form.setValue("teamId", match.team2Id!)
                       }
-                      size="team"
-                      className="inline-flex items-center gap-4 rounded-l-none"
-                      onClick={() => form.setValue("teamId", match.team2Id!)}
-                    >
-                      <Image
-                        src={`/${match.team2?.shortName}.png`}
-                        alt="team"
-                        width={50}
-                        height={50}
-                      />
-                      {match.team2?.shortName}
-                    </Button>
+                      dir="right"
+                    />
                   </div>
                   {!!stats?.pct && (
                     <div className="text-sm text-destructive font-semibold">
                       {`Based on stats ${match.team1?.shortName} has ${stats.pct}% chance of
-              winning`}
+                       winning`}
                     </div>
                   )}
                   <FormInput name="teamId" label="" className="hidden" />
@@ -244,7 +225,33 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
   );
 };
 
-export const loader = () => (
+const TeamButton = ({
+  teamId,
+  team,
+  handleClick,
+  dir = "left",
+}: {
+  teamId: string;
+  team: TeamShortInfo;
+  handleClick: () => void;
+  dir?: "left" | "right";
+}) => (
+  <Button
+    type="button"
+    variant={teamId === team.id ? (team.shortName as any) : "outline"}
+    size="team"
+    className={cn(
+      "flex items-center gap-4 rounded-r-none",
+      dir === "left" ? "flex-row" : "flex-row-reverse"
+    )}
+    onClick={handleClick}
+  >
+    {team.shortName}
+    <Image src={`/${team.shortName}.png`} alt="team" width={50} height={50} />
+  </Button>
+);
+
+const loader = () => (
   <DialogContent className="p-4">
     <Card className="w-full bg-background text-foreground shadow-md border-none">
       <Skeleton className="w-full h-10"></Skeleton>

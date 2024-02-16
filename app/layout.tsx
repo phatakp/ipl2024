@@ -6,14 +6,19 @@ import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/lib/constants";
 import AppProvider from "@/provider";
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter, Rubik } from "next/font/google";
+import { Inter, Overpass } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const rubik = Rubik({ subsets: ["latin"], variable: "--font-rubik" });
-const bebas = Bebas_Neue({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-bebas",
-  weight: "400",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const over = Overpass({
+  subsets: ["latin"],
+  variable: "--font-over",
+  display: "swap",
+  // weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${rubik.variable} ${bebas.variable}`}>
+      <body className={`${inter.variable} ${over.variable}`}>
         <AppProvider>
           <TopBar />
           <Navbar />

@@ -1,4 +1,4 @@
-import { getMatchPredictions } from "@/actions/prediction";
+import { getMatchPredictions } from "@/actions/prediction.actions";
 import { useQuery } from "@tanstack/react-query";
 
 export const useMatchPredictions = (
