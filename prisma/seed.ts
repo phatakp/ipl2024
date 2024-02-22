@@ -23,8 +23,8 @@ async function loadTeams() {
 }
 
 async function main() {
-  await loadTeams();
-  console.log("Teams loaded");
+  // await loadTeams();
+  // console.log("Teams loaded");
   await loadMatches();
   console.log("Matches loaded");
   // await loadHistory();

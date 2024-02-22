@@ -38,7 +38,7 @@ export const CarouselCardAmount = (props: CarouselCardAmountProps) => {
           className={cn("text-muted-foreground", !props.header && "size-4 ")}
         />
       )}
-      {props.balance.toFixed(props.type === "team" ? 0 : 1)}
+      {props.balance?.toFixed(props.type === "team" ? 0 : 1)}
       {props.type === "team" && (
         <div
           className={cn(
@@ -46,7 +46,7 @@ export const CarouselCardAmount = (props: CarouselCardAmountProps) => {
             props.nrr < 0 ? "text-destructive" : "text-green-600"
           )}
         >
-          ({props.nrr.toFixed(3)})
+          ({props.nrr?.toFixed(3)})
         </div>
       )}
     </div>

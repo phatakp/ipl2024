@@ -21,7 +21,11 @@ export async function loadMatches() {
       throw new Error(
         `Invalid teams ${match.FirstBattingTeamCode} ${match.SecondBattingTeamCode}`
       );
-    const date = new Date(`${match.MATCH_COMMENCE_START_DATE}.000Z`);
+    const date = new Date(match.MATCH_COMMENCE_START_DATE);
+    const [hr, min] = match.MatchTime.split(":");
+    date.setHours(parseInt(hr));
+    date.setMinutes(parseInt(min));
+    date.setSeconds(0);
     const istDate = DateTime.fromISO(date.toISOString())
       .setZone("Asia/Kolkata")
       .toISO();

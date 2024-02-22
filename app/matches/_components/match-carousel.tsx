@@ -47,9 +47,9 @@ export const MatchCarousel = async () => {
                   <Card className="bg-secondary text-secondary-foreground shadow-md px-0 pb-2 relative min-w-80 w-full">
                     <PredictionBadge prediction={prediction} />
                     <CardHeader className="p-2 rounded-none">
-                      <CardTitle className="text-xs flex items-center justify-between gap-1 text-muted-foreground">
-                        <span>Match {match.num}</span>
-                        <span>{match.venue}</span>
+                      <CardTitle className="text-xs flex items-center justify-between gap-6 text-muted-foreground">
+                        <span className="shrink-0">Match {match.num}</span>
+                        <span className="truncate">{match.venue}</span>
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col space-y-2 px-2 pb-1 md:pb-3 rounded-none">

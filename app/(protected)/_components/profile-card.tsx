@@ -38,13 +38,11 @@ export const ProfileCard = async ({ session }: ProfileCardProps) => {
         <Badge className="absolute right-2 top-2 z-10">
           Doubles: {session.user.doublesLeft}
         </Badge>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 space-y-0">
-          <h2
-            className={`font-semibold ${team?.shortName}-text m-0 p-0 leading-3`}
-          >
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 space-y-0 text-center">
+          <h2 className={`font-semibold invert m-0 p-0 leading-3`}>
             {session.user.name}
           </h2>
-          <p className={`text-sm m-0 p-0 ${team?.shortName}-text opacity-80`}>
+          <p className={`text-sm m-0 p-0 invert opacity-80`}>
             {team?.longName}
           </p>
           <div className="inline-flex items-center m-0">

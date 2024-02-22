@@ -64,7 +64,7 @@ const PAGE_SIZE = siteConfig.pageSize;
 export const CarouselCardWrapper = (props: CarouselCardWrapperProps) => {
   const { data: session, status } = useSession();
   const [page, setPage] = useState(1);
-  if (!props.data) return null;
+  if (props.data.length === 0) return null;
 
   const totalPages = !!props.data
     ? Math.ceil(props.data?.length / PAGE_SIZE)

@@ -20,7 +20,7 @@ export const StatsCarousel = async () => {
   const userPredictions = await getUserPredictions(session.user.id);
 
   const carouselData = [
-    { type: "user", data: users, title: "Highest Balance" },
+    { type: "user", data: users, title: "Leaderboard" },
     { type: "result", data: result, title: "Highest Single Win" },
     { type: "pred", data: userPredictions, title: "Your Predictions" },
   ];
