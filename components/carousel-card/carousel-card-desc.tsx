@@ -66,6 +66,8 @@ type CarouselCardDescProps = { header: boolean } & (
 const PAGE_SIZE = siteConfig.pageSize;
 
 export const CarouselCardDesc = (props: CarouselCardDescProps) => {
+  if (!props.data) return null;
+
   let title1 = "";
   let title2 = "";
   let titleData = "";

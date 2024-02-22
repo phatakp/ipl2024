@@ -44,35 +44,20 @@ export const UpdateMatchForm = ({ matchId }: UpdateMatchFormProps) => {
   const queryClient = useQueryClient();
   const form = useForm<UpdateMatchFormData>({
     resolver: zodResolver(UpdateMatchFormSchema),
-    // defaultValues: {
-    //   matchId: match?.id ?? "",
-    //   batFirstId: match?.batFirstId ?? "",
-    //   t1Score: `${match?.team1Runs ?? 0}/${match?.team1Wickets ?? 0}`,
-    //   t1Overs: match?.team1Overs.toFixed(1) ?? "0.0",
-    //   t2Score: `${match?.team2Runs ?? 0}/${match?.team2Wickets ?? 0}`,
-    //   t2Overs: match?.team2Overs.toFixed(1) ?? "0.0",
-    //   status: match?.status ?? MatchStatus.SCHEDULED,
-    //   winnerId: match?.winnerId ?? "",
-    // },
     mode: "onChange",
   });
+  const { setValue } = form;
 
   useEffect(() => {
-    form.setValue("matchId", match?.id ?? "");
-    form.setValue("batFirstId", match?.batFirstId ?? "");
-    form.setValue(
-      "t1Score",
-      `${match?.team1Runs ?? 0}/${match?.team1Wickets ?? 0}`
-    );
-    form.setValue(
-      "t2Score",
-      `${match?.team2Runs ?? 0}/${match?.team2Wickets ?? 0}`
-    );
-    form.setValue("t1Overs", match?.team1Overs.toFixed(1) ?? "0.0");
-    form.setValue("t2Overs", match?.team2Overs.toFixed(1) ?? "0.0");
-    form.setValue("status", match?.status ?? MatchStatus.SCHEDULED);
-    form.setValue("winnerId", match?.winnerId ?? "");
-  }, [isLoading, match]);
+    setValue("matchId", match?.id ?? "");
+    setValue("batFirstId", match?.batFirstId ?? "");
+    setValue("t1Score", `${match?.team1Runs ?? 0}/${match?.team1Wickets ?? 0}`);
+    setValue("t2Score", `${match?.team2Runs ?? 0}/${match?.team2Wickets ?? 0}`);
+    setValue("t1Overs", match?.team1Overs.toFixed(1) ?? "0.0");
+    setValue("t2Overs", match?.team2Overs.toFixed(1) ?? "0.0");
+    setValue("status", match?.status ?? MatchStatus.SCHEDULED);
+    setValue("winnerId", match?.winnerId ?? "");
+  }, [isLoading, match, setValue]);
 
   const onSubmit = async (values: UpdateMatchFormData) => {
     const resp = await updateMatch(values, match?.team1Id!);

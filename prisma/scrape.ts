@@ -1,15 +1,14 @@
-import { MatchHistoryInput, MatchInput } from "@/types";
-import { MatchStatus, MatchType, PrismaClient, Team } from "@prisma/client";
+import { MatchHistoryInput } from "@/types";
+import { MatchStatus, PrismaClient, Team } from "@prisma/client";
 import { JSDOM } from "jsdom";
-import { DateTime } from "luxon";
 const prisma = new PrismaClient();
 
-async function getTeams() {
+export async function getTeams() {
   const teams = await prisma.team.findMany();
   return teams;
 }
 
-function getTeam(teams: Team[], name: string) {
+export function getTeam(teams: Team[], name: string) {
   if (name === "Daredevils")
     return teams.find((team) => team.shortName === "DC");
   if (name === "Kings XI")
@@ -32,9 +31,7 @@ export const loadHistory = async () => {
 
   const matches = document.querySelectorAll("table tr");
   const data: MatchHistoryInput[] = [];
-  const mdata: MatchInput[] = [];
   const teams = await getTeams();
-  let num = 1;
   matches.forEach((match, i) => {
     if (i > 0) {
       const details = match.querySelectorAll("td");
@@ -88,45 +85,9 @@ export const loadHistory = async () => {
           status: !!winId ? MatchStatus.COMPLETED : MatchStatus.ABANDONED,
         };
         data.push(matchHistory);
-
-        if (date.getFullYear() === 2023) {
-          const date = new Date();
-          date.setDate(date.getDate() + i);
-          date.setHours(19);
-          date.setMinutes(30);
-          date.setSeconds(0);
-          const istDate = DateTime.fromISO(date.toISOString())
-            .setZone("Asia/Kolkata")
-            .toISO();
-
-          const matchCurr = {
-            num,
-            team1Id: homeId ?? null,
-            team2Id: awayId ?? null,
-            date: istDate!,
-            venue,
-            type: MatchType.LEAGUE,
-            status: MatchStatus.SCHEDULED,
-            batFirstId: null,
-            winnerId: null,
-            result: null,
-            minStake: 50,
-            team1Runs: 0,
-            team1Wickets: 0,
-            team1Overs: 0,
-            team2Runs: 0,
-            team2Wickets: 0,
-            team2Overs: 0,
-            isDoublePlayed: false,
-          };
-          mdata.push(matchCurr);
-          num++;
-        }
       }
     }
   });
   await prisma.matchHistory.deleteMany();
   await prisma.matchHistory.createMany({ data });
-  await prisma.match.deleteMany();
-  await prisma.match.createMany({ data: mdata });
 };

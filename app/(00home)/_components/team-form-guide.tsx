@@ -1,14 +1,23 @@
 "use client";
 
+import { Skeleton } from "@/components/ui/skeleton";
 import { useTeamFormGuide } from "@/hooks/team-form-guide";
 import { cn } from "@/lib/utils";
 import { MatchStatus } from "@prisma/client";
-import { Loader2Icon } from "lucide-react";
 
 export const TeamFormGuide = ({ teamId }: { teamId: string }) => {
   const { data: last10, isLoading } = useTeamFormGuide(teamId);
 
-  if (isLoading) return <Loader2Icon className="w-4 h-4 animate-spin" />;
+  if (isLoading)
+    return (
+      <div className="flex items-center gap-1 flex-nowrap shrink-0 mt-2">
+        <Skeleton className="size-4 rounded-full" />
+        <Skeleton className="size-4 rounded-full" />
+        <Skeleton className="size-4 rounded-full" />
+        <Skeleton className="size-4 rounded-full" />
+        <Skeleton className="size-4 rounded-full" />
+      </div>
+    );
 
   return (
     <div className="flex items-center gap-1 flex-nowrap shrink-0 mt-2">
@@ -16,7 +25,7 @@ export const TeamFormGuide = ({ teamId }: { teamId: string }) => {
         <span
           key={item.id}
           className={cn(
-            "h-4 w-4 rounded-full flex items-center justify-center text-[9px]",
+            "size-4 rounded-full flex items-center justify-center text-[9px]",
             item.winnerId === teamId
               ? "bg-green-600 text-white"
               : !!item.winnerId
@@ -39,7 +48,7 @@ export const TeamFormGuide = ({ teamId }: { teamId: string }) => {
           <span
             key={i}
             className={cn(
-              "h-4 w-4 rounded-full flex items-center justify-center text-xs bg-muted text-muted-foreground"
+              "size-4 rounded-full flex items-center justify-center text-xs bg-muted text-muted-foreground"
             )}
           >
             -
