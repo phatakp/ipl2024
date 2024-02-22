@@ -5,7 +5,7 @@ import { getAuthServerSession } from "@/lib/auth";
 
 const DashboardPage = async () => {
   const session = await getAuthServerSession();
-  if (!session) return null;
+  if (!session?.user) return null;
 
   return (
     <div className="flex flex-col space-y-16 w-full max-w-6xl mx-auto pb-8 mt-8 md:px-4">

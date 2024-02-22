@@ -13,7 +13,7 @@ import { getAuthServerSession } from "@/lib/auth";
 export const StatsCarousel = async () => {
   const session = await getAuthServerSession();
 
-  if (!session) return null;
+  if (!session?.user) return null;
 
   const users = await getUsers();
   const result = await getUsersByResult();
