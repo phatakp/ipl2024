@@ -1,4 +1,3 @@
-import { PredictionFormData } from "@/zodSchemas/prediction.schema";
 import { MatchStatus, PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
@@ -8,7 +7,7 @@ export async function loadPredictions() {
     where: { status: MatchStatus.SCHEDULED },
   });
 
-  let data = [] as PredictionFormData[];
+  let data = [] as any[];
   matches.forEach((match) => {
     users.forEach((user) => {
       if (match.team1Id && match.team2Id) {
@@ -27,5 +26,6 @@ export async function loadPredictions() {
     });
   });
   data = data.filter((item, i) => ![3, 17, 31, 47, 60, 79].includes(i)); // removing random predictions for default bets
+  await prisma.prediction.deleteMany({ where: { NOT: { matchId: null } } });
   await prisma.prediction.createMany({ data });
 }

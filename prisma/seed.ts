@@ -4,11 +4,11 @@ import { loadPredictions } from "./temp-predictions";
 const prisma = new PrismaClient();
 
 const teamDetails = [
-  { shortName: "CSK", longName: "Chennai Super Kings" },
+  { shortName: "CSK", longName: "Chennai SuperKings" },
   { shortName: "DC", longName: "Delhi Capitals" },
   { shortName: "GT", longName: "Gujarat Titans" },
-  { shortName: "KKR", longName: "Kolkata Knight Riders" },
-  { shortName: "LSG", longName: "Lucknow Super Giants" },
+  { shortName: "KKR", longName: "Kolkata KnightRiders" },
+  { shortName: "LSG", longName: "Lucknow SuperGiants" },
   { shortName: "MI", longName: "Mumbai Indians" },
   { shortName: "PBKS", longName: "Punjab Kings" },
   { shortName: "RR", longName: "Rajasthan Royals" },
@@ -17,14 +17,17 @@ const teamDetails = [
 ];
 
 async function loadTeams() {
+  await prisma.team.deleteMany();
   await prisma.team.createMany({
     data: teamDetails,
   });
 }
 
 async function main() {
-  // await loadTeams();
+  await loadTeams();
+  console.log("Teams loaded");
   await loadHistory();
+  console.log("Matches loaded");
   await loadPredictions();
   console.log("Data loaded");
 }

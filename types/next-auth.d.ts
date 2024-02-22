@@ -8,6 +8,7 @@ declare module "next-auth/jwt" {
     id: string;
     role: UserRole;
     balance: number;
+    doublesLeft: number;
     profile: ProfileInfo;
   }
 }
@@ -19,6 +20,7 @@ declare module "next-auth" {
       profile: ProfileInfo;
       role: UserRole;
       balance: number;
+      doublesLeft: number;
     } & DefaultSession["user"];
   }
 }

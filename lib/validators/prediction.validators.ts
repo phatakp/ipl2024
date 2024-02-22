@@ -2,7 +2,7 @@ import { getMatchById } from "@/actions/match.actions";
 import { getUserPredictionForMatch } from "@/actions/prediction.actions";
 import { getUserById } from "@/actions/user.actions";
 import { prisma } from "@/lib/db";
-import { isPredictionCutoffPassed } from "@/lib/utils";
+import { isDoubleCutoffPassed, isPredictionCutoffPassed } from "@/lib/utils";
 import { MatchAPIResult, PredictionAPIResult, UserAPIResult } from "@/types";
 import { PredictionFormData } from "@/zodSchemas/prediction.schema";
 
@@ -26,7 +26,11 @@ export function isValidTeam(data: PredictionFormData, match: MatchAPIResult) {
 }
 
 export function isValidDouble(data: PredictionFormData, user: UserAPIResult) {
-  return data.isDouble && user.doublesLeft > 0;
+  return (
+    data.isDouble &&
+    user.doublesLeft > 0 &&
+    !isDoubleCutoffPassed(data.matchDate)
+  );
 }
 
 export async function validatePrediction(data: PredictionFormData) {
@@ -52,11 +56,11 @@ export async function validatePrediction(data: PredictionFormData) {
       return { success: false, data: "Invalid team for match" };
 
     if (!isValidDouble(data, user))
-      return { success: false, data: "No double chances left" };
+      return { success: false, data: "Double not allowed" };
   }
 
   //Double already played then check if new one is for higher amount
-  if (data.isDouble && match?.doublePlayed) {
+  if (data.isDouble && match?.isDoublePlayed) {
     const doublePred = await prisma.prediction.findFirst({
       where: { isDouble: true },
     });

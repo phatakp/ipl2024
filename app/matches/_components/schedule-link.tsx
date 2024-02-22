@@ -11,7 +11,7 @@ export const ScheduleLink = () => {
       onClick={() => router.push("/matches")}
       className={"text-xs p-0"}
     >
-      Schedule
+      IPL Schedule
     </Button>
   );
 };

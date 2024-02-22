@@ -17,7 +17,7 @@ export const PRED_MATCH_DETAILS = {
     team2: TEAM_SHORT_DETAILS,
     winner: TEAM_SHORT_DETAILS,
     minStake: true,
-    doublePlayed: true,
+    isDoublePlayed: true,
   },
 };
 

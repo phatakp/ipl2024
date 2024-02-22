@@ -1,16 +1,17 @@
 "use client";
 
-import { UserProfile } from "@/app/(protected)/_components/user-profile";
-import { MobileNav } from "@/components/mobile-nav";
+import { UserProfileDropDown } from "@/app/(protected)/_components/user-profile-dropdown";
+import { MobileNav } from "@/components/navigation/mobile-nav";
 import { buttonVariants } from "@/components/ui/button";
 import { useScrollPosition } from "@/hooks/scroll-position";
 import { routes } from "@/lib/routes";
 import { cn } from "@/lib/utils";
-import { ArrowRightIcon } from "lucide-react";
+import { ChevronRightIcon } from "lucide-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Skeleton } from "../ui/skeleton";
 
 export const Navbar = () => {
   const { status } = useSession();
@@ -38,32 +39,36 @@ export const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  link.isProtected && status !== "authenticated" && "hidden",
-                  "group transition duration-300 font-over text-sm uppercase"
+                  "group transition duration-300 font-over text-sm uppercase",
+                  link.isProtected && status !== "authenticated" && "hidden"
                 )}
               >
                 {link.name}
-                {(!path.includes(link.href) || path === "/") && (
-                  <span className="block max-w-0 group-hover:max-w-[50%] mx-auto transition-all duration-500 h-0.5 bg-secondary mt-2"></span>
-                )}
-                {path.includes(link.href) && path !== "/" && (
-                  <span className="block max-w-[50%] mx-auto transition-all duration-500 h-0.5 bg-primary mt-2"></span>
+                {path !== link.href &&
+                  ((link.href === "/matches" && !path.includes("/matches")) ||
+                    link.href !== "/matches") && (
+                    <span className="block max-w-0 group-hover:max-w-[50%] mx-auto transition-all duration-500 h-1 bg-secondary mt-2"></span>
+                  )}
+                {(path === link.href ||
+                  (link.href === "/matches" && path.includes("/matches"))) && (
+                  <span className="block max-w-[50%] mx-auto transition-all duration-500 h-1 bg-primary mt-2"></span>
                 )}
               </Link>
             ))}
           </div>
-          {status === "authenticated" && <UserProfile />}
+          {status === "loading" && <Skeleton className="w-20 h-6" />}
+          {status === "authenticated" && <UserProfileDropDown />}
           {status === "unauthenticated" && <MobileNav />}
           {status === "unauthenticated" && !path.includes("sign") && (
             <Link
               href="/sign-in"
               className={cn(
-                buttonVariants({ size: "sm", variant: "ghost" }),
-                "hidden md:flex"
+                buttonVariants({ size: "sm" }),
+                "hidden md:flex group w-20"
               )}
             >
               Login
-              <ArrowRightIcon className="w-5 h-5 ml-2" />
+              <ChevronRightIcon className="group-hover:h-4 group-hover:w-4 ml-2 w-0 h-0 opacity-0 group-hover:opacity-100 group-hover:transition group-hover:duration-500" />
             </Link>
           )}
         </div>

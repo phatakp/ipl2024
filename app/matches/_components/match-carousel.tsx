@@ -28,12 +28,12 @@ export const MatchCarousel = async () => {
   const matches = await getMatchCarouselData();
 
   return (
-    <div className="mx-auto md:col-span-2">
+    <div className="mx-auto md:col-span-2 w-full px-4">
       <Carousel
         opts={{
           align: "center",
         }}
-        className="w-[320px] sm:w-full max-w-6xl mx-auto"
+        className="w-[370px] sm:w-full max-w-6xl mx-auto space-x-4"
       >
         <CarouselContent>
           {matches?.map(async (match) => {
@@ -42,20 +42,17 @@ export const MatchCarousel = async () => {
               match.id
             );
             return (
-              <CarouselItem
-                key={match.id}
-                className="basis-1/1 sm:basis-1/3 md:basis-1/4"
-              >
+              <CarouselItem key={match.id} className="basis-1/1 sm:basis-1/2">
                 <Link href={`/matches/${match.num}`} className="p-0">
-                  <Card className="bg-secondary text-secondary-foreground shadow-md p-0 relative">
+                  <Card className="bg-secondary text-secondary-foreground shadow-md px-0 pb-2 relative min-w-80 w-full">
                     <PredictionBadge prediction={prediction} />
-                    <CardHeader className="p-2">
+                    <CardHeader className="p-2 rounded-none">
                       <CardTitle className="text-xs flex items-center justify-between gap-1 text-muted-foreground">
                         <span>Match {match.num}</span>
                         <span>{match.venue}</span>
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="flex flex-col space-y-2 px-2 pb-1 md:pb-3">
+                    <CardContent className="flex flex-col space-y-2 px-2 pb-1 md:pb-3 rounded-none">
                       <CarouselTeam
                         shortName={match.team1?.shortName}
                         runs={match.team1Runs}
@@ -66,7 +63,7 @@ export const MatchCarousel = async () => {
                         runs={match.team2Runs}
                         wickets={match.team2Wickets}
                       />
-                      <div className="text-xs font-light px-1">
+                      <div className="text-sm font-over px-1 font-semibold">
                         {match.status === MatchStatus.SCHEDULED
                           ? `${DateTime.fromISO(match.date).toFormat("ff")} IST`
                           : match.status === MatchStatus.COMPLETED
@@ -74,9 +71,9 @@ export const MatchCarousel = async () => {
                           : "Match Abandoned"}
                       </div>
                     </CardContent>
-                    <CardFooter className="pb-1 flex items-center justify-between">
+                    <CardFooter className="pb-1 flex items-center justify-between px-3">
                       <ScheduleLink />
-                      {match.doublePlayed && (
+                      {match.isDoublePlayed && (
                         <Badge variant="destructive">Double Played</Badge>
                       )}
                     </CardFooter>

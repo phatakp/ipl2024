@@ -17,13 +17,13 @@ export const TeamCarousel = () => {
           align: "center",
           loop: true,
         }}
-        className="w-[300px] sm:w-full max-w-xl mx-auto"
+        className="w-[300px] sm:w-full max-w-6xl mx-auto"
       >
         <CarouselContent>
           {Object.keys(Teams).map((key, index) => (
             <CarouselItem key={key} className="basis-1/4 sm:basis-1/6">
               <div className="p-1">
-                <Card className="bg-darkblue border-none">
+                <Card className="bg-darkblue border-none w-full max-w-24">
                   <CardContent className="flex aspect-square items-center justify-center p-2">
                     <Image
                       src={`/${key}outline.png`}

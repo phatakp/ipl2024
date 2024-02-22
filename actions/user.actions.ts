@@ -3,6 +3,8 @@
 import { prisma } from "@/lib/db";
 import { ActionResp } from "@/types";
 import {
+  IsPaidFormData,
+  IsPaidFormSchema,
   ProfileFormData,
   ProfileFormSchema,
   RegisterFormData,
@@ -94,8 +96,51 @@ export async function getUsers() {
           team: TEAM_SHORT_DETAILS,
         },
       },
+      predictions: {
+        where: {
+          match: { NOT: { status: MatchStatus.SCHEDULED } },
+        },
+        orderBy: [{ match: { date: "desc" } }],
+        take: 5,
+      },
     },
   });
+  return users;
+}
+
+export async function getUsersByResult() {
+  const users = await prisma.prediction.findMany({
+    distinct: ["userId"],
+    where: { status: { in: ["WON", "LOST"] } },
+    orderBy: [{ result: "desc" }],
+    include: {
+      team: TEAM_SHORT_DETAILS,
+      match: {
+        select: {
+          num: true,
+          team1: TEAM_SHORT_DETAILS,
+          team2: TEAM_SHORT_DETAILS,
+          winner: TEAM_SHORT_DETAILS,
+        },
+      },
+      user: {
+        select: {
+          name: true,
+          profile: {
+            select: {
+              firstName: true,
+              lastName: true,
+              userId: true,
+              teamId: true,
+              isPaid: true,
+              team: TEAM_SHORT_DETAILS,
+            },
+          },
+        },
+      },
+    },
+  });
+
   return users;
 }
 
@@ -122,4 +167,17 @@ export async function getUserLast5(userId: string) {
     orderBy: [{ match: { date: "desc" } }],
     take: 5,
   });
+}
+
+export async function updateUserPaid(formData: IsPaidFormData) {
+  const values = IsPaidFormSchema.safeParse(formData);
+  if (!values.success) return { success: false, data: "Invalid isPaid flag" };
+
+  const { userId, isPaid } = values.data;
+  const user = await prisma.user.update({
+    where: { id: userId },
+    data: { profile: { update: { isPaid } } },
+  });
+  revalidatePath("/dashboard");
+  return { success: true, data: user };
 }

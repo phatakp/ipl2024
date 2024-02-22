@@ -136,21 +136,21 @@ enum PredictionStatus {
 }
 
 model Match {
-  id           String      @id @default(cuid())
-  num          Int         @unique
-  date         String
-  type         MatchType   @default(LEAGUE)
-  status       MatchStatus @default(SCHEDULED)
-  venue        String?
-  doublePlayed Boolean     @default(false)
-  minStake     Int         @default(50)
-  team1Runs    Int         @default(0)
-  team2Runs    Int         @default(0)
-  team1Wickets Int         @default(0)
-  team2Wickets Int         @default(0)
-  team1Overs   Float       @default(0)
-  team2Overs   Float       @default(0)
-  result       String?
+  id             String      @id @default(cuid())
+  num            Int         @unique
+  date           String
+  type           MatchType   @default(LEAGUE)
+  status         MatchStatus @default(SCHEDULED)
+  venue          String?
+  isDoublePlayed Boolean     @default(false)
+  minStake       Int         @default(50)
+  team1Runs      Int         @default(0)
+  team2Runs      Int         @default(0)
+  team1Wickets   Int         @default(0)
+  team2Wickets   Int         @default(0)
+  team1Overs     Float       @default(0)
+  team2Overs     Float       @default(0)
+  result         String?
 
   team1Id String?
   team1   Team?   @relation("team1", fields: [team1Id], references: [id], onDelete: Cascade)

@@ -58,4 +58,64 @@
   body {
     @apply bg-background text-foreground font-sans min-h-screen w-full antialiased;
   }
+  .GT-text {
+    @apply text-sky-400;
+  }
+  .MI-text {
+    @apply text-yellow-400;
+  }
+  .CSK-text {
+    @apply text-blue-700;
+  }
+  .DC-text {
+    @apply text-red-500;
+  }
+  .KKR-text {
+    @apply text-yellow-400;
+  }
+  .LSG-text {
+    @apply text-gray-200;
+  }
+  .PBKS-text {
+    @apply text-gray-200;
+  }
+  .RR-text {
+    @apply text-pink-400;
+  }
+  .RCB-text {
+    @apply text-yellow-400;
+  }
+  .SRH-text {
+    @apply text-red-800;
+  }
+  .GT {
+    @apply bg-[#0e1a31] text-sky-400;
+  }
+  .MI {
+    @apply bg-[#143266] text-yellow-400;
+  }
+  .CSK {
+    @apply bg-[#ffcb05] text-blue-700;
+  }
+  .DC {
+    @apply bg-[#01184a] text-red-500;
+  }
+  .KKR {
+    @apply bg-[#281f4a] text-yellow-400;
+  }
+  .LSG {
+    @apply bg-[#0349bc] text-gray-200;
+  }
+  .PBKS {
+    @apply bg-[#d71920] text-gray-200;
+  }
+  .RR {
+    @apply bg-[#052856] text-pink-400;
+  }
+  .RCB {
+    @apply bg-[#581e21] text-yellow-400;
+  }
+  .SRH {
+    @apply bg-[#f26522] text-red-800;
+  }
 }

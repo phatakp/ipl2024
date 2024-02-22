@@ -15,7 +15,7 @@ export async function getMatchPredictions(matchId: string) {
 
   const preds = await prisma.prediction.findMany({
     where: { matchId },
-    orderBy: [{ match: { num: "desc" } }, { createdAt: "asc" }],
+    orderBy: [{ result: "desc" }, { createdAt: "asc" }],
     include: {
       user: PRED_USER_DETAILS,
       match: PRED_MATCH_DETAILS,
@@ -81,21 +81,35 @@ export async function createOrUpdatePrediction(
 export async function predictionDBUpdate(data: PredictionFormData) {
   const { userId, matchId, teamId, isDouble, amount } = data;
   return await prisma.$transaction(async (db) => {
-    const prediction = await db.prediction.upsert({
-      where: { matchId_userId: { matchId, userId } },
-      create: { teamId, amount, userId, matchId },
-      update: { teamId, isDouble, amount, isUpdated: true },
-    });
     if (isDouble) {
+      const existingDouble = await db.prediction.findFirst({
+        where: { matchId, isDouble: true },
+      });
+      if (!!existingDouble) {
+        await db.user.update({
+          where: { id: existingDouble.userId },
+          data: { doublesLeft: { increment: 1 } },
+        });
+        await db.prediction.update({
+          where: { id: existingDouble.id },
+          data: { isDouble: false },
+        });
+      }
       await db.user.update({
         where: { id: userId },
         data: { doublesLeft: { decrement: 1 } },
       });
       await db.match.update({
         where: { id: matchId },
-        data: { doublePlayed: true },
+        data: { isDoublePlayed: true },
       });
     }
+    const prediction = await db.prediction.upsert({
+      where: { matchId_userId: { matchId, userId } },
+      create: { teamId, amount, userId, matchId },
+      update: { teamId, isDouble, amount, isUpdated: true },
+    });
+
     return { success: true, data: prediction };
   });
 }

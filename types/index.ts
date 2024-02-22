@@ -48,8 +48,14 @@ export type PredictionAPIResult = Prediction & {
     | "team1"
     | "team2"
     | "winner"
-    | "doublePlayed"
+    | "isDoublePlayed"
   > | null;
+};
+
+export type PredictionResultAPIType = Prediction & {
+  team: TeamShortInfo | null;
+  user: Pick<UserAPIResult, "name" | "profile">;
+  match: Pick<MatchAPIResult, "num" | "team1" | "team2" | "winner"> | null;
 };
 
 // Stats Type

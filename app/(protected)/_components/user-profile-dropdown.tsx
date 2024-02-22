@@ -18,7 +18,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export const UserProfile = () => {
+export const UserProfileDropDown = () => {
   const { data: session, status } = useSession();
   const path = usePathname();
   if (status === "loading") return <Loader2 className="h-8 w-8 animate-spin" />;

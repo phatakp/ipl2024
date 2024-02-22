@@ -24,6 +24,7 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { MatchStatus } from "@prisma/client";
 import { useQueryClient } from "@tanstack/react-query";
+import { ChevronRightIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -107,7 +108,7 @@ export const UpdateMatchForm = ({ matchId }: UpdateMatchFormProps) => {
   return (
     <Dialog open={isOpen && !isLoading} onOpenChange={setisOpen}>
       <DialogTrigger asChild>
-        <Button size="sm" variant="secondary">
+        <Button size="sm" variant="secondary" icon={<ChevronRightIcon />}>
           Update Match
         </Button>
       </DialogTrigger>

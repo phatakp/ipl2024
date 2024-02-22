@@ -1,11 +1,11 @@
 import { getMatchFixtures, getMatchResults } from "@/actions/match.actions";
-import { MatchDetail } from "@/app/matches/_components/match-detail";
+import { LoadMore } from "@/components/load-more";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const MatchListPage = async () => {
-  const fixtures = await getMatchFixtures();
-  const results = await getMatchResults();
+  const fixtures = await getMatchFixtures(1);
+  const results = await getMatchResults(1);
   const MATCHLIST_TYPES = [
     { value: "fixtures", label: "Fixtures", data: fixtures },
     { value: "results", label: "Results", data: results },
@@ -26,15 +26,12 @@ const MatchListPage = async () => {
         </TabsList>
         {MATCHLIST_TYPES.map((type) => (
           <TabsContent key={type.value} value={type.value}>
-            <div className="w-full max-w-6xl mx-auto">
+            <div className="w-full max-w-6xl mx-auto grid gap-4">
               <Card className="w-full px-0 md:px-4 shadow-md">
-                <CardContent className="">
-                  {type.data?.map((match) => (
-                    <MatchDetail key={match.id} match={match} />
-                  ))}
-                </CardContent>
+                <CardContent className="">{type.data}</CardContent>
               </Card>
             </div>
+            <LoadMore type={type.value as any} />
           </TabsContent>
         ))}
       </Tabs>

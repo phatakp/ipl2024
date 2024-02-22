@@ -71,6 +71,7 @@ export const authOptions: NextAuthOptions = {
         session.user.profile = token.profile;
         session.user.balance = token.balance;
         session.user.role = token.role;
+        session.user.doublesLeft = token.doublesLeft;
       }
       return session;
     },
@@ -99,6 +100,7 @@ export const authOptions: NextAuthOptions = {
         profile: dbUser.profile,
         balance: dbUser.balance,
         role: dbUser.role,
+        doublesLeft: dbUser.doublesLeft,
       } as JWT;
     },
   },

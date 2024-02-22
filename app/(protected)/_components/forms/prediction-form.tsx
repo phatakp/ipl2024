@@ -25,7 +25,12 @@ import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/components/ui/use-toast";
 import { useTeamStats } from "@/hooks/team-stats";
-import { cn, isMatchStarted } from "@/lib/utils";
+import {
+  cn,
+  isDoubleCutoffPassed,
+  isMatchStarted,
+  isPredictionCutoffPassed,
+} from "@/lib/utils";
 import { MatchAPIResult, PredictionAPIResult, TeamShortInfo } from "@/types";
 import {
   PredictionFormData,
@@ -33,11 +38,11 @@ import {
 } from "@/zodSchemas/prediction.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { MatchStatus } from "@prisma/client";
-import { ArrowRight } from "lucide-react";
+import { ChevronRightIcon } from "lucide-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useFormContext } from "react-hook-form";
 
 type PredictionFormProps = {
   match: MatchAPIResult;
@@ -58,7 +63,8 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
     resolver: zodResolver(PredictionFormSchema),
     defaultValues: {
       amount: prediction?.amount ?? match.minStake,
-      matchId: match.id ?? "",
+      matchId: match.id,
+      matchDate: match.date,
       teamId: prediction?.teamId ?? "",
       userId: prediction?.userId ?? session?.user.id,
       isDouble: !!prediction?.isDouble ?? false,
@@ -98,14 +104,12 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
     prediction.teamId === teamId &&
     prediction.amount === amount;
 
+  const isDisabled = !prediction && isPredictionCutoffPassed(match.date);
+
   return (
     <Dialog open={isOpen} onOpenChange={setisOpen}>
       <DialogTrigger asChild>
-        <Button
-          size="sm"
-          variant="secondary"
-          icon={<ArrowRight className="w-4 h-4 ml-2" />}
-        >
+        <Button size="sm" variant="secondary" icon={<ChevronRightIcon />}>
           Predict Now
         </Button>
       </DialogTrigger>
@@ -128,26 +132,12 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
                   className="space-y-6"
                   onSubmit={form.handleSubmit(onSubmit)}
                 >
-                  <Label
-                    className={cn(
-                      "font-over text-lg my-4",
-                      isCurrPrediction ? "text-primary" : "text-destructive"
-                    )}
-                  >
-                    {isCurrPrediction
-                      ? `Current Bet: Rs.${amount}/- for ${
-                          teamId === match.team1Id
-                            ? match.team1?.shortName
-                            : match.team2?.shortName
-                        }`
-                      : !!teamId
-                      ? `Provide Confirmation:  Rs.${amount}/- for ${
-                          teamId === match.team1Id
-                            ? match.team1?.shortName
-                            : match.team2?.shortName
-                        }`
-                      : "No Prediction yet"}
-                  </Label>
+                  <PredictionFormLabel
+                    match={match}
+                    teamId={teamId}
+                    amount={amount}
+                    isCurrPrediction={isCurrPrediction}
+                  />
 
                   <Slider
                     defaultValue={[match.minStake]}
@@ -162,6 +152,7 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
                     <TeamButton
                       teamId={teamId}
                       team={match.team1!}
+                      isDisabled={isDisabled}
                       handleClick={() =>
                         form.setValue("teamId", match.team1Id!)
                       }
@@ -169,6 +160,7 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
                     <TeamButton
                       teamId={teamId}
                       team={match.team2!}
+                      isDisabled={isDisabled}
                       handleClick={() =>
                         form.setValue("teamId", match.team2Id!)
                       }
@@ -183,33 +175,15 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
                   )}
                   <FormInput name="teamId" label="" className="hidden" />
 
-                  <FormField
-                    control={form.control}
-                    name="isDouble"
-                    render={({ field }) => (
-                      <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
-                        <div className="space-y-0.5">
-                          <FormLabel className="text-base">
-                            Double your stake
-                          </FormLabel>
-                          <FormDescription>
-                            Only the one with highest stake will be applied.
-                          </FormDescription>
-                        </div>
-                        <FormControl>
-                          <Switch
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                          />
-                        </FormControl>
-                      </FormItem>
-                    )}
-                  />
+                  {!isDoubleCutoffPassed(match.date) && (
+                    <PredictionDoubleInput />
+                  )}
 
                   <div className={cn("flex items-center justify-end w-full")}>
                     <Button
                       isLoading={form.formState.isSubmitting}
                       type="submit"
+                      disabled={isDisabled}
                       size="sm"
                     >
                       Submit
@@ -229,17 +203,20 @@ const TeamButton = ({
   teamId,
   team,
   handleClick,
+  isDisabled = false,
   dir = "left",
 }: {
   teamId: string;
   team: TeamShortInfo;
   handleClick: () => void;
+  isDisabled?: boolean;
   dir?: "left" | "right";
 }) => (
   <Button
     type="button"
     variant={teamId === team.id ? (team.shortName as any) : "outline"}
     size="team"
+    disabled={isDisabled}
     className={cn(
       "flex items-center gap-4 rounded-r-none",
       dir === "left" ? "flex-row" : "flex-row-reverse"
@@ -250,6 +227,64 @@ const TeamButton = ({
     <Image src={`/${team.shortName}.png`} alt="team" width={50} height={50} />
   </Button>
 );
+
+const PredictionFormLabel = ({
+  match,
+  amount,
+  teamId,
+  isCurrPrediction,
+}: {
+  match: MatchAPIResult;
+  amount: number;
+  teamId: string;
+  isCurrPrediction: boolean;
+}) => (
+  <Label
+    className={cn(
+      "font-over text-lg my-4",
+      isCurrPrediction ? "text-primary" : "text-destructive"
+    )}
+  >
+    {isCurrPrediction
+      ? `Current Bet: Rs.${amount}/- for ${
+          teamId === match.team1Id
+            ? match.team1?.shortName
+            : match.team2?.shortName
+        }`
+      : !!teamId
+      ? `Provide Confirmation:  Rs.${amount}/- for ${
+          teamId === match.team1Id
+            ? match.team1?.shortName
+            : match.team2?.shortName
+        }`
+      : isPredictionCutoffPassed(match.date)
+      ? "Prediction Cutoff Passed"
+      : "No Prediction yet"}
+  </Label>
+);
+
+const PredictionDoubleInput = () => {
+  const { control } = useFormContext();
+  return (
+    <FormField
+      control={control}
+      name="isDouble"
+      render={({ field }) => (
+        <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+          <div className="space-y-0.5">
+            <FormLabel className="text-base">Double your stake</FormLabel>
+            <FormDescription>
+              Only the one with highest stake will be applied.
+            </FormDescription>
+          </div>
+          <FormControl>
+            <Switch checked={field.value} onCheckedChange={field.onChange} />
+          </FormControl>
+        </FormItem>
+      )}
+    />
+  );
+};
 
 const loader = () => (
   <DialogContent className="p-4">

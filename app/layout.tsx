@@ -1,7 +1,7 @@
 import "@/app/globals.css";
-import { Navbar } from "@/components/navbar";
+import { Navbar } from "@/components/navigation/navbar";
+import { TopBar } from "@/components/navigation/top-bar";
 import { PageHeader } from "@/components/page-header";
-import { TopBar } from "@/components/top-bar";
 import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/lib/constants";
 import AppProvider from "@/provider";

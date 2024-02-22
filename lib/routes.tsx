@@ -1,6 +1,12 @@
-import { AnvilIcon, LayoutDashboardIcon } from "lucide-react";
+import { AnvilIcon, HomeIcon, LayoutDashboardIcon } from "lucide-react";
 
 export const routes = [
+  {
+    name: "HomePage",
+    href: "/",
+    isProtected: false,
+    icon: <HomeIcon className="w-4 h-4" />,
+  },
   {
     name: "Dashboard",
     href: "/dashboard",

@@ -6,22 +6,22 @@ import { MatchStatus } from "@prisma/client";
 import { Loader2Icon } from "lucide-react";
 
 export const TeamFormGuide = ({ teamId }: { teamId: string }) => {
-  const { data: last5, isLoading } = useTeamFormGuide(teamId);
+  const { data: last10, isLoading } = useTeamFormGuide(teamId);
 
   if (isLoading) return <Loader2Icon className="w-4 h-4 animate-spin" />;
 
   return (
-    <div className="flex items-center justify-around gap-1 flex-nowrap shrink-0 mt-2">
-      {last5?.map((item) => (
+    <div className="flex items-center gap-1 flex-nowrap shrink-0 mt-2">
+      {last10?.map((item) => (
         <span
           key={item.id}
           className={cn(
-            "h-5 w-5 rounded-full flex items-center justify-center text-xs",
+            "h-4 w-4 rounded-full flex items-center justify-center text-[9px]",
             item.winnerId === teamId
               ? "bg-green-600 text-white"
               : !!item.winnerId
               ? "bg-destructive text-destructive-foreground"
-              : "bg-muted text-muted-foreground"
+              : "bg-input text-muted-foreground text-[10px]"
           )}
         >
           {item.winnerId === teamId
@@ -33,13 +33,13 @@ export const TeamFormGuide = ({ teamId }: { teamId: string }) => {
             : "D"}
         </span>
       ))}
-      {!!last5 &&
-        last5.length < 5 &&
-        Array.from(Array(5 - last5.length).keys()).map((i) => (
+      {!!last10 &&
+        last10.length < 10 &&
+        Array.from(Array(10 - last10.length).keys()).map((i) => (
           <span
             key={i}
             className={cn(
-              "h-5 w-5 rounded-full flex items-center justify-center text-xs bg-muted text-muted-foreground"
+              "h-4 w-4 rounded-full flex items-center justify-center text-xs bg-muted text-muted-foreground"
             )}
           >
             -

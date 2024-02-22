@@ -1,5 +1,5 @@
 import { getUserPredictionForMatch } from "@/actions/prediction.actions";
-import { PredictionForm } from "@/app/(protected)/_components/prediction-form";
+import { PredictionForm } from "@/app/(protected)/_components/forms/prediction-form";
 import { getAuthServerSession } from "@/lib/auth";
 import { cn, isMatchStarted } from "@/lib/utils";
 import { MatchAPIResult } from "@/types";
@@ -20,10 +20,10 @@ export const MatchResult = async ({
   return (
     <div
       className={cn(
-        "text-xs md:text-sm ",
+        "text-sm ",
         screen === "small"
           ? "col-span-5  md:hidden"
-          : "md:col-span-3  hidden md:flex"
+          : "md:col-span-2  hidden md:flex"
       )}
     >
       {match.status === MatchStatus.SCHEDULED ? (

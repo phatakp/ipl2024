@@ -39,6 +39,12 @@ export const ProfileFormSchema = z.object({
   userId: z.string({ required_error: "You are not authenticated" }),
 });
 
+export const IsPaidFormSchema = z.object({
+  userId: z.string({ required_error: "You are not authenticated" }),
+  isPaid: z.boolean(),
+});
+
 export type RegisterFormData = z.infer<typeof RegisterSchema>;
 export type LoginFormData = z.infer<typeof LoginSchema>;
 export type ProfileFormData = z.infer<typeof ProfileFormSchema>;
+export type IsPaidFormData = z.infer<typeof IsPaidFormSchema>;

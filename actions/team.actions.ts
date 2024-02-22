@@ -28,13 +28,13 @@ export async function getTeamsInfo() {
   }));
 }
 
-export async function getTeamLast5(teamId: string) {
+export async function getTeamLast10(teamId: string) {
   return await prisma.match.findMany({
     where: {
       OR: [{ team1Id: teamId }, { team2Id: teamId }],
       NOT: { status: MatchStatus.SCHEDULED },
     },
     orderBy: [{ date: "desc" }],
-    take: 5,
+    take: 10,
   });
 }

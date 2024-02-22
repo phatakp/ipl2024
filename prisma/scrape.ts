@@ -71,7 +71,11 @@ export const loadHistory = async () => {
       const homeId = getTeam(teams, team1)?.id;
       const awayId = getTeam(teams, team2)?.id;
       const winId = getTeam(teams, winner)?.id;
-      const date = new Date(dt);
+      let d;
+      if (dt.includes("-")) {
+        d = dt.split("-")[0] + "," + dt.split("-")[1].split(",")[1];
+      }
+      const date = new Date(d ?? dt);
 
       if (!!homeId && !!awayId) {
         const matchHistory = {
@@ -113,7 +117,7 @@ export const loadHistory = async () => {
             team2Runs: 0,
             team2Wickets: 0,
             team2Overs: 0,
-            doublePlayed: false,
+            isDoublePlayed: false,
           };
           mdata.push(matchCurr);
           num++;
@@ -121,8 +125,8 @@ export const loadHistory = async () => {
       }
     }
   });
-  // await prisma.matchHistory.deleteMany();
-  // await prisma.matchHistory.createMany({ data });
+  await prisma.matchHistory.deleteMany();
+  await prisma.matchHistory.createMany({ data });
   await prisma.match.deleteMany();
   await prisma.match.createMany({ data: mdata });
 };

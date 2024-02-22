@@ -1,7 +1,7 @@
 import { getUserPredictionForMatch } from "@/actions/prediction.actions";
 import { getMatchStats } from "@/actions/stats.actions";
-import { PredictionForm } from "@/app/(protected)/_components/prediction-form";
-import { UpdateMatchForm } from "@/app/(protected)/_components/update-match-form";
+import { PredictionForm } from "@/app/(protected)/_components/forms/prediction-form";
+import { UpdateMatchForm } from "@/app/(protected)/_components/forms/update-match-form";
 import { buttonVariants } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";

@@ -2,11 +2,11 @@ import { prisma } from "@/lib/db";
 import { computeNrr } from "@/lib/utils";
 import { Match, PredictionStatus } from "@prisma/client";
 
-export type PredReturnType = { id: string; amount: number; userId: string };
-const PRED_VALUES = {
-  id: true,
-  amount: true,
-  userId: true,
+export type PredReturnType = {
+  id: string;
+  amount: number;
+  userId: string;
+  isDouble: boolean;
 };
 
 export async function getDefaultersForMatch(matchId: string) {
@@ -39,16 +39,59 @@ export async function addDefaultersForMatch(
   });
 }
 
-export async function addDefaultersForCompletedMatch(
-  match: Match,
-  defaulters: { id: string }[]
-) {
+export async function addDefaultersForCompletedMatch({
+  match,
+  defaulters,
+  isDouble,
+}: {
+  match: Match;
+  defaulters: { id: string }[];
+  isDouble: boolean;
+}) {
   defaulters.forEach(
     async (user) =>
       await prisma.user.update({
         where: { id: user.id },
         data: {
-          balance: { decrement: match.minStake },
+          balance: {
+            decrement: isDouble ? 2 * match.minStake : match.minStake,
+          },
+          predictions: {
+            upsert: {
+              where: { matchId_userId: { matchId: match.id, userId: user.id } },
+              create: {
+                matchId: match.id,
+                amount: match.minStake,
+                result: isDouble ? -2 * match.minStake : -match.minStake,
+                status: PredictionStatus.LOST,
+              },
+              update: {
+                amount: match.minStake,
+                result: isDouble ? -2 * match.minStake : -match.minStake,
+                status: PredictionStatus.LOST,
+              },
+            },
+          },
+        },
+      })
+  );
+}
+
+export async function settleLosersForAbandonedMatch({
+  match,
+  defaulters,
+}: {
+  match: Match;
+  defaulters: { id: string }[];
+}) {
+  defaulters.forEach(
+    async (user) =>
+      await prisma.user.update({
+        where: { id: user.id },
+        data: {
+          balance: {
+            decrement: match.minStake,
+          },
           predictions: {
             upsert: {
               where: { matchId_userId: { matchId: match.id, userId: user.id } },
@@ -69,76 +112,26 @@ export async function addDefaultersForCompletedMatch(
       })
   );
 }
-
-export async function getWinnersForAbandonedMatch(
-  matchId: string
-): Promise<PredReturnType[]> {
-  return await prisma.prediction.findMany({
-    where: { matchId, status: PredictionStatus.PLACED },
-    select: PRED_VALUES,
-  });
-}
-
-export async function getWinnersForCompletedMatch(
-  match: Match
-): Promise<PredReturnType[]> {
-  return await prisma.prediction.findMany({
-    where: { matchId: match.id, teamId: match.winnerId },
-    select: PRED_VALUES,
-  });
-}
-
-export async function getLosersForCompletedMatch(
-  match: Match
-): Promise<PredReturnType[]> {
-  return await prisma.prediction.findMany({
-    where: { matchId: match.id, NOT: { teamId: match.winnerId } },
-    select: PRED_VALUES,
-  });
-}
-
-export async function addLosingBetForMatch(
-  match: Match,
-  defaulters: { id: string }[]
-) {
-  defaulters.forEach(
-    async (user) =>
-      await prisma.user.update({
-        where: { id: user.id },
-        data: {
-          balance: { decrement: match.minStake },
-          predictions: {
-            upsert: {
-              where: { matchId_userId: { matchId: match.id, userId: user.id } },
-              create: {
-                matchId: match.id,
-                amount: match.minStake,
-                result: -match.minStake,
-                status: PredictionStatus.LOST,
-              },
-              update: {
-                amount: match.minStake,
-                result: -match.minStake,
-                status: PredictionStatus.LOST,
-              },
-            },
-          },
-        },
-      })
-  );
-}
-export async function addLosingBetForCompletedMatch(losers: PredReturnType[]) {
+export async function settleLosersForCompletedMatch({
+  losers,
+  isDouble,
+}: {
+  losers: PredReturnType[];
+  isDouble: boolean;
+}) {
   losers.forEach(
     async (pred) =>
       await prisma.user.update({
         where: { id: pred.userId },
         data: {
-          balance: { decrement: pred.amount },
+          balance: {
+            decrement: isDouble ? 2 * pred.amount : pred.amount,
+          },
           predictions: {
             update: {
               where: { id: pred.id },
               data: {
-                result: -pred.amount,
+                result: isDouble ? -2 * pred.amount : -pred.amount,
                 status: PredictionStatus.LOST,
               },
             },
@@ -148,22 +141,36 @@ export async function addLosingBetForCompletedMatch(losers: PredReturnType[]) {
   );
 }
 
-export async function addWinningBetForMatch(
-  winners: PredReturnType[],
-  totalWon: number,
-  totalLost: number
-) {
+export async function settleWinnersForMatch({
+  winners,
+  totalWon,
+  totalLost,
+  isDouble,
+}: {
+  winners: PredReturnType[];
+  totalWon: number;
+  totalLost: number;
+  isDouble: boolean;
+}) {
   winners.forEach(
     async (pred) =>
       await prisma.user.update({
         where: { id: pred.userId },
         data: {
-          balance: { increment: (pred.amount / totalWon) * totalLost },
+          balance: {
+            increment:
+              isDouble && pred.isDouble
+                ? totalLost + (pred.amount / totalWon) * totalLost
+                : (pred.amount / totalWon) * totalLost,
+          },
           predictions: {
             update: {
               where: { id: pred.id },
               data: {
-                result: (pred.amount / totalWon) * totalLost,
+                result:
+                  isDouble && pred.isDouble
+                    ? totalLost + (pred.amount / totalWon) * totalLost
+                    : (pred.amount / totalWon) * totalLost,
                 status: PredictionStatus.WON,
               },
             },
@@ -173,14 +180,14 @@ export async function addWinningBetForMatch(
   );
 }
 
-export async function updateNoResultForMatch(match: Match) {
+export async function updateNoResultForMatch({ match }: { match: Match }) {
   await prisma.prediction.updateMany({
     where: { matchId: match.id },
     data: { status: PredictionStatus.NORESULT },
   });
 }
 
-export async function insertToHistory(match: Match) {
+export async function insertToHistory({ match }: { match: Match }) {
   await prisma.matchHistory.create({
     data: {
       date: match.date.slice(0, 10),
@@ -194,7 +201,11 @@ export async function insertToHistory(match: Match) {
   });
 }
 
-export async function updateTeamsForAbandonedMatch(match: Match) {
+export async function updateTeamsForAbandonedMatch({
+  match,
+}: {
+  match: Match;
+}) {
   await prisma.match.update({
     where: { id: match.id },
     data: {
@@ -222,7 +233,11 @@ export async function updateTeamsForAbandonedMatch(match: Match) {
   });
 }
 
-export async function updateTeamsForCompletedMatch(match: Match) {
+export async function updateTeamsForCompletedMatch({
+  match,
+}: {
+  match: Match;
+}) {
   const nrr1 = await computeNrrForTeam(match, match.team1Id!);
   const nrr2 = await computeNrrForTeam(match, match.team2Id!);
 
@@ -316,4 +331,11 @@ export async function computeNrrForTeam(match: Match, teamId: string) {
       : match.team1Overs);
 
   return computeNrr(forOvers, forRuns, againstOvers, againstRuns);
+}
+
+export async function updateNoIPLWinner() {
+  await prisma.prediction.updateMany({
+    where: { matchId: null },
+    data: { status: PredictionStatus.NORESULT },
+  });
 }

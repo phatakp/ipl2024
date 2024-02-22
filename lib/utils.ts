@@ -1,4 +1,4 @@
-import { getMatchResults } from "@/actions/match.actions";
+import { getMatchResultsAll } from "@/actions/match.actions";
 import { clsx, type ClassValue } from "clsx";
 import { DateTime } from "luxon";
 import { twMerge } from "tailwind-merge";
@@ -59,8 +59,18 @@ export function isPredictionCutoffPassed(matchDate: string) {
   return currDate! >= cutoff;
 }
 
+export function isDoubleCutoffPassed(matchDate: string) {
+  const currDate = DateTime.fromISO(new Date().toISOString()).setZone(
+    "Asia/Kolkata"
+  );
+  const cutoff = DateTime.fromISO(matchDate)
+    .plus({ minutes: 30 })
+    .setZone("Asia/Kolkata");
+  return currDate! >= cutoff;
+}
+
 export async function isIPLWinnerUpdatable() {
-  const completed = await getMatchResults();
+  const completed = await getMatchResultsAll();
   return completed?.[0]?.num < 35;
 }
 

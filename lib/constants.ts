@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "IPL 2024",
   description: "Fantasy Prediction League for IPL 2024",
+  pageSize: 10,
 };
 
 export enum Teams {
