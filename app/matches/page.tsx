@@ -28,7 +28,9 @@ const MatchListPage = async () => {
           <TabsContent key={type.value} value={type.value}>
             <div className="w-full max-w-6xl mx-auto grid gap-4">
               <Card className="w-full px-0 md:px-4 shadow-md">
-                <CardContent className="">{type.data}</CardContent>
+                <CardContent className="">
+                  {type.data.length === 0 ? "No Records to show" : type.data}
+                </CardContent>
               </Card>
             </div>
             <LoadMore type={type.value as any} />
