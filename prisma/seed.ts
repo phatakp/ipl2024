@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { loadMatches } from "./schedule";
+import { loadHistory } from "./scrape";
 const prisma = new PrismaClient();
 
 const teamDetails = [
@@ -27,8 +28,8 @@ async function main() {
   // console.log("Teams loaded");
   await loadMatches();
   console.log("Matches loaded");
-  // await loadHistory();
-  // console.log("History loaded");
+  await loadHistory();
+  console.log("History loaded");
   // await loadPredictions();
   // console.log("Data loaded");
 }

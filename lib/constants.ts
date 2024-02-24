@@ -4,6 +4,11 @@ export const siteConfig = {
   pageSize: 10,
 };
 
+export const variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
 export enum Teams {
   CSK = "CSK",
   GT = "GT",

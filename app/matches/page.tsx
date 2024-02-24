@@ -1,11 +1,11 @@
 import { getMatchFixtures, getMatchResults } from "@/actions/match.actions";
-import { LoadMore } from "@/components/load-more";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { MatchDetail } from "./_components/match-detail";
 
 const MatchListPage = async () => {
-  const fixtures = await getMatchFixtures(1);
-  const results = await getMatchResults(1);
+  const fixtures = await getMatchFixtures();
+  const results = await getMatchResults();
   const MATCHLIST_TYPES = [
     { value: "fixtures", label: "Fixtures", data: fixtures },
     { value: "results", label: "Results", data: results },
@@ -27,13 +27,19 @@ const MatchListPage = async () => {
         {MATCHLIST_TYPES.map((type) => (
           <TabsContent key={type.value} value={type.value}>
             <div className="w-full max-w-6xl mx-auto grid gap-4">
-              <Card className="w-full px-0 md:px-4 shadow-md">
-                <CardContent className="">
-                  {type.data.length === 0 ? "No Records to show" : type.data}
+              <Card className="w-full p-0 md:p-4 shadow-md">
+                <CardContent className="space-y-4 p-0 md:p-4">
+                  {type.data.length === 0 && (
+                    <div className="w-full pt-2 flex items-center justify-center text-lg font-semibold">
+                      No Matches to display
+                    </div>
+                  )}
+                  {type.data.map((match, i) => (
+                    <MatchDetail key={match.id} match={match} index={i} />
+                  ))}
                 </CardContent>
               </Card>
             </div>
-            <LoadMore type={type.value as any} />
           </TabsContent>
         ))}
       </Tabs>

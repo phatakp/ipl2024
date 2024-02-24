@@ -19,7 +19,7 @@ export const TeamStatsCarousel = async () => {
         className="w-[370px] sm:w-full max-w-6xl mx-auto"
       >
         <CarouselContent>
-          <CarouselItem className="basis-1/1 sm:basis-1/2 ">
+          <CarouselItem className="basis-1/1 sm:basis-1/2 mx-auto">
             <CarouselCardWrapper
               type="team"
               title="Points Table"

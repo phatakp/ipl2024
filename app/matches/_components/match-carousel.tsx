@@ -19,8 +19,8 @@ import { getAuthServerSession } from "@/lib/auth";
 import { PredictionAPIResult } from "@/types";
 import { MatchStatus } from "@prisma/client";
 import { DateTime } from "luxon";
-import Image from "next/image";
 import Link from "next/link";
+import { CarouselTeam } from "./match-carousel-team";
 import { ScheduleLink } from "./schedule-link";
 
 export const MatchCarousel = async () => {
@@ -111,29 +111,4 @@ const PredictionBadge = ({
       "No Prediction Made"
     )}
   </Badge>
-);
-
-const CarouselTeam = ({
-  shortName,
-  runs,
-  wickets,
-}: {
-  shortName: string | undefined;
-  runs: number;
-  wickets: number;
-}) => (
-  <div className="flex items-center justify-between">
-    <div className="inline-flex items-center gap-2">
-      <Image
-        src={`/${shortName ?? "default"}.png`}
-        alt=""
-        width={30}
-        height={30}
-      />
-      <span className="text-xs">{shortName ?? "TBC"}</span>
-    </div>
-    <div className="text-sm">
-      {runs}/{wickets}
-    </div>
-  </div>
 );

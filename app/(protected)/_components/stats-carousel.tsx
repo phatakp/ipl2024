@@ -21,11 +21,11 @@ export const StatsCarousel = async () => {
 
   const carouselData = [
     { type: "user", data: users, title: "Leaderboard" },
-    { type: "result", data: result, title: "Highest Single Win" },
     { type: "pred", data: userPredictions, title: "Your Predictions" },
+    { type: "result", data: result, title: "Highest Single Win" },
   ];
   return (
-    <div className="mx-auto">
+    <div className="w-full max-w-6xl mx-auto">
       <Carousel
         opts={{
           align: "center",
@@ -34,7 +34,10 @@ export const StatsCarousel = async () => {
       >
         <CarouselContent>
           {carouselData.map((item) => (
-            <CarouselItem key={item.type} className="basis-1/1 sm:basis-1/2 ">
+            <CarouselItem
+              key={item.type}
+              className="basis-1/1 sm:basis-1/2 mx-auto"
+            >
               <CarouselCardWrapper
                 type={item.type as any}
                 title={item.title}

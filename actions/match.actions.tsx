@@ -13,7 +13,6 @@ import {
   updateTeamsForAbandonedMatch,
   updateTeamsForCompletedMatch,
 } from "@/actions/settlement.actions";
-import { MatchDetail } from "@/app/matches/_components/match-detail";
 import { prisma } from "@/lib/db";
 import { PredictionAPIResult } from "@/types";
 import {
@@ -44,31 +43,23 @@ export async function getMatches() {
   return matches;
 }
 
-export async function getMatchFixtures(page: number) {
+export async function getMatchFixtures() {
   const matches = await prisma.match.findMany({
     where: { status: MatchStatus.SCHEDULED },
     orderBy: [{ num: "asc" }],
     include: INCLUDE_MATCH_DETAILS,
-    skip: (page - 1) * 5,
-    take: 5,
   });
 
-  return matches.map((match, i) => (
-    <MatchDetail key={match.id} match={match} index={i} />
-  ));
+  return matches;
 }
 
-export async function getMatchResults(page: number) {
+export async function getMatchResults() {
   const matches = await prisma.match.findMany({
     where: { NOT: { status: MatchStatus.SCHEDULED } },
     orderBy: [{ num: "desc" }],
     include: INCLUDE_MATCH_DETAILS,
-    skip: (page - 1) * 5,
-    take: 5,
   });
-  return matches.map((match, i) => (
-    <MatchDetail key={match.id} match={match} index={i} />
-  ));
+  return matches;
 }
 
 export async function getMatchResultsAll() {
