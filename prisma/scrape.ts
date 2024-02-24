@@ -1,7 +1,7 @@
 import { MatchHistoryInput } from "@/types";
-import { MatchStatus, PrismaClient, Team } from "@prisma/client";
+import { MatchStatus, Team } from "@prisma/client";
 import { JSDOM } from "jsdom";
-const prisma = new PrismaClient();
+import { prisma } from ".";
 
 export async function getTeams() {
   const teams = await prisma.team.findMany();

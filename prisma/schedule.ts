@@ -1,9 +1,9 @@
 import { MatchInput } from "@/types";
-import { MatchStatus, MatchType, PrismaClient } from "@prisma/client";
+import { MatchStatus, MatchType } from "@prisma/client";
 import { DateTime } from "luxon";
+import { prisma } from ".";
 import matches from "./matches.json";
 import { getTeams } from "./scrape";
-const prisma = new PrismaClient();
 
 export async function loadMatches() {
   await prisma.match.deleteMany();

@@ -1,5 +1,5 @@
-import { MatchStatus, PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
+import { MatchStatus } from "@prisma/client";
+import { prisma } from ".";
 
 export async function loadPredictions() {
   const users = await prisma.user.findMany();

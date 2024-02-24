@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Skeleton } from "../ui/skeleton";
+import { NavLink } from "./nav-link";
 
 export const Navbar = () => {
   const { status } = useSession();
@@ -35,25 +36,7 @@ export const Navbar = () => {
           </Link>
           <div className="md:inline-flex items-center gap-8 hidden">
             {routes.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "group transition duration-300 font-over text-sm uppercase",
-                  link.isProtected && status !== "authenticated" && "hidden"
-                )}
-              >
-                {link.name}
-                {path !== link.href &&
-                  ((link.href === "/matches" && !path.includes("/matches")) ||
-                    link.href !== "/matches") && (
-                    <span className="block max-w-0 group-hover:max-w-[50%] mx-auto transition-all duration-500 h-1 bg-secondary mt-2"></span>
-                  )}
-                {(path === link.href ||
-                  (link.href === "/matches" && path.includes("/matches"))) && (
-                  <span className="block max-w-[50%] mx-auto transition-all duration-500 h-1 bg-primary mt-2"></span>
-                )}
-              </Link>
+              <NavLink key={link.href} link={link} />
             ))}
           </div>
           {status === "loading" && <Skeleton className="w-20 h-6" />}
