@@ -24,7 +24,7 @@ export const MatchDetail = ({ match, index }: MatchDetailProps) => {
           duration: 0.25,
         }}
         viewport={{ once: true }}
-        className="md:flex flex-col space-y-16 border-b border-input py-8 my-4 hidden"
+        className="flex flex-col space-y-16 border-b border-input py-8 my-4"
       >
         <MatchDetailTopLine match={match} />
         <div className="grid grid-cols-8 md:grid-cols-10 gap-4 md:gap-0 items-center">
