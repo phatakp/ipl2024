@@ -23,15 +23,19 @@ export const RecentTeam = ({
     <span
       className={cn(
         "font-over   text-lg md:hidden",
-        !isWinner && "text-muted-foreground"
+        !isWinner
+          ? "text-muted-foreground"
+          : `${shortName} px-2 py-1 rounded-full`
       )}
     >
       {shortName}
     </span>
     <span
       className={cn(
-        "font-over font-light   text-lg hidden md:flex",
-        !isWinner && "text-muted-foreground"
+        "font-over text-lg hidden md:flex",
+        !isWinner
+          ? "text-muted-foreground"
+          : `${shortName} px-4 py-1 rounded-full`
       )}
     >
       {longName}

@@ -1,4 +1,12 @@
 import type { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+const svgToDataUri = require("mini-svg-data-uri");
+
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
   darkMode: ["class"],
@@ -28,6 +36,56 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        CSK: {
+          DEFAULT: "var(--CSK)",
+          secondary: "var(--CSK-secondary)",
+          foreground: "var(--CSK-foreground)",
+        },
+        MI: {
+          DEFAULT: "var(--MI)",
+          secondary: "var(--MI-secondary)",
+          foreground: "var(--MI-foreground)",
+        },
+        GT: {
+          DEFAULT: "var(--GT)",
+          secondary: "var(--GT-secondary)",
+          foreground: "var(--GT-foreground)",
+        },
+        RR: {
+          DEFAULT: "var(--RR)",
+          secondary: "var(--RR-secondary)",
+          foreground: "var(--RR-foreground)",
+        },
+        RCB: {
+          DEFAULT: "var(--RCB)",
+          secondary: "var(--RCB-secondary)",
+          foreground: "var(--RCB-foreground)",
+        },
+        LSG: {
+          DEFAULT: "var(--LSG)",
+          secondary: "var(--LSG-secondary)",
+          foreground: "var(--LSG-foreground)",
+        },
+        PBKS: {
+          DEFAULT: "var(--PBKS)",
+          secondary: "var(--PBKS-secondary)",
+          foreground: "var(--PBKS-foreground)",
+        },
+        SRH: {
+          DEFAULT: "var(--SRH)",
+          secondary: "var(--SRH-secondary)",
+          foreground: "var(--SRH-foreground)",
+        },
+        KKR: {
+          DEFAULT: "var(--KKR)",
+          secondary: "var(--KKR-secondary)",
+          foreground: "var(--KKR-foreground)",
+        },
+        DC: {
+          DEFAULT: "var(--DC)",
+          secondary: "var(--DC-secondary)",
+          foreground: "var(--DC-foreground)",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -43,6 +101,10 @@ const config = {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -79,15 +141,66 @@ const config = {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
+        shimmer: {
+          from: { backgroundPosition: "0 0" },
+          to: { backgroundPosition: "-200% 0" },
+        },
+        spotlight: {
+          "0%": {
+            opacity: "0",
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "infinite-scroll": "infinite-scroll 15s linear infinite",
+        shimmer: "shimmer 1s linear infinite",
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    addVariablesForColors,
+    function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          "bg-grid": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+            )}")`,
+          }),
+          "bg-grid-small": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+            )}")`,
+          }),
+          "bg-dot": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
+    },
+  ],
 } satisfies Config;
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+  addBase({
+    ":root": newVars,
+  });
+}
 
 export default config;

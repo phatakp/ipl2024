@@ -2,20 +2,43 @@
 
 import { prisma } from "@/lib/db";
 import { validatePrediction } from "@/lib/validators/prediction.validators";
-import { ActionResp, PredictionAPIResult } from "@/types";
+import { ActionResp, MatchAPIResult, PredictionAPIResult } from "@/types";
 import {
   PredictionFormData,
   PredictionFormSchema,
 } from "@/zodSchemas/prediction.schema";
+import { PredictionStatus } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 import { PRED_MATCH_DETAILS, PRED_USER_DETAILS, TEAM_SHORT_DETAILS } from ".";
 
-export async function getMatchPredictions(matchId: string) {
+export async function getHighestPredictionForMatch(match: MatchAPIResult) {
+  const pred = await prisma.prediction.aggregate({
+    where: { matchId: match.id },
+    _max: {
+      amount: true,
+    },
+  });
+  return pred._max.amount ?? match.minStake;
+}
+
+export async function getMatchPredictions({
+  matchId,
+  fetchAll,
+  userId,
+}: {
+  matchId: string | undefined;
+  fetchAll: boolean;
+  userId?: string | undefined;
+}) {
   if (!matchId) return [] as PredictionAPIResult[];
+  let predicate: { matchId: string; userId?: string } = { matchId: matchId };
+  if (!fetchAll) {
+    predicate = { ...predicate, userId: userId ?? "" };
+  }
 
   const preds = await prisma.prediction.findMany({
-    where: { matchId },
-    orderBy: [{ result: "desc" }, { createdAt: "asc" }],
+    where: predicate,
+    orderBy: [{ result: "desc" }, { amount: "desc" }],
     include: {
       user: PRED_USER_DETAILS,
       match: PRED_MATCH_DETAILS,
@@ -53,7 +76,7 @@ export async function getUserPredictionForMatch(
       team: TEAM_SHORT_DETAILS,
     },
   });
-  return pred;
+  return pred as PredictionAPIResult;
 }
 
 export async function createOrUpdatePrediction(
@@ -69,7 +92,7 @@ export async function createOrUpdatePrediction(
     const resp = await predictionDBUpdate(values.data);
     if (resp?.success) {
       revalidatePath("/dashboard");
-      revalidatePath("/matches/[matchNum]/page");
+      revalidatePath("/matches/[matchNum]/page", "page");
     }
     return resp;
   } catch (error) {
@@ -112,4 +135,46 @@ export async function predictionDBUpdate(data: PredictionFormData) {
 
     return { success: true, data: prediction };
   });
+}
+
+export async function getStatsForUser(userId: string) {
+  const result = await prisma.prediction.groupBy({
+    by: ["status", "isDouble"],
+    where: {
+      userId,
+      status: { in: [PredictionStatus.WON, PredictionStatus.LOST] },
+    },
+    _sum: {
+      result: true,
+    },
+    _count: {
+      id: true,
+    },
+  });
+
+  const winCount =
+    result.find((item) => item.status === PredictionStatus.WON)?._count.id ?? 0;
+  const lostCount =
+    result.find((item) => item.status === PredictionStatus.LOST)?._count.id ??
+    0;
+
+  const won = result
+    .filter((item) => item.status === PredictionStatus.WON)
+    .reduce((acc, b) => acc + (b._sum.result ?? 0), 0);
+  const lost = result
+    .filter((item) => item.status === PredictionStatus.LOST)
+    .reduce((acc, b) => acc + (b._sum.result ?? 0), 0);
+  const double = result
+    .filter((item) => item.isDouble === true)
+    .reduce((acc, b) => acc + (b._sum.result ?? 0), 0);
+
+  return {
+    pct:
+      winCount > 0 || lostCount > 0
+        ? (winCount / (winCount + lostCount)) * 100
+        : 0,
+    double,
+    won,
+    lost,
+  };
 }

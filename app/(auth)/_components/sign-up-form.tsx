@@ -7,6 +7,7 @@ import { Form } from "@/components/ui/form";
 import { useToast } from "@/components/ui/use-toast";
 import { RegisterFormData, RegisterSchema } from "@/zodSchemas/user.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
@@ -26,8 +27,22 @@ export const SignUpForm = () => {
   const onSubmit = async (values: RegisterFormData) => {
     const { success, data } = await createUser(values);
     if (success) {
-      toast({ title: "Success", description: "User Created successfully" });
-      router.push("/sign-in");
+      const { email, password } = values;
+      const resp = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+      if (resp?.ok && !resp.error) {
+        toast({ title: "Success", description: "User Created successfully" });
+        router.push("/dashboard");
+      } else {
+        toast({
+          title: "Error",
+          description: "Invalid Credentials",
+          variant: "destructive",
+        });
+      }
     } else
       toast({ title: "Error", description: `${data}`, variant: "destructive" });
   };

@@ -9,7 +9,7 @@ import {
   ProfileFormSchema,
   RegisterFormData,
 } from "@/zodSchemas/user.schema";
-import { MatchStatus } from "@prisma/client";
+import { MatchStatus, PredictionStatus } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import { revalidatePath } from "next/cache";
 import { TEAM_SHORT_DETAILS } from ".";
@@ -82,6 +82,34 @@ export async function createUser(data: RegisterFormData): Promise<ActionResp> {
   }
 }
 
+export async function updatePassword(
+  data: RegisterFormData
+): Promise<ActionResp> {
+  const { email, password } = data;
+  const hash = await bcrypt.hash(password, 10);
+
+  try {
+    const existingUser = await prisma.user.findUnique({
+      where: { email },
+    });
+    if (!existingUser) return { success: false, data: "Email does not exist" };
+
+    const user = await prisma.user.update({
+      where: { id: existingUser.id },
+      data: {
+        email,
+        password: { update: { hash } },
+      },
+    });
+
+    return { success: true, data: user };
+  } catch (error) {
+    console.error(error);
+
+    return { success: false, data: "Error while updating password" };
+  }
+}
+
 export async function getUsers() {
   const users = await prisma.user.findMany({
     orderBy: [{ balance: "desc" }, { name: "asc" }],
@@ -108,11 +136,11 @@ export async function getUsers() {
   return users;
 }
 
-export async function getUsersByResult() {
+export async function getHighestWins() {
   const users = await prisma.prediction.findMany({
-    distinct: ["userId"],
-    where: { status: { in: ["WON", "LOST"] } },
+    where: { status: PredictionStatus.WON },
     orderBy: [{ result: "desc" }],
+    take: 10,
     include: {
       team: TEAM_SHORT_DETAILS,
       match: {

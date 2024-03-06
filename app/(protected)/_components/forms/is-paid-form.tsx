@@ -39,7 +39,7 @@ export const PaidForm = ({
 
   return (
     <Form {...form}>
-      <form>
+      <form className="p-0 m-0 leading-none">
         <input type="hidden" name="userId" value={userId} />
         <FormField
           control={form.control}
@@ -50,7 +50,7 @@ export const PaidForm = ({
               await onSubmit(form.getValues());
             };
             return (
-              <FormItem>
+              <FormItem className="p-0 m-0">
                 <FormControl>
                   <Checkbox checked={field.value} onCheckedChange={onChange} />
                 </FormControl>

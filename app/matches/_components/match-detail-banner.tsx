@@ -2,6 +2,7 @@ import { getUserPredictionForMatch } from "@/actions/prediction.actions";
 import { getMatchStats } from "@/actions/stats.actions";
 import { PredictionForm } from "@/app/(protected)/_components/forms/prediction-form";
 import { UpdateMatchForm } from "@/app/(protected)/_components/forms/update-match-form";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 import { buttonVariants } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
@@ -26,7 +27,7 @@ export const MatchDetailBanner = async ({ match }: MatchDetailBannerProps) => {
   const stats = await getMatchStats(match.team1Id, match.team2Id);
 
   return (
-    <div className="w-screen bg-[url('/bg.png')] bg-cover bg-no-repeat bg-center text-darkblue-foreground py-8 relative">
+    <div className="w-full rounded-md bg-backround/90 relative flex flex-col items-center justify-center antialiased py-8">
       <div className="w-full max-w-6xl p-4 mx-auto flex flex-col items-center justify-center">
         <div className="text-sm">
           Match {match.num} | {match?.venue}
@@ -46,30 +47,36 @@ export const MatchDetailBanner = async ({ match }: MatchDetailBannerProps) => {
         </div>
       </div>
 
-      {!!stats &&
-        stats.pct &&
-        match.status === MatchStatus.SCHEDULED &&
-        !isMatchStarted(match.date) && <MatchStatsIndicator stats={stats} />}
+      {!!stats && stats.pct && match.status === MatchStatus.SCHEDULED && (
+        <MatchStatsIndicator stats={stats} />
+      )}
 
       <div className="flex items-center justify-center my-8">
-        <PredictionForm match={match} prediction={prediction} />
+        {!!session?.user.id && (
+          <PredictionForm
+            match={match}
+            prediction={prediction}
+            session={session}
+          />
+        )}
         {session?.user.role === UserRole.ADMIN && (
           <UpdateMatchForm matchId={match.id} />
         )}
       </div>
 
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
         <div className="flex items-center justify-center gap-4">
           <MatchPrevButton matchNum={match.num} />
           <MatchNextButton matchNum={match.num} matchType={match.type} />
         </div>
       </div>
+      {match.status === MatchStatus.COMPLETED && <BackgroundBeams />}
     </div>
   );
 };
 
 const MatchBannerResult = ({ match }: { match: MatchAPIResult }) => (
-  <div className="my-4 font-over  text-xl ">
+  <div className="my-4 font-over text-2xl md:text-3xl title">
     {match.status === MatchStatus.SCHEDULED
       ? isMatchStarted(match.date)
         ? "Match In Progress"
@@ -98,7 +105,10 @@ const MatchPrevButton = ({ matchNum }: { matchNum: number }) => {
   return (
     <Link
       href={`/matches/${matchNum - 1}`}
-      className={cn(buttonVariants({ variant: "default", size: "sm" }))}
+      className={cn(
+        buttonVariants({ variant: "outline", size: "sm" }),
+        "inline-flex items-center gap-2"
+      )}
     >
       <ArrowLeftIcon className="w-6 h-4" />
       Prev
@@ -117,7 +127,10 @@ const MatchNextButton = ({
   return (
     <Link
       href={`/matches/${matchNum + 1}`}
-      className={cn(buttonVariants({ variant: "default", size: "sm" }))}
+      className={cn(
+        buttonVariants({ variant: "outline", size: "sm" }),
+        "inline-flex items-center gap-2"
+      )}
     >
       Next
       <ArrowRightIcon className="w-6 h-4" />

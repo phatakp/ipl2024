@@ -2,6 +2,7 @@
 
 import { createOrUpdatePrediction } from "@/actions/prediction.actions";
 import { FormInput } from "@/components/form-input";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -24,7 +25,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/components/ui/use-toast";
-import { useTeamStats } from "@/hooks/team-stats";
 import {
   cn,
   isDoubleCutoffPassed,
@@ -38,8 +38,7 @@ import {
 } from "@/zodSchemas/prediction.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { MatchStatus } from "@prisma/client";
-import { ChevronRightIcon } from "lucide-react";
-import { useSession } from "next-auth/react";
+import { Session } from "next-auth";
 import Image from "next/image";
 import { useState } from "react";
 import { useForm, useFormContext } from "react-hook-form";
@@ -47,17 +46,16 @@ import { useForm, useFormContext } from "react-hook-form";
 type PredictionFormProps = {
   match: MatchAPIResult;
   prediction: PredictionAPIResult | null;
+  session: Session;
 };
 
-export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
+export const PredictionForm = ({
+  session,
+  match,
+  prediction,
+}: PredictionFormProps) => {
   const [isOpen, setisOpen] = useState(false);
   const { toast } = useToast();
-  const { data: session } = useSession();
-  const { data: stats, isLoading } = useTeamStats(
-    match.team1Id,
-    match.team2Id,
-    isOpen
-  );
 
   const form = useForm<PredictionFormData>({
     resolver: zodResolver(PredictionFormSchema),
@@ -93,7 +91,7 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
   if (
     !(
       match.status === MatchStatus.SCHEDULED &&
-      !isMatchStarted(match.date) &&
+      !isDoubleCutoffPassed(match.date) &&
       !!session?.user.profile.teamId
     )
   )
@@ -105,96 +103,87 @@ export const PredictionForm = ({ match, prediction }: PredictionFormProps) => {
     prediction.amount === amount;
 
   const isDisabled = !prediction && isPredictionCutoffPassed(match.date);
+  const isTeamChangeDisabled = isMatchStarted(match.date) || isDisabled;
 
   return (
     <Dialog open={isOpen} onOpenChange={setisOpen}>
       <DialogTrigger asChild>
-        <Button size="sm" variant="secondary" icon={<ChevronRightIcon />}>
-          Predict Now
-        </Button>
+        <Button size="sm">Predict Now</Button>
       </DialogTrigger>
 
-      {isLoading ? (
-        loader()
-      ) : (
-        <DialogContent className="bg-[url('/bg.png')] bg-cover bg-no-repeat bg-center p-4">
-          <Card className="w-full bg-background text-foreground shadow-md border-none">
-            <CardHeader>
-              <CardTitle className="font-over font-normal">
-                Match {match.num} - {match.team1?.shortName} vs{" "}
-                {match.team2?.shortName}
-              </CardTitle>
-              <CardDescription>Predict and win big !</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Form {...form}>
-                <form
-                  className="space-y-6"
-                  onSubmit={form.handleSubmit(onSubmit)}
-                >
-                  <PredictionFormLabel
-                    match={match}
+      <DialogContent className="bg-[url('/bg.png')] bg-cover bg-no-repeat bg-center p-4">
+        <Card className="w-full bg-background text-foreground shadow-md border-none">
+          <CardHeader>
+            <CardTitle className="font-over title text-3xl">
+              Match {match.num} - {match.team1?.shortName} vs{" "}
+              {match.team2?.shortName}
+            </CardTitle>
+            <CardDescription>Predict and win big !</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Form {...form}>
+              <form
+                className="space-y-6"
+                onSubmit={form.handleSubmit(onSubmit)}
+              >
+                <PredictionFormLabel
+                  match={match}
+                  teamId={teamId}
+                  amount={amount}
+                  isCurrPrediction={isCurrPrediction}
+                  isDouble={!!prediction?.isDouble}
+                />
+
+                <Slider
+                  defaultValue={[match.minStake]}
+                  max={match.minStake * 10}
+                  min={prediction?.amount ?? match.minStake}
+                  step={10}
+                  onValueChange={(val) => form.setValue("amount", val[0])}
+                  disabled={isDisabled}
+                />
+                <FormInput name="amount" label="" className="hidden" />
+
+                <div className="flex items-center justify-center">
+                  <TeamButton
                     teamId={teamId}
-                    amount={amount}
-                    isCurrPrediction={isCurrPrediction}
+                    team={match.team1!}
+                    isDisabled={isTeamChangeDisabled}
+                    handleClick={() => form.setValue("teamId", match.team1Id!)}
                   />
-
-                  <Slider
-                    defaultValue={[match.minStake]}
-                    max={match.minStake * 10}
-                    min={prediction?.amount ?? match.minStake}
-                    step={10}
-                    onValueChange={(val) => form.setValue("amount", val[0])}
+                  <TeamButton
+                    teamId={teamId}
+                    team={match.team2!}
+                    isDisabled={isTeamChangeDisabled}
+                    handleClick={() => form.setValue("teamId", match.team2Id!)}
+                    dir="right"
                   />
-                  <FormInput name="amount" label="" className="hidden" />
+                </div>
 
-                  <div className="flex items-center justify-center">
-                    <TeamButton
-                      teamId={teamId}
-                      team={match.team1!}
-                      isDisabled={isDisabled}
-                      handleClick={() =>
-                        form.setValue("teamId", match.team1Id!)
-                      }
-                    />
-                    <TeamButton
-                      teamId={teamId}
-                      team={match.team2!}
-                      isDisabled={isDisabled}
-                      handleClick={() =>
-                        form.setValue("teamId", match.team2Id!)
-                      }
-                      dir="right"
-                    />
-                  </div>
-                  {!!stats?.pct && (
-                    <div className="text-sm text-destructive font-semibold">
-                      {`Based on stats ${match.team1?.shortName} has ${stats.pct}% chance of
-                       winning`}
-                    </div>
-                  )}
-                  <FormInput name="teamId" label="" className="hidden" />
+                <FormInput name="teamId" label="" className="hidden" />
 
-                  {!isDoubleCutoffPassed(match.date) && (
-                    <PredictionDoubleInput />
-                  )}
+                {!isDoubleCutoffPassed(match.date) && (
+                  <PredictionDoubleInput
+                    doublesLeft={session.user.doublesLeft}
+                    isDisabled={!!prediction?.isDouble || isDisabled}
+                  />
+                )}
 
-                  <div className={cn("flex items-center justify-end w-full")}>
-                    <Button
-                      isLoading={form.formState.isSubmitting}
-                      type="submit"
-                      disabled={isDisabled}
-                      size="sm"
-                    >
-                      Submit
-                    </Button>
-                  </div>
-                </form>
-              </Form>
-            </CardContent>
-          </Card>
-        </DialogContent>
-      )}
+                <div className={cn("flex items-center justify-end w-full")}>
+                  <Button
+                    isLoading={form.formState.isSubmitting}
+                    type="submit"
+                    disabled={isDisabled}
+                    size="sm"
+                  >
+                    Submit
+                  </Button>
+                </div>
+              </form>
+            </Form>
+          </CardContent>
+        </Card>
+      </DialogContent>
     </Dialog>
   );
 };
@@ -233,16 +222,18 @@ const PredictionFormLabel = ({
   amount,
   teamId,
   isCurrPrediction,
+  isDouble,
 }: {
   match: MatchAPIResult;
   amount: number;
   teamId: string;
   isCurrPrediction: boolean;
+  isDouble: boolean;
 }) => (
   <Label
     className={cn(
-      "font-over text-lg my-4",
-      isCurrPrediction ? "text-primary" : "text-destructive"
+      "font-over text-lg my-4 inline-flex items-center gap-4",
+      isCurrPrediction ? "text-success" : "text-destructive"
     )}
   >
     {isCurrPrediction
@@ -260,25 +251,44 @@ const PredictionFormLabel = ({
       : isPredictionCutoffPassed(match.date)
       ? "Prediction Cutoff Passed"
       : "No Prediction yet"}
+    {isDouble && <Badge variant="success">Double</Badge>}
   </Label>
 );
 
-const PredictionDoubleInput = () => {
+const PredictionDoubleInput = ({
+  isDisabled = false,
+  doublesLeft,
+}: {
+  doublesLeft: number;
+  isDisabled?: boolean;
+}) => {
   const { control } = useFormContext();
   return (
     <FormField
       control={control}
       name="isDouble"
       render={({ field }) => (
-        <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+        <FormItem
+          className={cn(
+            "flex flex-row items-center justify-between rounded-lg border p-4",
+            isDisabled && "bg-muted"
+          )}
+        >
           <div className="space-y-0.5">
             <FormLabel className="text-base">Double your stake</FormLabel>
             <FormDescription>
               Only the one with highest stake will be applied.
             </FormDescription>
+            <FormDescription className="text-success">
+              You have {doublesLeft} doubles left
+            </FormDescription>
           </div>
           <FormControl>
-            <Switch checked={field.value} onCheckedChange={field.onChange} />
+            <Switch
+              checked={field.value}
+              onCheckedChange={field.onChange}
+              disabled={isDisabled}
+            />
           </FormControl>
         </FormItem>
       )}
@@ -289,25 +299,30 @@ const PredictionDoubleInput = () => {
 const loader = () => (
   <DialogContent className="p-4">
     <Card className="w-full bg-background text-foreground shadow-md border-none">
-      <Skeleton className="w-full h-10"></Skeleton>
+      <CardHeader className="space-y-4">
+        <Skeleton className="font-over font-normal sr-only h-10">
+          Match X - TBC vs TBC
+        </Skeleton>
+        <Skeleton className="h-6 w-20" />
+      </CardHeader>
       <CardContent>
-        <div>
-          <Skeleton className="h-6 my-4" />
+        <div className="space-y-6">
+          <Skeleton className="h-10 my-4 w-full" />
 
-          <Skeleton className="h-4 my-4" />
+          <Skeleton className="h-6 w-full rounded-full" />
 
-          <div className="flex items-center justify-center">
-            <Skeleton className="w-full h-10" />
+          <div className="flex items-center justify-center w-full gap-2">
+            <Skeleton className="w-full h-20" />
 
-            <Skeleton className="w-full h-10" />
+            <Skeleton className="w-full h-20" />
           </div>
 
-          <div className="flex flex-row items-center justify-between rounded-lg border p-4">
-            <Skeleton className="h-6 w-full"></Skeleton>
-            <Skeleton className="h-4 w-10" />
+          <div className="flex flex-row items-center justify-between rounded-lg border border-input p-4 gap-8">
+            <Skeleton className="h-6 basis-3/4" />
+            <Skeleton className="h-6 w-8 basis-1/4" />
           </div>
 
-          <Skeleton className=" h-10 w-10 rounded-sm" />
+          <Skeleton className=" h-10 w-20 rounded-sm place-content-end" />
         </div>
       </CardContent>
     </Card>

@@ -3,7 +3,7 @@ import { DateTime } from "luxon";
 
 export const MatchDetailTopLine = ({ match }: { match: MatchAPIResult }) => {
   return (
-    <div className="grid grid-cols-8 md:grid-cols-10 gap-16 md:gap-0 shadow-md p-2 items-center bg-darkblue text-darkblue-foreground">
+    <div className="grid grid-cols-8 md:grid-cols-10 gap-16 md:gap-0 shadow-md p-2 items-center bg-primary text-primary-foreground">
       <div className="col-span-2">
         <span className="p-1  font-over text-xs md:text-sm whitespace-nowrap">
           Match {match.num}

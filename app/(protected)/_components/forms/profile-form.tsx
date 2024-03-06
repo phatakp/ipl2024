@@ -2,7 +2,6 @@
 
 import { updateProfile } from "@/actions/user.actions";
 import { FormInput } from "@/components/form-input";
-import { FormSelect } from "@/components/form-select";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -17,11 +16,13 @@ import { Form } from "@/components/ui/form";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useToast } from "@/components/ui/use-toast";
 import { useTeamOptions } from "@/hooks/team-options";
-import { cn, isIPLWinnerUpdatable } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { ProfileInfo } from "@/types";
 import { ProfileFormData, ProfileFormSchema } from "@/zodSchemas/user.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ChevronRightIcon } from "lucide-react";
+import { Edit2Icon } from "lucide-react";
+import { useSession } from "next-auth/react";
+import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -34,6 +35,7 @@ export const ProfileForm = ({ userId, profile }: ProfileFormProps) => {
   const { data: teamOptions, isLoading } = useTeamOptions();
   const { toast } = useToast();
   const [open, setOpen] = useState(!profile.teamId);
+  const { update } = useSession();
 
   const form = useForm<ProfileFormData>({
     resolver: zodResolver(ProfileFormSchema),
@@ -45,10 +47,13 @@ export const ProfileForm = ({ userId, profile }: ProfileFormProps) => {
     },
   });
 
+  const teamId = form.watch("teamId");
+
   const onSubmit = async (values: ProfileFormData) => {
     const { success, data } = await updateProfile(values);
     if (success) {
       setOpen(false);
+      update();
       toast({ title: "Success", description: "Profile updated successfully" });
     } else
       toast({ title: "Error", description: `${data}`, variant: "destructive" });
@@ -57,43 +62,56 @@ export const ProfileForm = ({ userId, profile }: ProfileFormProps) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="sm" icon={<ChevronRightIcon />}>
-          Edit Profile
+        <Button size="icon" variant="outline" className="rounded-full">
+          <Edit2Icon className="size-4 text-primary" />
         </Button>
       </DialogTrigger>
 
-      {isLoading ? (
-        loader()
-      ) : (
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Update Profile</DialogTitle>
-            <DialogDescription>
-              This is mandatory before prediction!!
-            </DialogDescription>
-          </DialogHeader>
-          <Form {...form}>
-            <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
-              <FormInput name="firstName" label="First Name" />
-              <FormInput name="lastName" label="Last Name" />
-              {!!teamOptions && teamOptions.length > 0 && (
-                <FormSelect
-                  name="teamId"
-                  label="IPL Winner Team"
-                  options={teamOptions}
-                  isDisabled={!isIPLWinnerUpdatable()}
-                />
-              )}
-
-              <div className={cn("flex items-center justify-end")}>
-                <Button isLoading={form.formState.isSubmitting} type="submit">
-                  Submit
-                </Button>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle className="text-3xl title">
+            {!teamId ? "Select IPL Winner" : "Update Profile"}
+          </DialogTitle>
+          <DialogDescription>
+            This is mandatory before prediction!!
+          </DialogDescription>
+        </DialogHeader>
+        <Form {...form}>
+          <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
+            <FormInput name="firstName" label="First Name" />
+            <FormInput name="lastName" label="Last Name" />
+            <FormInput name="teamId" type="hidden" label="Select Team" />
+            {isLoading && (
+              <div className="grid grid-cols-5 gap-4">
+                <Skeleton className="size-16" />
               </div>
-            </form>
-          </Form>
-        </DialogContent>
-      )}
+            )}
+
+            <div className="grid grid-cols-5 gap-4 px-auto">
+              {teamOptions?.map((team) => (
+                <Button
+                  key={team.id}
+                  type="button"
+                  variant={team.shortName as any}
+                  onClick={() => form.setValue("teamId", team.id)}
+                  className={cn(
+                    "relative p-0 m-0 aspect-square opacity-20 size-16 hover:opacity-80",
+                    team.id === teamId && "border-2 border-success opacity-100"
+                  )}
+                >
+                  <Image src={`/${team.shortName}outline.png`} alt="log" fill />
+                </Button>
+              ))}
+            </div>
+
+            <div className={cn("flex items-center justify-end my-8")}>
+              <Button isLoading={form.formState.isSubmitting} type="submit">
+                Submit
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </DialogContent>
     </Dialog>
   );
 };

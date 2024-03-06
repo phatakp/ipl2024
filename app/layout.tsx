@@ -1,7 +1,6 @@
 import "@/app/globals.css";
 import { Navbar } from "@/components/navigation/navbar";
 import { TopBar } from "@/components/navigation/top-bar";
-import { PageHeader } from "@/components/page-header";
 import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/lib/constants";
 import AppProvider from "@/provider";
@@ -36,12 +35,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${over.variable}`}>
+      <body className={`${inter.variable} ${over.variable} dark`}>
         <AppProvider>
           <TopBar />
           <Navbar />
-          <main className="min-h-screen flex flex-col relative">
-            <PageHeader />
+          <main className="min-h-screen flex flex-col bg-dot-white/[0.2] relative">
+            <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             {children}
           </main>
           <Toaster />

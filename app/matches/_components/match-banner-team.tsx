@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { MatchAPIResult, MatchHistoryAPIResult } from "@/types";
-import { MatchStatus } from "@prisma/client";
 import Image from "next/image";
 
 type MatchBannerTeamProps = {
@@ -47,13 +46,28 @@ export const MatchBannerTeam = ({
             isNotWinner && "text-muted-foreground"
           )}
         >
-          <span className="text-xl font-over  md:hidden">
+          <span
+            className={cn(
+              "text-xl font-over md:hidden",
+              !isNotWinner ? "title" : "text-muted-foreground"
+            )}
+          >
             {team?.shortName ?? "TBC"}
           </span>
-          <span className="text-xl font-over  hidden md:flex whitespace-nowrap truncate">
+          <span
+            className={cn(
+              "text-xl font-over hidden md:flex whitespace-nowrap truncate",
+              !isNotWinner ? "title" : "text-muted-foreground"
+            )}
+          >
             {team?.longName ?? "TBC"}
           </span>
-          <span className="text-2xl text-primary">
+          <span
+            className={cn(
+              "text-2xl",
+              isNotWinner ? "text-muted-foreground" : "text-primary"
+            )}
+          >
             {runs}/{wickets}
           </span>
           <span className="text-sm text-muted-foreground">
@@ -63,9 +77,7 @@ export const MatchBannerTeam = ({
       </div>
       <div className="flex flex-col gap-2">
         <MatchBars teamId={team?.id} winnerId={match.winnerId} />
-        {match.status === MatchStatus.SCHEDULED && (
-          <FormGuide last5={last5} teamId={team?.id} />
-        )}
+        <FormGuide last5={last5} teamId={team?.id} />
       </div>
     </div>
   );
@@ -85,7 +97,7 @@ const MatchBars = ({
         className={cn(
           "h-4 w-1 md:h-5 md:w-2",
           !!winnerId && winnerId !== teamId
-            ? "bg-muted-foreground"
+            ? "bg-muted"
             : "bg-darkblue-foreground"
         )}
       ></span>
@@ -107,7 +119,7 @@ const FormGuide = ({
         className={cn(
           "h-5 w-5 rounded-full flex items-center justify-center text-xs",
           !!item.winnerId && item.winnerId === teamId
-            ? "bg-green-600"
+            ? "bg-success"
             : !!item.winnerId
             ? "bg-destructive"
             : "bg-muted"

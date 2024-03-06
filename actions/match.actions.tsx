@@ -93,6 +93,7 @@ export async function getMatchById(id: string) {
 }
 
 export async function getMatchByNum(num: number) {
+  if (!num) return;
   const match = await prisma.match.findFirst({
     where: { num },
     include: INCLUDE_MATCH_DETAILS,
@@ -180,7 +181,10 @@ export async function updateMatch(
 
       if (!match) return { success: false, data: "Error updating match" };
       const defaulters = await getDefaultersForMatch(match.id);
-      const matchPredictions = await getMatchPredictions(match.id);
+      const matchPredictions = await getMatchPredictions({
+        matchId: match.id,
+        fetchAll: true,
+      });
       switch (match.status) {
         case MatchStatus.SCHEDULED:
           await processScheduledMatch({ match, defaulters });
@@ -244,6 +248,15 @@ async function processAbandonedMatch({
     await updateNoResultForMatch({ match });
   }
   if (match.type === MatchType.LEAGUE) {
+    const doublePred = await prisma.prediction.findFirst({
+      where: { matchId: match.id, isDouble: true },
+    });
+    if (!!doublePred) {
+      await prisma.user.update({
+        where: { id: doublePred.userId },
+        data: { doublesLeft: { increment: 1 } },
+      });
+    }
     await updateTeamsForAbandonedMatch({ match });
   }
   if (match.type === MatchType.FINAL) {
@@ -264,32 +277,38 @@ async function processCompletedMatch({
   const winners = matchPredictions.filter(
     (pred) => pred.teamId === match.winnerId
   );
-  const losers = matchPredictions.filter(
-    (pred) => pred.teamId !== match.winnerId
-  );
+  const losers = matchPredictions
+    .filter((pred) => !!pred.teamId && pred.teamId !== match.winnerId)
+    .map((pred) =>
+      pred.isDouble ? { ...pred, amount: pred.amount * 2 } : pred
+    );
 
-  if (defaulters.length > 0 || (winners.length > 0 && losers.length > 0)) {
+  if (defaulters.length > 0 || winners.length > 0) {
     const totalWon = winners.reduce((acc, b) => acc + b.amount, 0);
     let totalLost = losers.reduce((acc, b) => acc + b.amount, 0);
-    totalLost += defaulters.length * match.minStake;
+    if (totalWon > 0) {
+      totalLost += defaulters.length * match.minStake;
+    }
+
+    const isDoubleWinner = winners.find((pred) => pred.isDouble);
 
     if (defaulters.length > 0) {
       await addDefaultersForCompletedMatch({
         match,
         defaulters,
-        isDouble: match.isDoublePlayed && totalWon > 0,
+        isDouble: match.isDoublePlayed && !!isDoubleWinner,
       });
     }
     if (totalWon > 0) {
       await settleLosersForCompletedMatch({
         losers,
-        isDouble: match.isDoublePlayed,
+        isDouble: match.isDoublePlayed && !!isDoubleWinner,
       });
       await settleWinnersForMatch({
         winners,
         totalWon,
         totalLost,
-        isDouble: match.isDoublePlayed,
+        isDouble: match.isDoublePlayed && !!isDoubleWinner,
       });
     } else {
       await settleWinnersForMatch({

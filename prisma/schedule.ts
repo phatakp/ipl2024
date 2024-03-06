@@ -1,9 +1,8 @@
 import { MatchInput } from "@/types";
 import { MatchStatus, MatchType } from "@prisma/client";
 import { DateTime } from "luxon";
-import { prisma } from ".";
+import { getTeams, prisma } from ".";
 import matches from "./matches.json";
-import { getTeams } from "./scrape";
 
 export async function loadMatches() {
   await prisma.match.deleteMany();
@@ -41,6 +40,12 @@ export async function loadMatches() {
       winnerId: null,
       result: null,
       minStake: 50,
+      // team1Runs: randomNumberBetween(150, 200),
+      // team1Wickets: randomNumberBetween(1, 10),
+      // team1Overs: randomNumberBetween(18, 20),
+      // team2Runs: randomNumberBetween(150, 200),
+      // team2Wickets: randomNumberBetween(1, 10),
+      // team2Overs: randomNumberBetween(18, 20),
       team1Runs: 0,
       team1Wickets: 0,
       team1Overs: 0,

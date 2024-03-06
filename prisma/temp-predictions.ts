@@ -26,6 +26,6 @@ export async function loadPredictions() {
     });
   });
   data = data.filter((item, i) => ![3, 17, 31, 47, 60, 79].includes(i)); // removing random predictions for default bets
-  await prisma.prediction.deleteMany({ where: { NOT: { matchId: null } } });
+  await prisma.prediction.deleteMany({ where: { NOT: { amount: 500 } } });
   await prisma.prediction.createMany({ data });
 }

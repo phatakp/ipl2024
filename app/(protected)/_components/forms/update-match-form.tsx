@@ -23,8 +23,7 @@ import {
 } from "@/zodSchemas/match.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { MatchStatus } from "@prisma/client";
-import { useQueryClient } from "@tanstack/react-query";
-import { ChevronRightIcon } from "lucide-react";
+import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -41,7 +40,7 @@ export const UpdateMatchForm = ({ matchId }: UpdateMatchFormProps) => {
   const [isOpen, setisOpen] = useState(false);
   const { toast } = useToast();
   const { data: match, isLoading } = useMatchDetail(matchId);
-  const queryClient = useQueryClient();
+  const { update } = useSession();
   const form = useForm<UpdateMatchFormData>({
     resolver: zodResolver(UpdateMatchFormSchema),
     mode: "onChange",
@@ -66,9 +65,8 @@ export const UpdateMatchForm = ({ matchId }: UpdateMatchFormProps) => {
         title: "Success",
         description: "Match updated successfully",
       });
-      queryClient.invalidateQueries({ queryKey: ["matchPredictions"] });
-      queryClient.invalidateQueries({ queryKey: ["userPredictions"] });
       setisOpen(false);
+      update();
     } else
       toast({
         title: "Error",
@@ -93,7 +91,7 @@ export const UpdateMatchForm = ({ matchId }: UpdateMatchFormProps) => {
   return (
     <Dialog open={isOpen && !isLoading} onOpenChange={setisOpen}>
       <DialogTrigger asChild>
-        <Button size="sm" variant="secondary" icon={<ChevronRightIcon />}>
+        <Button size="sm" variant="secondary">
           Update Match
         </Button>
       </DialogTrigger>
@@ -101,7 +99,7 @@ export const UpdateMatchForm = ({ matchId }: UpdateMatchFormProps) => {
       <DialogContent className="bg-[url('/bg.png')] bg-cover bg-no-repeat bg-center p-4">
         <Card className="w-full bg-background text-foreground shadow-md border-none">
           <CardHeader>
-            <CardTitle className="font-over font-normal">
+            <CardTitle className="font-over text-3xl title">
               Match {match.num} - {match.team1?.shortName} vs{" "}
               {match.team2?.shortName}
             </CardTitle>

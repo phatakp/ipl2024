@@ -5,7 +5,7 @@ import { createContext, useContext } from "react";
 
 type MatchContextProps = {
   match: MatchAPIResult;
-  prediction: PredictionAPIResult | null;
+  prediction: PredictionAPIResult | null | undefined;
   session: Session | null;
 };
 

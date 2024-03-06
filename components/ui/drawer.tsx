@@ -5,14 +5,22 @@ import { Drawer as DrawerPrimitive } from "vaul";
 
 import { cn } from "@/lib/utils";
 
+type DrawerContextProps = {
+  direction: "left" | "right" | "top" | "bottom" | undefined;
+};
+
+const DrawerContext = React.createContext({} as DrawerContextProps);
+
 const Drawer = ({
   shouldScaleBackground = true,
   ...props
 }: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
-  <DrawerPrimitive.Root
-    shouldScaleBackground={shouldScaleBackground}
-    {...props}
-  />
+  <DrawerContext.Provider value={{ direction: props.direction }}>
+    <DrawerPrimitive.Root
+      shouldScaleBackground={shouldScaleBackground}
+      {...props}
+    />
+  </DrawerContext.Provider>
 );
 Drawer.displayName = "Drawer";
 
@@ -28,7 +36,7 @@ const DrawerOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Overlay
     ref={ref}
-    className={cn("fixed inset-0 z-50 bg-black/80", className)}
+    className={cn("fixed inset-0 z-50 bg-black/60", className)}
     {...props}
   />
 ));
@@ -37,22 +45,34 @@ DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>
->(({ className, children, ...props }, ref) => (
-  <DrawerPortal>
-    <DrawerOverlay />
-    <DrawerPrimitive.Content
-      ref={ref}
-      className={cn(
-        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
-        className
-      )}
-      {...props}
-    >
-      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />
-      {children}
-    </DrawerPrimitive.Content>
-  </DrawerPortal>
-));
+>(({ className, children, ...props }, ref) => {
+  const { direction } = React.useContext(DrawerContext);
+  return (
+    <DrawerPortal>
+      <DrawerOverlay />
+      <DrawerPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed z-50 flex h-auto flex-col items-center justify-center bg-gradient-to-br from-background via-gray-900 to-slate-900",
+          (!direction || direction === "right") &&
+            "inset-y-0 right-0 w-full max-w-sm rounded-l-[10px]",
+          direction === "left" &&
+            "inset-y-0 left-0 w-full max-w-sm rounded-r-[10px]",
+          direction === "bottom" &&
+            "inset-x-0 bottom-0 w-screen rounded-t-[10px]",
+          direction === "top" && "inset-x-0 top-0 w-screen rounded-b-[10px]",
+          className
+        )}
+        {...props}
+      >
+        {(direction === "top" || direction === "bottom") && (
+          <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />
+        )}
+        {children}
+      </DrawerPrimitive.Content>
+    </DrawerPortal>
+  );
+});
 DrawerContent.displayName = "DrawerContent";
 
 const DrawerHeader = ({

@@ -11,5 +11,5 @@ export default async function ProtectedLayout({
 
   if (!session?.user?.id) redirect("/sign-in");
 
-  return <main className="">{children}</main>;
+  return <main>{children}</main>;
 }

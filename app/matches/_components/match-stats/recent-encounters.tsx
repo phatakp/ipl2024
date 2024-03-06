@@ -14,7 +14,7 @@ export const RecentEncounter = ({ matches }: RecentEncounterProps) => {
     <div className="flex flex-col justify-center items-center gap-4 w-full">
       <StatsTitle title="Recent Encounters" />
       <Card className="w-full ">
-        <CardContent className="w-full flex flex-col items-center justify-center divide-y-2">
+        <CardContent className="w-full flex flex-col items-center justify-center divide-y-2 divide-input">
           {matches.map((match) => (
             <div
               key={match.id}

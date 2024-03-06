@@ -18,10 +18,10 @@ export const StatsTeam = ({
       dir === "left" ? "flex-row" : "flex-row-reverse"
     )}
   >
-    <span className="font-over   text-xl md:hidden text-darkblue">
+    <span className="font-over   text-lg md:hidden text-secondary-foreround">
       {shortName}
     </span>
-    <span className="font-over   text-xl hidden md:flex text-darkblue">
+    <span className="font-over   text-lg hidden md:flex text-secondary-foreround">
       {longName}
     </span>
     <div className="relative w-12 h-12 ">

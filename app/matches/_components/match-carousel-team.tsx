@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const CarouselTeam = ({
+export const MatchCarouselTeam = ({
   shortName,
   runs,
   wickets,

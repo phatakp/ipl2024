@@ -1,0 +1,8192 @@
+[
+  {
+    "date": "2023-05-27",
+    "team1": "GT",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Ahmedabad",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-25",
+    "team1": "GT",
+    "team2": "MI",
+    "winner": "GT",
+    "venue": "Ahmedabad",
+    "result": "62 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-23",
+    "team1": "LSG",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Chennai",
+    "result": "81 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-22",
+    "team1": "CSK",
+    "team2": "GT",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-20",
+    "team1": "RCB",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "Bengaluru",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-20",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-19",
+    "team1": "KKR",
+    "team2": "LSG",
+    "winner": "LSG",
+    "venue": "Eden Gardens",
+    "result": "1 run",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-19",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Delhi",
+    "result": "77 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-18",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Dharamsala",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-17",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Hyderabad",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-16",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Dharamsala",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-15",
+    "team1": "LSG",
+    "team2": "MI",
+    "winner": "LSG",
+    "venue": "Lucknow",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-14",
+    "team1": "GT",
+    "team2": "SRH",
+    "winner": "GT",
+    "venue": "Ahmedabad",
+    "result": "34 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-13",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Chennai",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-13",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Jaipur",
+    "result": "112 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-12",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Delhi",
+    "result": "31 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-12",
+    "team1": "SRH",
+    "team2": "LSG",
+    "winner": "LSG",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-11",
+    "team1": "MI",
+    "team2": "GT",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "27 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-10",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Eden Gardens",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-09",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "27 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-08",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-07",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-06",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Jaipur",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-06",
+    "team1": "GT",
+    "team2": "LSG",
+    "winner": "GT",
+    "venue": "Ahmedabad",
+    "result": "56 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-05",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-05",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-04",
+    "team1": "RR",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "Jaipur",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-03",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Hyderabad",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-02",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-05-02",
+    "team1": "LSG",
+    "team2": "CSK",
+    "winner": null,
+    "venue": "Lucknow",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2023-05-01",
+    "team1": "GT",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Ahmedabad",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-30",
+    "team1": "LSG",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Lucknow",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-29",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-29",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Chennai",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-28",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Delhi",
+    "result": "9 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-28",
+    "team1": "KKR",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "Eden Gardens",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-27",
+    "team1": "PBKS",
+    "team2": "LSG",
+    "winner": "LSG",
+    "venue": "Mohali",
+    "result": "56 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-26",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "32 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-25",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Bengaluru",
+    "result": "21 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-24",
+    "team1": "GT",
+    "team2": "MI",
+    "winner": "GT",
+    "venue": "Ahmedabad",
+    "result": "55 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-23",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Hyderabad",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-22",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Eden Gardens",
+    "result": "49 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-22",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-21",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Wankhede",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-21",
+    "team1": "LSG",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "Lucknow",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-20",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-19",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-19",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Mohali",
+    "result": "24 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-18",
+    "team1": "RR",
+    "team2": "LSG",
+    "winner": "LSG",
+    "venue": "Jaipur",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-17",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Hyderabad",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-16",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Bengaluru",
+    "result": "8 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-15",
+    "team1": "GT",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Ahmedabad",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-15",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-14",
+    "team1": "LSG",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Lucknow",
+    "result": "2 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-14",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-13",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Eden Gardens",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-12",
+    "team1": "PBKS",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-11",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Chennai",
+    "result": "3 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-10",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Delhi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-09",
+    "team1": "RCB",
+    "team2": "LSG",
+    "winner": "LSG",
+    "venue": "Bengaluru",
+    "result": "1 wicket",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-08",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-08",
+    "team1": "GT",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Ahmedabad",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-07",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-07",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "RR",
+    "venue": "Guwahati",
+    "result": "57 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-06",
+    "team1": "LSG",
+    "team2": "SRH",
+    "winner": "LSG",
+    "venue": "Lucknow",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-05",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "81 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-04",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Guwahati",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-03",
+    "team1": "DC",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "Delhi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-02",
+    "team1": "CSK",
+    "team2": "LSG",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-01",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-04-01",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Hyderabad",
+    "result": "72 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-03-31",
+    "team1": "LSG",
+    "team2": "DC",
+    "winner": "LSG",
+    "venue": "Lucknow",
+    "result": "50 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-03-31",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2023-03-30",
+    "team1": "GT",
+    "team2": "CSK",
+    "winner": "GT",
+    "venue": "Ahmedabad",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-28",
+    "team1": "GT",
+    "team2": "RR",
+    "winner": "GT",
+    "venue": "Ahmedabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-26",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RR",
+    "venue": "Ahmedabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-24",
+    "team1": "LSG",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Eden Gardens",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-23",
+    "team1": "GT",
+    "team2": "RR",
+    "winner": "GT",
+    "venue": "Eden Gardens",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-21",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-20",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-19",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "RR",
+    "venue": "Brabourne",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-18",
+    "team1": "RCB",
+    "team2": "GT",
+    "winner": "RCB",
+    "venue": "Wankhede",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-17",
+    "team1": "KKR",
+    "team2": "LSG",
+    "winner": "LSG",
+    "venue": "DY Patil",
+    "result": "2 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-16",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Wankhede",
+    "result": "3 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-15",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "DY Patil",
+    "result": "17 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-14",
+    "team1": "LSG",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Brabourne",
+    "result": "24 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-14",
+    "team1": "CSK",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "Wankhede",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-13",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Pune",
+    "result": "54 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-12",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Brabourne",
+    "result": "54 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-11",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-10",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "DY Patil",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-09",
+    "team1": "LSG",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "Pune",
+    "result": "62 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-08",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "DY Patil",
+    "result": "52 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-07",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "DY Patil",
+    "result": "91 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-07",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Wankhede",
+    "result": "67 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-06",
+    "team1": "LSG",
+    "team2": "KKR",
+    "winner": "LSG",
+    "venue": "Pune",
+    "result": "75 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-06",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-05",
+    "team1": "GT",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Brabourne",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-04",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "DC",
+    "venue": "Brabourne",
+    "result": "21 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-03",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "RCB",
+    "venue": "Pune",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-02",
+    "team1": "GT",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "DY Patil",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-05-01",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "KKR",
+    "venue": "Wankhede",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-30",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Pune",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-30",
+    "team1": "DC",
+    "team2": "LSG",
+    "winner": "LSG",
+    "venue": "Wankhede",
+    "result": "6 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-29",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "DY Patil",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-29",
+    "team1": "GT",
+    "team2": "RCB",
+    "winner": "GT",
+    "venue": "Brabourne",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-28",
+    "team1": "PBKS",
+    "team2": "LSG",
+    "winner": "LSG",
+    "venue": "Pune",
+    "result": "20 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-27",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "DC",
+    "venue": "Wankhede",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-26",
+    "team1": "GT",
+    "team2": "SRH",
+    "winner": "GT",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-25",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Pune",
+    "result": "29 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-24",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "PBKS",
+    "venue": "Wankhede",
+    "result": "11 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-23",
+    "team1": "LSG",
+    "team2": "MI",
+    "winner": "LSG",
+    "venue": "Wankhede",
+    "result": "36 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-22",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Brabourne",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-22",
+    "team1": "KKR",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "DY Patil",
+    "result": "8 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-21",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Wankhede",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-20",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "DY Patil",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-19",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "DC",
+    "venue": "Brabourne",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-18",
+    "team1": "LSG",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "DY Patil",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-17",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "RR",
+    "venue": "Brabourne",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-16",
+    "team1": "GT",
+    "team2": "CSK",
+    "winner": "GT",
+    "venue": "Pune",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-16",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "DY Patil",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-15",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Wankhede",
+    "result": "16 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-15",
+    "team1": "MI",
+    "team2": "LSG",
+    "winner": "LSG",
+    "venue": "Brabourne",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-14",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "SRH",
+    "venue": "Brabourne",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-13",
+    "team1": "RR",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "DY Patil",
+    "result": "37 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-12",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Pune",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-11",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "DY Patil",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-10",
+    "team1": "SRH",
+    "team2": "GT",
+    "winner": "SRH",
+    "venue": "DY Patil",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-09",
+    "team1": "RR",
+    "team2": "LSG",
+    "winner": "RR",
+    "venue": "Wankhede",
+    "result": "3 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-09",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Brabourne",
+    "result": "44 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-08",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "RCB",
+    "venue": "Pune",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-08",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "DY Patil",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-07",
+    "team1": "PBKS",
+    "team2": "GT",
+    "winner": "GT",
+    "venue": "Brabourne",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-06",
+    "team1": "LSG",
+    "team2": "DC",
+    "winner": "LSG",
+    "venue": "DY Patil",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-05",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "KKR",
+    "venue": "Pune",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-04",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Wankhede",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-03",
+    "team1": "SRH",
+    "team2": "LSG",
+    "winner": "LSG",
+    "venue": "DY Patil",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-02",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Brabourne",
+    "result": "54 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-01",
+    "team1": "GT",
+    "team2": "DC",
+    "winner": "GT",
+    "venue": "Pune",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-04-01",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "DY Patil",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-03-31",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "KKR",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-03-30",
+    "team1": "LSG",
+    "team2": "CSK",
+    "winner": "LSG",
+    "venue": "Brabourne",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-03-29",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "RCB",
+    "venue": "DY Patil",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-03-28",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Pune",
+    "result": "61 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-03-27",
+    "team1": "GT",
+    "team2": "LSG",
+    "winner": "GT",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-03-26",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "PBKS",
+    "venue": "DY Patil",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-03-26",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "Brabourne",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2022-03-25",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-14",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Dubai (DSC)",
+    "result": "27 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-12",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Sharjah",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-10",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Sharjah",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-09",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Dubai (DSC)",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-07",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "RCB",
+    "venue": "Dubai (DSC)",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-07",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Abu Dhabi",
+    "result": "42 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-06",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "KKR",
+    "venue": "Sharjah",
+    "result": "86 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-06",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Dubai (DSC)",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-05",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Abu Dhabi",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-04",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Sharjah",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-03",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "DC",
+    "venue": "Dubai (DSC)",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-02",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Dubai (DSC)",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-02",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "RCB",
+    "venue": "Sharjah",
+    "result": "6 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-01",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "RR",
+    "venue": "Abu Dhabi",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-10-01",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Sharjah",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-30",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Dubai (DSC)",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-29",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Sharjah",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-28",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Dubai (DSC)",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-27",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "MI",
+    "venue": "Abu Dhabi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-27",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "KKR",
+    "venue": "Sharjah",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-26",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "SRH",
+    "venue": "Dubai (DSC)",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-25",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "RCB",
+    "venue": "Dubai (DSC)",
+    "result": "54 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-25",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Abu Dhabi",
+    "result": "2 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-24",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Sharjah",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-24",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "DC",
+    "venue": "Abu Dhabi",
+    "result": "33 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-23",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Sharjah",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-22",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Abu Dhabi",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-21",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "DC",
+    "venue": "Dubai (DSC)",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-20",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Dubai (DSC)",
+    "result": "2 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-19",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "KKR",
+    "venue": "Abu Dhabi",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-09-18",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "CSK",
+    "venue": "Dubai (DSC)",
+    "result": "20 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-05-01",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Ahmedabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-05-01",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "RR",
+    "venue": "Delhi",
+    "result": "55 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-30",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "MI",
+    "venue": "Delhi",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-29",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "PBKS",
+    "venue": "Ahmedabad",
+    "result": "34 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-28",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "DC",
+    "venue": "Ahmedabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-28",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "MI",
+    "venue": "Delhi",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-27",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "Delhi",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-26",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Ahmedabad",
+    "result": "1 run",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-25",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Ahmedabad",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-24",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": null,
+    "venue": "Chennai",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2021-04-24",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "69 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-23",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "RR",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-22",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "PBKS",
+    "venue": "Chennai",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-21",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RCB",
+    "venue": "Wankhede",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-20",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-20",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Chennai",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-19",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "Chennai",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-18",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "45 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-17",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "DC",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-17",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "RCB",
+    "venue": "Chennai",
+    "result": "38 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-16",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "MI",
+    "venue": "Chennai",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-15",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-14",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "RR",
+    "venue": "Wankhede",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-13",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Chennai",
+    "result": "6 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-12",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Chennai",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-11",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Wankhede",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-10",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Chennai",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-09",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Wankhede",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2021-04-08",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Chennai",
+    "result": "2 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-11-09",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Dubai (DSC)",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-11-07",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "DC",
+    "venue": "Abu Dhabi",
+    "result": "17 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-11-05",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Abu Dhabi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-11-04",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Dubai (DSC)",
+    "result": "57 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-11-02",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "SRH",
+    "venue": "Sharjah",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-11-01",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "DC",
+    "venue": "Abu Dhabi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-31",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "KKR",
+    "venue": "Dubai (DSC)",
+    "result": "60 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-31",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "CSK",
+    "venue": "Abu Dhabi",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-30",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Sharjah",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-30",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Dubai (DSC)",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-29",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Abu Dhabi",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-28",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Dubai (DSC)",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-27",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "MI",
+    "venue": "Abu Dhabi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-26",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "SRH",
+    "venue": "Dubai (DSC)",
+    "result": "88 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-25",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Sharjah",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-24",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "RR",
+    "venue": "Abu Dhabi",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-24",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Dubai (DSC)",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-23",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "PBKS",
+    "venue": "Dubai (DSC)",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-23",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "KKR",
+    "venue": "Abu Dhabi",
+    "result": "59 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-22",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Sharjah",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-21",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Dubai (DSC)",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-20",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Abu Dhabi",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-19",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "PBKS",
+    "venue": "Dubai (DSC)",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-18",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Abu Dhabi",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-17",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": null,
+    "venue": "Dubai (DSC)",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2020-10-17",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": null,
+    "venue": "Abu Dhabi",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2020-10-16",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "DC",
+    "venue": "Sharjah",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-16",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Dubai (DSC)",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-15",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Abu Dhabi",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-14",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Sharjah",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-13",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "DC",
+    "venue": "Dubai (DSC)",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-12",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Dubai (DSC)",
+    "result": "20 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-11",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "RCB",
+    "venue": "Sharjah",
+    "result": "82 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-10",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "MI",
+    "venue": "Abu Dhabi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-10",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Dubai (DSC)",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-09",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Dubai (DSC)",
+    "result": "37 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-09",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Abu Dhabi",
+    "result": "2 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-08",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Sharjah",
+    "result": "46 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-07",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "SRH",
+    "venue": "Dubai (DSC)",
+    "result": "69 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-06",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "KKR",
+    "venue": "Abu Dhabi",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-05",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "MI",
+    "venue": "Abu Dhabi",
+    "result": "57 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-04",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Dubai (DSC)",
+    "result": "59 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-03",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Dubai (DSC)",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-03",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "MI",
+    "venue": "Sharjah",
+    "result": "34 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-02",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "DC",
+    "venue": "Sharjah",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-02",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RCB",
+    "venue": "Abu Dhabi",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-10-01",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Dubai (DSC)",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-30",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Abu Dhabi",
+    "result": "48 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-29",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Dubai (DSC)",
+    "result": "37 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-28",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Abu Dhabi",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-27",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": null,
+    "venue": "Dubai (DSC)",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2020-09-26",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": "RR",
+    "venue": "Sharjah",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-25",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Abu Dhabi",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-24",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Dubai (DSC)",
+    "result": "44 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-23",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "PBKS",
+    "venue": "Dubai (DSC)",
+    "result": "97 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-22",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Abu Dhabi",
+    "result": "49 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-21",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "RR",
+    "venue": "Sharjah",
+    "result": "16 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-20",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Dubai (DSC)",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2020-09-19",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": null,
+    "venue": "Dubai (DSC)",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2020-09-18",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Abu Dhabi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-05-11",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Hyderabad",
+    "result": "1 run",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-05-09",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Visakhapatnam",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-05-07",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Visakhapatnam",
+    "result": "2 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-05-06",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Chennai",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-05-04",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-05-04",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-05-03",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-05-03",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-05-02",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Mohali",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-05-01",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": null,
+    "venue": "Wankhede",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2019-04-30",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "80 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-29",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": null,
+    "venue": "Bengaluru",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2019-04-28",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "45 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-27",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "34 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-27",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "16 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-26",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-25",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Chennai",
+    "result": "46 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-24",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Eden Gardens",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-23",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "17 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-22",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-21",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Jaipur",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-20",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "1 run",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-20",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-19",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-19",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-18",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Eden Gardens",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-17",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Delhi",
+    "result": "40 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-16",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-15",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-14",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-13",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Hyderabad",
+    "result": "39 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-13",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Eden Gardens",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-12",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Mohali",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-12",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Wankhede",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-11",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Eden Gardens",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-10",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Jaipur",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-09",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-08",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-07",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-06",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Jaipur",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-06",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Bengaluru",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-05",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Hyderabad",
+    "result": "40 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-05",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "22 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-04",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Bengaluru",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-03",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Delhi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-02",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "37 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-04-01",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-31",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-30",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "8 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-30",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "118 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-29",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": null,
+    "venue": "Delhi",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2019-03-29",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-28",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-27",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Bengaluru",
+    "result": "6 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-26",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "28 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-25",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Delhi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-24",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Jaipur",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-23",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Wankhede",
+    "result": "37 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-23",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2019-03-22",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-26",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-24",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Eden Gardens",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-22",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "25 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-21",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "2 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-19",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "CSK",
+    "venue": "Pune",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-19",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "11 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-18",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Hyderabad",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-18",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "30 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-17",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "34 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-16",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-15",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "3 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-14",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-13",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Indore",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-12",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Wankhede",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-12",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "Pune",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-11",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Delhi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-11",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Indore",
+    "result": "31 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-10",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-09",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Delhi",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-08",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Eden Gardens",
+    "result": "102 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-07",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-06",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-05",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "PBKS",
+    "venue": "Indore",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-05",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-04",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-04",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Pune",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-03",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Indore",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-02",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-05-01",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-30",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-29",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Pune",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-28",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Bengaluru",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-28",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Jaipur",
+    "result": "11 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-27",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Pune",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-26",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "55 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-25",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-24",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Bengaluru",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-23",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Wankhede",
+    "result": "31 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-22",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Delhi",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-21",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-21",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Hyderabad",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-20",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-20",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Eden Gardens",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-19",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Pune",
+    "result": "64 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-18",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-17",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Jaipur",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-16",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "46 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-15",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "71 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-14",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-14",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Bengaluru",
+    "result": "19 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-13",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Eden Gardens",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-13",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Wankhede",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-12",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-11",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "1 wicket",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-10",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-09",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-08",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-07",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-07",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2018-04-06",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "1 wicket",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-18",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Bengaluru",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-16",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Bengaluru",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-13",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Delhi",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-12",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Eden Gardens",
+    "result": "9 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-10",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Wankhede",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-08",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-07",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-06",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Bengaluru",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-05",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Delhi",
+    "result": "146 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-04",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Bengaluru",
+    "result": "19 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-05-01",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-30",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-29",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "48 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-29",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-27",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Mohali",
+    "result": "26 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-27",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-22",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "82 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-21",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-19",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Indore",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-18",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-16",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-16",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Delhi",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-14",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "51 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-14",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "17 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-13",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Bengaluru",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-12",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-11",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-09",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "PBKS",
+    "venue": "Indore",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-08",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-07",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2017-04-04",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "35 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-28",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Bengaluru",
+    "result": "8 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-24",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Delhi",
+    "result": "22 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-21",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Raipur",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-21",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "22 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-19",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "DC",
+    "venue": "Raipur",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-17",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "82 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-15",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Eden Gardens",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-14",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "MI",
+    "venue": "Visakhapatnam",
+    "result": "80 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-14",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Mohali",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-12",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Visakhapatnam",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-11",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-10",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Bengaluru",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-08",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Mohali",
+    "result": "1 run",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-07",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Visakhapatnam",
+    "result": "85 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-06",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "9 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-03",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-05-01",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Bengaluru",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-29",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-29",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "27 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-27",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-24",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Mohali",
+    "result": "25 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-22",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-22",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-19",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-18",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-17",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-16",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Bengaluru",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-15",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Hyderabad",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-14",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-12",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Eden Gardens",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-11",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "45 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2016-04-09",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-23",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Eden Gardens",
+    "result": "41 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-21",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Ranchi",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-19",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Pune",
+    "result": "71 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-18",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "25 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-16",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Hyderabad",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-16",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": null,
+    "venue": "Bengaluru",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2015-05-15",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "RR",
+    "venue": "Brabourne",
+    "result": "9 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-15",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Mohali",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-14",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Hyderabad",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-13",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-12",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "22 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-11",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "DC",
+    "venue": "Raipur",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-10",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-09",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-09",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Wankhede",
+    "result": "39 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-08",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Raipur",
+    "result": "6 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-08",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "1 wicket",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-07",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Chennai",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-06",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-06",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Brabourne",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-05",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "138 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-04",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-03",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "35 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-03",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "24 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-02",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "RR",
+    "venue": "Brabourne",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-02",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Mohali",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-01",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "22 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-05-01",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-30",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "8 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-30",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-29",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-28",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": null,
+    "venue": "Bengaluru",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2015-04-27",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "2 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-26",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Mohali",
+    "result": "20 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-25",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Delhi",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-24",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "97 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-24",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "20 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-23",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Ahmedabad",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-22",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "37 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-21",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Bengaluru",
+    "result": "27 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-21",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "SRH",
+    "venue": "Visakhapatnam",
+    "result": "16 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-20",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": null,
+    "venue": "Ahmedabad",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2015-04-19",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Delhi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-18",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Bengaluru",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-18",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "RR",
+    "venue": "Ahmedabad",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-17",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Pune",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-17",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Visakhapatnam",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-16",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-15",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Visakhapatnam",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-14",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Pune",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-13",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "RR",
+    "venue": "Ahmedabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-12",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Bengaluru",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-11",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Wankhede",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-11",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Delhi",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-10",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Eden Gardens",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-10",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "45 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-09",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Pune",
+    "result": "26 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-08",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "1 run",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2015-04-07",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-31",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Bengaluru",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-29",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Wankhede",
+    "result": "24 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-27",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Brabourne",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-26",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "28 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-24",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-24",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-23",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-23",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Bengaluru",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-22",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "16 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-22",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-21",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Ranchi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-21",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "30 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-20",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Mohali",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-19",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-19",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-18",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Delhi",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-18",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Ahmedabad",
+    "result": "25 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-17",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-17",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Ranchi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-14",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "RR",
+    "venue": "Ahmedabad",
+    "result": "62 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-13",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "KKR",
+    "venue": "Cuttack",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-13",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Hyderabad",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-12",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "16 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-12",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Ranchi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-11",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-10",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Bengaluru",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-10",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Cuttack",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-09",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-09",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Delhi",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-08",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Bengaluru",
+    "result": "32 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-07",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Ahmedabad",
+    "result": "32 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-06",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "PBKS",
+    "venue": "Cuttack",
+    "result": "44 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-06",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Delhi",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-05",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "19 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-04",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Delhi",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-04",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "RR",
+    "venue": "Ahmedabad",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-03",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-02",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Delhi",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-02",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-05-01",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Ranchi",
+    "result": "34 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-29",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Dubai (DSC)",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-28",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": null,
+    "venue": "Abu Dhabi",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2014-04-27",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "PBKS",
+    "venue": "Dubai (DSC)",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-26",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Sharjah",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-26",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "Sharjah",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-25",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Abu Dhabi",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-25",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RR",
+    "venue": "Abu Dhabi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-24",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "CSK",
+    "venue": "Dubai (DSC)",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-24",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "SRH",
+    "venue": "Dubai (DSC)",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-23",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Sharjah",
+    "result": "2 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-22",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Dubai (DSC)",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-21",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "PBKS",
+    "venue": "Sharjah",
+    "result": "72 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-20",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Abu Dhabi",
+    "result": "93 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-19",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Sharjah",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-18",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Dubai (DSC)",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-18",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "RCB",
+    "venue": "Dubai (DSC)",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-17",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Abu Dhabi",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-17",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Abu Dhabi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-16",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Sharjah",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2014-04-15",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Abu Dhabi",
+    "result": "41 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-25",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Eden Gardens",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-23",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "MI",
+    "venue": "Eden Gardens",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-21",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "RR",
+    "venue": "Delhi",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-20",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "CSK",
+    "venue": "Delhi",
+    "result": "48 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-18",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-17",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "24 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-17",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "PBKS",
+    "venue": "Dharamsala",
+    "result": "50 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-16",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-15",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "PBKS",
+    "venue": "Dharamsala",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-14",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-13",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "33 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-13",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Bengaluru",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-12",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-11",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-11",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "KKR",
+    "venue": "Ranchi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-10",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Mohali",
+    "result": "30 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-09",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Delhi",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-08",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Mohali",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-07",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Hyderabad",
+    "result": "77 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-06",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "65 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-06",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-05",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-04",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "60 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-03",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-02",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-05-01",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "15 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-30",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "DC",
+    "venue": "Raipur",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-30",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-28",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-28",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-27",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-26",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "58 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-26",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-25",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-24",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-23",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Eden Gardens",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-22",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Delhi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-21",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-20",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-19",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-19",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Eden Gardens",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-18",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-17",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Delhi",
+    "result": "86 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-16",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "87 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-15",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": null,
+    "venue": "Bengaluru",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2013-04-15",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-13",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-13",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "48 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-12",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-11",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Delhi",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-10",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-09",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Mohali",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-08",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "44 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-08",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-07",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "19 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-06",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": null,
+    "venue": "Hyderabad",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2013-04-05",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Chennai",
+    "result": "9 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-05",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Delhi",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-03",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "2 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2013-04-02",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-26",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Chennai",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-24",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "86 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-22",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "CSK",
+    "venue": "Bengaluru",
+    "result": "38 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-21",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Pune",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-19",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Jaipur",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-19",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "9 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-18",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Dharamsala",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-17",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-16",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Delhi",
+    "result": "21 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-16",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "PBKS",
+    "venue": "Dharamsala",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-15",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Wankhede",
+    "result": "32 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-14",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-13",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Eden Gardens",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-13",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Bengaluru",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-12",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-11",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-11",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Eden Gardens",
+    "result": "27 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-09",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Jaipur",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-09",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Hyderabad",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-08",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Wankhede",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-07",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Hyderabad",
+    "result": "25 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-06",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Delhi",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-05",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-05",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "2 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-04",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Mohali",
+    "result": "43 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-03",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-05-01",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Bengaluru",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-30",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Jaipur",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-29",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Chennai",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-28",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-28",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "1 run",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-27",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "47 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-27",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Chennai",
+    "result": "7 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-26",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "37 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-24",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": null,
+    "venue": "Bengaluru",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2012-04-24",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Mohali",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-22",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Jaipur",
+    "result": "46 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-21",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Cuttack",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-21",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-20",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-19",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Mohali",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-18",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-17",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Mohali",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-16",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-15",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Wankhede",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-14",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Bengaluru",
+    "result": "59 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-14",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Eden Gardens",
+    "result": "2 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-12",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-11",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-10",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "27 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-09",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-09",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Bengaluru",
+    "result": "42 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-08",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Visakhapatnam",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-07",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "22 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-06",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Visakhapatnam",
+    "result": "74 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-06",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "20 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-05",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "31 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-04",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Eden Gardens",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2012-04-03",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Chennai",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-27",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "58 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-26",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Chennai",
+    "result": "43 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-24",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-23",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-21",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Eden Gardens",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-21",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-20",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Dharamsala",
+    "result": "82 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-19",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Wankhede",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-16",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "PBKS",
+    "venue": "Dharamsala",
+    "result": "111 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-14",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "PBKS",
+    "venue": "Dharamsala",
+    "result": "29 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-13",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Wankhede",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-13",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-11",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-10",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Jaipur",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-09",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "76 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-08",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Jaipur",
+    "result": "63 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-06",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "32 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-06",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-05",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "85 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-04",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Hyderabad",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-03",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-02",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Hyderabad",
+    "result": "20 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-05-01",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-30",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "19 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-29",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-28",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-27",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Delhi",
+    "result": "17 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-25",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Delhi",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-23",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Hyderabad",
+    "result": "37 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-22",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "29 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-21",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "8 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-21",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Eden Gardens",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-20",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "48 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-18",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Delhi",
+    "result": "16 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-16",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-15",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Hyderabad",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-15",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "21 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-14",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Jaipur",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-13",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "SRH",
+    "venue": "Hyderabad",
+    "result": "33 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-12",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-11",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Bengaluru",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-11",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-10",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "9 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-09",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Delhi",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-08",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Hyderabad",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2011-04-07",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "2 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-24",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "DY Patil",
+    "result": "22 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-23",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "DY Patil",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-21",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "DY Patil",
+    "result": "38 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-20",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "MI",
+    "venue": "DY Patil",
+    "result": "35 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-18",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-17",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Delhi",
+    "result": "11 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-17",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Dharamsala",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-16",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-16",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Bengaluru",
+    "result": "57 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-15",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Dharamsala",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-14",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Chennai",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-13",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Jaipur",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-12",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-12",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "MI",
+    "venue": "Brabourne",
+    "result": "39 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-11",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "SRH",
+    "venue": "Nagpur",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-10",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Jaipur",
+    "result": "37 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-10",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Delhi",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-09",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-09",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "SRH",
+    "venue": "Nagpur",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-08",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-07",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Bengaluru",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-06",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-06",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-05",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "24 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-04",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Nagpur",
+    "result": "2 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-03",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "37 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-03",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Eden Gardens",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-02",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "MI",
+    "venue": "Brabourne",
+    "result": "63 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-02",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-04-01",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-31",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "24 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-30",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "67 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-30",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-29",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "MI",
+    "venue": "Brabourne",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-28",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "40 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-27",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "DY Patil",
+    "result": "41 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-27",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "RR",
+    "venue": "Ahmedabad",
+    "result": "17 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-26",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Mohali",
+    "result": "39 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-25",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "RR",
+    "venue": "Ahmedabad",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-24",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "MI",
+    "venue": "Brabourne",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-24",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Bengaluru",
+    "result": "17 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-23",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Mohali",
+    "result": "31 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-22",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "36 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-21",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Brabourne",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-20",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": null,
+    "venue": "Chennai",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2010-03-20",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "SRH",
+    "venue": "Cuttack",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-19",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Brabourne",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-19",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "RR",
+    "venue": "Ahmedabad",
+    "result": "34 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-18",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "SRH",
+    "venue": "Cuttack",
+    "result": "6 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-18",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Delhi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-17",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-16",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Delhi",
+    "result": "98 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-15",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Eden Gardens",
+    "result": "55 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-15",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-14",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Ahmedabad",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-13",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Chennai",
+    "result": "31 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-13",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-12",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Mohali",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-12",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "MI",
+    "venue": "Brabourne",
+    "result": "4 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2010-03-11",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "DY Patil",
+    "result": "11 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-23",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "SRH",
+    "venue": "Johannesburg",
+    "result": "6 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-22",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Johannesburg",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-21",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "SRH",
+    "venue": "Centurion",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-20",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "RCB",
+    "venue": "Centurion",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-20",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "Centurion",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-19",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "CSK",
+    "venue": "Durban",
+    "result": "24 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-19",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "KKR",
+    "venue": "Durban",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-18",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "RCB",
+    "venue": "Johannesburg",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-17",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Centurion",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-16",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "DC",
+    "venue": "Bloemfontein",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-16",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Johannesburg",
+    "result": "1 run",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-15",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "SRH",
+    "venue": "Johannesburg",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-15",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "CSK",
+    "venue": "Gqeberha",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-14",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Bloemfontein",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-13",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Durban",
+    "result": "2 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-13",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "RCB",
+    "venue": "Durban",
+    "result": "2 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-12",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Durban",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-11",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Centurion",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-11",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "RCB",
+    "venue": "Centurion",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-10",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "SRH",
+    "venue": "Kimberley",
+    "result": "53 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-09",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "DC",
+    "venue": "Johannesburg",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-09",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Gqeberha",
+    "result": "16 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-08",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Kimberley",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-08",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Kimberley",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-07",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "East London",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-06",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "CSK",
+    "venue": "Centurion",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-06",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Centurion",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-05",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "SRH",
+    "venue": "Centurion",
+    "result": "19 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-04",
+    "team1": "DC",
+    "team2": "KKR",
+    "winner": "DC",
+    "venue": "Durban",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-04",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Durban",
+    "result": "78 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-03",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "CSK",
+    "venue": "East London",
+    "result": "78 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-02",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "RCB",
+    "venue": "Johannesburg",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-02",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "PBKS",
+    "venue": "Gqeberha",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-01",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "CSK",
+    "venue": "Johannesburg",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-05-01",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Gqeberha",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-30",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "RCB",
+    "venue": "Durban",
+    "result": "8 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-30",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "East London",
+    "result": "9 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-29",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "CSK",
+    "venue": "Centurion",
+    "result": "38 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-29",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Centurion",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-28",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "PBKS",
+    "venue": "Durban",
+    "result": "3 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-28",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "RCB",
+    "venue": "Durban",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-27",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Centurion",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-26",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Gqeberha",
+    "result": "92 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-26",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Durban",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-25",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "PBKS",
+    "venue": "Cape Town",
+    "result": "27 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-25",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Gqeberha",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-24",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "SRH",
+    "venue": "Durban",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-23",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Durban",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-22",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": null,
+    "venue": "Cape Town",
+    "result": "-",
+    "status": "ABANDONED"
+  },
+  {
+    "date": "2009-04-22",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Durban",
+    "result": "9 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-21",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Cape Town",
+    "result": "24 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-20",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Durban",
+    "result": "11 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-19",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Gqeberha",
+    "result": "92 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-18",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "SRH",
+    "venue": "Cape Town",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-18",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "DC",
+    "venue": "Cape Town",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-17",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RCB",
+    "venue": "Cape Town",
+    "result": "75 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2009-04-17",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Cape Town",
+    "result": "19 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-31",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "DY Patil",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-30",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "CSK",
+    "venue": "Wankhede",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-29",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Wankhede",
+    "result": "105 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-27",
+    "team1": "PBKS",
+    "team2": "RR",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "41 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-27",
+    "team1": "RCB",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Bengaluru",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-26",
+    "team1": "SRH",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-25",
+    "team1": "RR",
+    "team2": "MI",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-24",
+    "team1": "KKR",
+    "team2": "PBKS",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-24",
+    "team1": "SRH",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Hyderabad",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-23",
+    "team1": "DC",
+    "team2": "MI",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-23",
+    "team1": "CSK",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Chennai",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-22",
+    "team1": "PBKS",
+    "team2": "SRH",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-20",
+    "team1": "CSK",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Chennai",
+    "result": "14 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-20",
+    "team1": "MI",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Wankhede",
+    "result": "1 run",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-19",
+    "team1": "KKR",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Eden Gardens",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-18",
+    "team1": "RCB",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Bengaluru",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-17",
+    "team1": "SRH",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Hyderabad",
+    "result": "25 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-17",
+    "team1": "KKR",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Eden Gardens",
+    "result": "3 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-16",
+    "team1": "DC",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Delhi",
+    "result": "6 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-16",
+    "team1": "RR",
+    "team2": "RCB",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "65 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-15",
+    "team1": "MI",
+    "team2": "KKR",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-14",
+    "team1": "DC",
+    "team2": "SRH",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "12 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-13",
+    "team1": "MI",
+    "team2": "CSK",
+    "winner": "MI",
+    "venue": "Wankhede",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-12",
+    "team1": "KKR",
+    "team2": "DC",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-11",
+    "team1": "PBKS",
+    "team2": "RCB",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-10",
+    "team1": "RR",
+    "team2": "DC",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-10",
+    "team1": "SRH",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Hyderabad",
+    "result": "23 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-09",
+    "team1": "CSK",
+    "team2": "PBKS",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "18 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-08",
+    "team1": "RR",
+    "team2": "SRH",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-07",
+    "team1": "KKR",
+    "team2": "RCB",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "5 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-07",
+    "team1": "DC",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Delhi",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-06",
+    "team1": "MI",
+    "team2": "RR",
+    "winner": "MI",
+    "venue": "DY Patil",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-05",
+    "team1": "CSK",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "Chennai",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-04",
+    "team1": "RCB",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Bengaluru",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-03",
+    "team1": "RR",
+    "team2": "CSK",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-03",
+    "team1": "MI",
+    "team2": "DC",
+    "winner": "MI",
+    "venue": "DY Patil",
+    "result": "29 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-02",
+    "team1": "PBKS",
+    "team2": "KKR",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "9 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-02",
+    "team1": "RCB",
+    "team2": "SRH",
+    "winner": "RCB",
+    "venue": "Bengaluru",
+    "result": "3 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-05-01",
+    "team1": "CSK",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Chennai",
+    "result": "8 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-30",
+    "team1": "SRH",
+    "team2": "PBKS",
+    "winner": "PBKS",
+    "venue": "Hyderabad",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-30",
+    "team1": "RR",
+    "team2": "KKR",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "45 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-29",
+    "team1": "DC",
+    "team2": "RCB",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "10 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-28",
+    "team1": "KKR",
+    "team2": "MI",
+    "winner": "MI",
+    "venue": "Eden Gardens",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-27",
+    "team1": "RCB",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Bengaluru",
+    "result": "13 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-26",
+    "team1": "MI",
+    "team2": "SRH",
+    "winner": "SRH",
+    "venue": "DY Patil",
+    "result": "10 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-26",
+    "team1": "PBKS",
+    "team2": "DC",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "4 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-25",
+    "team1": "RCB",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Bengaluru",
+    "result": "7 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-25",
+    "team1": "CSK",
+    "team2": "KKR",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-24",
+    "team1": "PBKS",
+    "team2": "MI",
+    "winner": "PBKS",
+    "venue": "Mohali",
+    "result": "66 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-23",
+    "team1": "SRH",
+    "team2": "RR",
+    "winner": "RR",
+    "venue": "Hyderabad",
+    "result": "3 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-22",
+    "team1": "CSK",
+    "team2": "MI",
+    "winner": "CSK",
+    "venue": "Chennai",
+    "result": "6 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-21",
+    "team1": "SRH",
+    "team2": "DC",
+    "winner": "DC",
+    "venue": "Hyderabad",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-20",
+    "team1": "RR",
+    "team2": "PBKS",
+    "winner": "RR",
+    "venue": "Jaipur",
+    "result": "6 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-19",
+    "team1": "MI",
+    "team2": "RCB",
+    "winner": "RCB",
+    "venue": "Wankhede",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-19",
+    "team1": "KKR",
+    "team2": "SRH",
+    "winner": "KKR",
+    "venue": "Eden Gardens",
+    "result": "5 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-18",
+    "team1": "DC",
+    "team2": "RR",
+    "winner": "DC",
+    "venue": "Delhi",
+    "result": "9 wickets",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-18",
+    "team1": "PBKS",
+    "team2": "CSK",
+    "winner": "CSK",
+    "venue": "Mohali",
+    "result": "33 runs",
+    "status": "COMPLETED"
+  },
+  {
+    "date": "2008-04-17",
+    "team1": "RCB",
+    "team2": "KKR",
+    "winner": "KKR",
+    "venue": "Bengaluru",
+    "result": "140 runs",
+    "status": "COMPLETED"
+  }
+]

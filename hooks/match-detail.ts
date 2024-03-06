@@ -6,5 +6,6 @@ export const useMatchDetail = (matchId: string | undefined) => {
     queryKey: ["matchDetail", matchId],
     queryFn: () => getMatchById(matchId!),
     enabled: !!matchId,
+    staleTime: 10000,
   });
 };

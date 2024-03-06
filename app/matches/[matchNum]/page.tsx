@@ -2,11 +2,12 @@ import { getMatchByNum } from "@/actions/match.actions";
 import { getMatchPredictions } from "@/actions/prediction.actions";
 import { MatchDetailBanner } from "@/app/matches/_components/match-detail-banner";
 import { TeamStats } from "@/app/matches/_components/team-stats";
-import { CarouselCardWrapper } from "@/components/carousel-card/carousel-card-wrapper";
+import { Carousel } from "@/components/carousel/carousel";
 import { buttonVariants } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getAuthServerSession } from "@/lib/auth";
-import { cn } from "@/lib/utils";
+import { cn, isPredictionCutoffPassed } from "@/lib/utils";
+import { MatchStatus } from "@prisma/client";
 import Link from "next/link";
 
 type MatchDetailPageProps = {
@@ -20,14 +21,29 @@ const MatchDetailPage = async ({
   const session = await getAuthServerSession();
   const match = await getMatchByNum(parseInt(matchNum));
   if (!match) return;
-  let predictions = await getMatchPredictions(match.id);
+  let predictions = await getMatchPredictions({
+    matchId: match.id,
+    fetchAll: isPredictionCutoffPassed(match.date),
+    userId: session?.user.id,
+  });
+  const items = [
+    {
+      title: "",
+      type: "matchpred",
+      data: predictions,
+    },
+  ];
 
   return (
     <div className="w-screen pb-8">
       <MatchDetailBanner match={match} />
       <div className="mt-24 w-full max-w-6xl mx-auto">
         <Tabs
-          defaultValue={!!session?.user ? "predictions" : "stats"}
+          defaultValue={
+            !!session?.user.id && match.status !== MatchStatus.SCHEDULED
+              ? "predictions"
+              : "stats"
+          }
           className="w-full px-4 justify-center items-center"
         >
           <TabsList className="">
@@ -45,19 +61,16 @@ const MatchDetailPage = async ({
             value="predictions"
             className="flex items-center justify-center"
           >
-            {!!session?.user && (
-              <CarouselCardWrapper
-                type="matchpred"
-                title=""
-                data={predictions}
-              />
-            )}
-            {!session?.user && (
+            {!!session?.user.id && <Carousel data={items} />}
+            {!session?.user.id && (
               <div className="w-full flex justify-center items-center gap-4">
                 <span>You are not authorized</span>
+
                 <Link
                   href="/sign-in"
-                  className={cn(buttonVariants({ size: "sm" }))}
+                  className={cn(
+                    buttonVariants({ variant: "default", size: "sm" })
+                  )}
                 >
                   Login now
                 </Link>

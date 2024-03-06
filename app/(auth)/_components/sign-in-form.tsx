@@ -29,7 +29,6 @@ export const SignInForm = () => {
         ...values.data,
         redirect: false,
       });
-      console.log(resp);
 
       if (resp?.error)
         toast({
@@ -50,10 +49,11 @@ export const SignInForm = () => {
       <form className="space-y-6 mt-12" onSubmit={form.handleSubmit(onSubmit)}>
         <FormInput name="email" label="Email Address" type="email" />
         <FormInput name="password" label="Password" type="password" />
+
         <Button
           isLoading={form.formState.isSubmitting}
           type="submit"
-          className="w-full my-4"
+          className="w-full my-16"
         >
           Submit
         </Button>

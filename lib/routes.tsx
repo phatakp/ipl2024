@@ -19,4 +19,10 @@ export const routes = [
     isProtected: false,
     icon: <AnvilIcon className="w-4 h-4" />,
   },
+  {
+    name: "Rules",
+    href: "/rules",
+    isProtected: false,
+    icon: <AnvilIcon className="w-4 h-4" />,
+  },
 ];
