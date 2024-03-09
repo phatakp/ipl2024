@@ -28,7 +28,7 @@ export const PageHeader = async ({
 
         <div className="text-muted-foreground max-w-lg my-2 text-sm text-center relative z-10 flex items-center justify-center gap-4">
           {desc}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2">
+          <div className="absolute -right-4 md:right-0 top-1/2 -translate-y-1/2">
             {component}
           </div>
         </div>

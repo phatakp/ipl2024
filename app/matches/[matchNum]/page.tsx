@@ -6,7 +6,7 @@ import { Carousel } from "@/components/carousel/carousel";
 import { buttonVariants } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getAuthServerSession } from "@/lib/auth";
-import { cn, isPredictionCutoffPassed } from "@/lib/utils";
+import { cn, isMatchStarted, isPredictionCutoffPassed } from "@/lib/utils";
 import { MatchStatus } from "@prisma/client";
 import Link from "next/link";
 
@@ -40,7 +40,9 @@ const MatchDetailPage = async ({
       <div className="mt-24 w-full max-w-6xl mx-auto">
         <Tabs
           defaultValue={
-            !!session?.user.id && match.status !== MatchStatus.SCHEDULED
+            !!session?.user.id &&
+            (match.status !== MatchStatus.SCHEDULED ||
+              isMatchStarted(match.date))
               ? "predictions"
               : "stats"
           }

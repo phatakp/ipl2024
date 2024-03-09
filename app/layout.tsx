@@ -4,6 +4,8 @@ import { TopBar } from "@/components/navigation/top-bar";
 import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/lib/constants";
 import AppProvider from "@/provider";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter, Overpass } from "next/font/google";
 
@@ -45,6 +47,8 @@ export default function RootLayout({
           </main>
           <Toaster />
         </AppProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

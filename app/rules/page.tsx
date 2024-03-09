@@ -58,7 +58,10 @@ const RulesPage = () => {
 
                 <li className="">
                   Minimum Stake is applicable for each match as below.{" "}
-                  <strong>No Maximum Limit.</strong>
+                  <strong>
+                    No Maximum Limit, but stake can be increased in multiples of
+                    10.
+                  </strong>
                   <ul>
                     For League Matches - <strong>Rs.50</strong>
                   </ul>
@@ -71,8 +74,9 @@ const RulesPage = () => {
                 </li>
 
                 <li className="">
-                  Player has the option to play double any time. However his/her
-                  stake amount should be the highest.
+                  Player has the option to play double any time (up until 30
+                  mins post start of match). <br /> However his/her stake amount
+                  should be the highest.
                 </li>
 
                 <li className="text-destructive">

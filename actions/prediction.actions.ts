@@ -111,11 +111,15 @@ export async function predictionDBUpdate(data: PredictionFormData) {
       if (!!existingDouble) {
         await db.user.update({
           where: { id: existingDouble.userId },
-          data: { doublesLeft: { increment: 1 } },
-        });
-        await db.prediction.update({
-          where: { id: existingDouble.id },
-          data: { isDouble: false },
+          data: {
+            doublesLeft: { increment: 1 },
+            predictions: {
+              update: {
+                where: { id: existingDouble.id },
+                data: { isDouble: false },
+              },
+            },
+          },
         });
       }
       await db.user.update({

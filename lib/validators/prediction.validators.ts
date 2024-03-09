@@ -4,20 +4,23 @@ import {
   getUserPredictionForMatch,
 } from "@/actions/prediction.actions";
 import { getUserById } from "@/actions/user.actions";
-import { prisma } from "@/lib/db";
-import { isDoubleCutoffPassed, isPredictionCutoffPassed } from "@/lib/utils";
+import {
+  isDoubleCutoffPassed,
+  isMatchStarted,
+  isPredictionCutoffPassed,
+} from "@/lib/utils";
 import { MatchAPIResult, PredictionAPIResult, UserAPIResult } from "@/types";
 import { PredictionFormData } from "@/zodSchemas/prediction.schema";
-import { MatchType } from "@prisma/client";
+import { MatchType, PredictionStatus } from "@prisma/client";
 
 export function isValidTeamChange(
   data: PredictionFormData,
   pred: PredictionAPIResult
 ) {
-  return !(
-    isPredictionCutoffPassed(pred.match!.date) &&
+  return (
+    !isMatchStarted(pred.match!.date) &&
     pred.teamId !== data.teamId &&
-    data.amount < pred.amount * 2
+    data.amount > pred.amount * 2
   );
 }
 
@@ -43,6 +46,7 @@ export async function validatePrediction(data: PredictionFormData) {
   const match = await getMatchById(data.matchId);
   const user = await getUserById(data.userId);
   const pred = await getUserPredictionForMatch(data.userId, data.matchId);
+  const isPredictionDone = pred?.status === PredictionStatus.PLACED;
 
   if (!match) return { success: false, data: "Match not found" };
   if (!user) return { success: false, data: "User not found" };
@@ -63,6 +67,7 @@ export async function validatePrediction(data: PredictionFormData) {
         data: "Double only valid for League Matches",
       };
     }
+
     const maxAmt = await getHighestPredictionForMatch(match);
     if (data.amount <= maxAmt)
       return {
@@ -71,26 +76,31 @@ export async function validatePrediction(data: PredictionFormData) {
       };
   }
 
-  //Double already played then check if new one is for higher amount
-  if (data.isDouble && match?.isDoublePlayed) {
-    const doublePred = await prisma.prediction.findFirst({
-      where: { isDouble: true },
-    });
-    if (!!doublePred && doublePred.amount >= data.amount)
-      return {
-        success: false,
-        data: `Minimum stake for double Rs.${doublePred.amount + 10}/-`,
-      };
-  }
-
-  if (!!pred) {
+  if (isPredictionDone) {
     //Update Prediction validations
     if (!data.isDouble && pred.isDouble)
       return { success: false, data: "Double cannot be retracted" };
-    if (!isValidTeamChange(data, pred))
-      return { success: false, data: `Minimum stake Rs.${pred.amount * 2}/-` };
-    else if (data.amount <= pred.amount)
+
+    if (!data.isDouble && isMatchStarted(match.date))
+      return {
+        success: false,
+        data: `Prediction cannot be changed. Only double allowed`,
+      };
+
+    if (pred.teamId !== data.teamId && data.amount <= pred.amount * 2)
+      return {
+        success: false,
+        data: `Minimum stake Rs.${pred.amount * 2}/- for team change`,
+      };
+
+    if (data.amount <= pred.amount)
       return { success: false, data: `Minimum stake Rs.${pred.amount + 10}/-` };
+
+    if (!data.isDouble && isMatchStarted(match.date))
+      return {
+        success: false,
+        data: `Prediction cannot be changed. Only double allowed`,
+      };
   } else {
     //New Prediction validations
     if (isPredictionCutoffPassed(match.date))

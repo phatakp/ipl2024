@@ -1,4 +1,4 @@
-import { TableCardLoading } from "@/components/loaders/table-card-loading";
+import TableLoading from "@/components/loaders/table-loading";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const HomeLoading = () => {
@@ -12,7 +12,7 @@ const HomeLoading = () => {
         <Skeleton className="relative size-16 sm:size-18 md:size-20 aspect-square" />
       </div>
 
-      <TableCardLoading />
+      <TableLoading />
     </section>
   );
 };
