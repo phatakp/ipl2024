@@ -6,10 +6,12 @@ import {
   PredictionResultAPIType,
   UserAPIResult,
 } from "@/types";
-import { PredictionStatus, Team, UserRole } from "@prisma/client";
+import { PredictionStatus, UserRole } from "@prisma/client";
 import { Session } from "next-auth";
+import Link from "next/link";
 import { ReactNode } from "react";
 import { FormGuide } from "../form-guide";
+import { buttonVariants } from "../ui/button";
 import { CarouselCardAmount } from "./carousel-card-amount";
 import { CarouselCardDesc } from "./carousel-card-desc";
 import { CarouselCardTeamLogo } from "./carousel-card-team-logo";
@@ -31,7 +33,6 @@ export const CarouselCardData = ({
 }: CarouselCardDataProps) => {
   let teamShortName: string | undefined = undefined;
   let amount = 0;
-  let nrr = 0;
   let text1 = "Visual Row";
   let node: ReactNode;
   let isDouble = false;
@@ -60,11 +61,19 @@ export const CarouselCardData = ({
         amount = (data as PredictionResultAPIType).result;
         result = (data as PredictionResultAPIType).status;
         text1 = (data as PredictionResultAPIType).user.name ?? `User ${rank}`;
-        node = `${
-          (data as PredictionResultAPIType).match?.team1?.shortName ?? "TBC"
-        } vs ${
-          (data as PredictionResultAPIType).match?.team2?.shortName ?? "TBC"
-        }`;
+        node = (
+          <Link
+            href={`/matches/${(data as PredictionResultAPIType).match?.num}`}
+            className={cn(
+              buttonVariants({ variant: "link" }),
+              "h-4 text-muted-foreground text-sm text-left w-fit px-0"
+            )}
+          >
+            {(data as PredictionResultAPIType).match?.team1?.shortName ?? "TBC"}{" "}
+            vs{" "}
+            {(data as PredictionResultAPIType).match?.team2?.shortName ?? "TBC"}
+          </Link>
+        );
       }
       break;
     case "matchpred":
@@ -90,17 +99,6 @@ export const CarouselCardData = ({
         node = `Stake : ${(data as PredictionAPIResult).amount.toFixed()}`;
       }
       break;
-    case "team":
-      node = <FormGuide header={false} type="team" id={""} />;
-      if (!!data) {
-        teamShortName = (data as Team).shortName;
-        amount = (data as Team).points;
-        text1 = (data as Team).longName;
-        nrr = (data as Team).nrr;
-        node = <FormGuide header={false} type="team" id={(data as Team).id} />;
-      }
-      break;
-
     default:
       break;
   }
@@ -134,7 +132,6 @@ export const CarouselCardData = ({
         type={type}
         header={false}
         amount={amount}
-        nrr={nrr}
         team={teamShortName}
         result={result}
       />

@@ -325,12 +325,12 @@ async function processCompletedMatch({
     await updateTeamsForCompletedMatch({ match });
   }
   if (match.type === MatchType.FINAL) {
-    const iplWinners = matchPredictions.filter(
-      (pred) => pred.matchId === null && pred.teamId === match.winnerId
-    );
-    const iplLosers = matchPredictions.filter(
-      (pred) => pred.matchId === null && pred.teamId !== match.winnerId
-    );
+    const iplWinners = await prisma.prediction.findMany({
+      where: { matchId: null, teamId: match.winnerId },
+    });
+    const iplLosers = await prisma.prediction.findMany({
+      where: { matchId: null, NOT: { teamId: match.winnerId } },
+    });
     if (iplWinners.length > 0 && iplLosers.length > 0) {
       const totalWon = iplWinners.reduce((acc, b) => acc + b.amount, 0);
       const totalLost = iplLosers.reduce((acc, b) => acc + b.amount, 0);

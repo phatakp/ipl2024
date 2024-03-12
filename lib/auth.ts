@@ -75,33 +75,36 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
-    async jwt({ token, user }) {
-      const dbUser = await prisma.user.findUnique({
-        where: { email: token.email! },
-        include: {
-          profile: {
-            include: {
-              team: { select: { id: true, shortName: true, longName: true } },
+    async jwt({ token, user, trigger }) {
+      if (trigger === "update" || trigger === "signIn") {
+        const dbUser = await prisma.user.findUnique({
+          where: { email: token.email! },
+          include: {
+            profile: {
+              include: {
+                team: { select: { id: true, shortName: true, longName: true } },
+              },
             },
           },
-        },
-      });
+        });
 
-      if (!dbUser) {
-        token.id = user.id;
-        return token;
+        if (!dbUser) {
+          token.id = user.id;
+          return token;
+        }
+
+        return {
+          id: dbUser.id,
+          name: dbUser.name as string,
+          email: dbUser.email,
+          picture: dbUser.image,
+          profile: dbUser.profile,
+          balance: dbUser.balance,
+          role: dbUser.role,
+          doublesLeft: dbUser.doublesLeft,
+        } as JWT;
       }
-
-      return {
-        id: dbUser.id,
-        name: dbUser.name as string,
-        email: dbUser.email,
-        picture: dbUser.image,
-        profile: dbUser.profile,
-        balance: dbUser.balance,
-        role: dbUser.role,
-        doublesLeft: dbUser.doublesLeft,
-      } as JWT;
+      return token;
     },
   },
 };

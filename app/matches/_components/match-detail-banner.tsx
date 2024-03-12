@@ -7,7 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
 import { getAuthServerSession } from "@/lib/auth";
-import { cn, isMatchStarted } from "@/lib/utils";
+import { cn, isMatchStarted, isToday, isTomorrow } from "@/lib/utils";
 import { MatchAPIResult, StatsResult } from "@/types";
 import { MatchStatus, MatchType, UserRole } from "@prisma/client";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
@@ -29,11 +29,22 @@ export const MatchDetailBanner = async ({ match }: MatchDetailBannerProps) => {
   return (
     <div className="w-full rounded-md bg-backround/90 relative flex flex-col items-center justify-center antialiased py-8">
       <div className="w-full max-w-6xl p-4 mx-auto flex flex-col items-center justify-center">
-        <div className="text-sm">
-          Match {match.num} | {match?.venue}
+        <div className="text-sm flex flex-col md:flex-row items-center justify-center gap-2">
+          <span>
+            {match.type === MatchType.LEAGUE
+              ? `Match ${match.num}`
+              : match.type}
+          </span>
+          <span className="hidden md:flex">|</span>
+          <span>{match?.venue}</span>
         </div>
         <div className="text-xs text-muted-foreground my-2">
-          {DateTime.fromISO(match.date).toFormat("ff")} IST
+          {isToday(match.date)
+            ? `Today, ${DateTime.fromISO(match.date).toFormat("t")}`
+            : isTomorrow(match.date)
+            ? `Tomorrow, ${DateTime.fromISO(match.date).toFormat("t")}`
+            : DateTime.fromISO(match.date).toFormat("ff")}{" "}
+          IST
         </div>
         <Separator className="bg-muted-foreground" />
         <MatchBannerResult match={match} />
@@ -80,7 +91,7 @@ const MatchBannerResult = ({ match }: { match: MatchAPIResult }) => (
     {match.status === MatchStatus.SCHEDULED
       ? isMatchStarted(match.date)
         ? "Match In Progress"
-        : "Match Scheduled"
+        : "Match Yet to Begin"
       : match.status === MatchStatus.COMPLETED
       ? `${match.winner?.shortName} won by ${match.result}`
       : "Match Abandoned"}

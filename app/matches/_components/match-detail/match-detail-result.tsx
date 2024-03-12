@@ -36,7 +36,7 @@ export const MatchDetailResult = async ({
             session={session}
           />
         ) : (
-          "Match Scheduled"
+          "Match Yet to Begin"
         )
       ) : match.status === MatchStatus.COMPLETED ? (
         `${match.winner?.shortName} won by ${match.result}`

@@ -37,7 +37,7 @@ import {
   PredictionFormSchema,
 } from "@/zodSchemas/prediction.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { MatchStatus } from "@prisma/client";
+import { MatchStatus, MatchType } from "@prisma/client";
 import { Session } from "next-auth";
 import Image from "next/image";
 import { useState } from "react";
@@ -115,8 +115,10 @@ export const PredictionForm = ({
         <Card className="w-full bg-background text-foreground shadow-md border-none">
           <CardHeader>
             <CardTitle className="font-over title text-3xl">
-              Match {match.num} - {match.team1?.shortName} vs{" "}
-              {match.team2?.shortName}
+              {match.type === MatchType.LEAGUE
+                ? `Match ${match.num}`
+                : match.type}{" "}
+              - {match.team1?.shortName} vs {match.team2?.shortName}
             </CardTitle>
             <CardDescription>Predict and win big !</CardDescription>
           </CardHeader>
@@ -162,12 +164,13 @@ export const PredictionForm = ({
 
                 <FormInput name="teamId" label="" className="hidden" />
 
-                {!isDoubleCutoffPassed(match.date) && (
-                  <PredictionDoubleInput
-                    doublesLeft={session.user.doublesLeft}
-                    isDisabled={!!prediction?.isDouble || isDisabled}
-                  />
-                )}
+                {match.type === MatchType.LEAGUE &&
+                  !isDoubleCutoffPassed(match.date) && (
+                    <PredictionDoubleInput
+                      doublesLeft={session.user.doublesLeft}
+                      isDisabled={!!prediction?.isDouble || isDisabled}
+                    />
+                  )}
 
                 <div className={cn("flex items-center justify-end w-full")}>
                   <Button

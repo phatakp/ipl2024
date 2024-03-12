@@ -1,4 +1,6 @@
+import { isToday, isTomorrow } from "@/lib/utils";
 import { MatchAPIResult } from "@/types";
+import { MatchType } from "@prisma/client";
 import { DateTime } from "luxon";
 
 export const MatchDetailTopLine = ({ match }: { match: MatchAPIResult }) => {
@@ -6,14 +8,19 @@ export const MatchDetailTopLine = ({ match }: { match: MatchAPIResult }) => {
     <div className="grid grid-cols-8 md:grid-cols-10 gap-16 md:gap-0 shadow-md p-2 items-center bg-primary text-primary-foreground">
       <div className="col-span-2">
         <span className="p-1  font-over text-xs md:text-sm whitespace-nowrap">
-          Match {match.num}
+          {match.type === MatchType.LEAGUE ? `Match ${match.num}` : match.type}
         </span>
       </div>
       <div className="col-span-6 md:col-span-8 flex flex-col md:flex-row gap-x-2 items-start md:items-center">
         <span className="text-sm">{match.venue}</span>
         <span className="hidden md:flex text-muted-foreground">|</span>
         <span className="text-xs text-muted-foreground ">
-          {DateTime.fromISO(match.date).toFormat("ff")} IST
+          {isToday(match.date)
+            ? `Today, ${DateTime.fromISO(match.date).toFormat("t")}`
+            : isTomorrow(match.date)
+            ? `Tomorrow, ${DateTime.fromISO(match.date).toFormat("t")}`
+            : DateTime.fromISO(match.date).toFormat("ff")}{" "}
+          IST
         </span>
       </div>
     </div>

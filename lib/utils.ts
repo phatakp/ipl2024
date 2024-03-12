@@ -12,6 +12,25 @@ export function randomNumberBetween(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+export function isToday(matchDate: string) {
+  const currDate = DateTime.fromISO(new Date().toISOString())
+    .setZone("Asia/Kolkata")
+    .toISODate();
+
+  const mDate = matchDate.slice(0, 10);
+  return currDate === mDate;
+}
+
+export function isTomorrow(matchDate: string) {
+  const tomorrowDate = DateTime.fromISO(new Date().toISOString())
+    .plus({ days: 1 })
+    .setZone("Asia/Kolkata")
+    .toISODate();
+
+  const mDate = matchDate.slice(0, 10);
+  return tomorrowDate === mDate;
+}
+
 export function computeNrr(
   forOvers: number,
   forRuns: number,

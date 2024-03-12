@@ -3,7 +3,11 @@ import {
   getStatsForUser,
   getUserPredictions,
 } from "@/actions/prediction.actions";
-import { getHighestWins, getUsers } from "@/actions/user.actions";
+import {
+  getBiggestLoss,
+  getHighestWins,
+  getUsers,
+} from "@/actions/user.actions";
 import { Carousel } from "@/components/carousel/carousel";
 import { PageHeader } from "@/components/page-header";
 import { Badge } from "@/components/ui/badge";
@@ -29,6 +33,7 @@ const DashboardPage = async () => {
   const matches: MatchAPIResult[] = await getMatchCarouselData();
   const users = await getUsers();
   const wins = await getHighestWins();
+  const losses = await getBiggestLoss();
   const { won, lost, pct, double } = await getStatsForUser(session.user.id);
   const userPredictions = await getUserPredictions(session.user.id);
   const rank =
@@ -39,6 +44,7 @@ const DashboardPage = async () => {
   let items = [
     { type: "user", data: users, title: "Leaderboard" },
     { type: "result", data: wins, title: "Highest Single Win" },
+    { type: "result", data: losses, title: "Biggest Single Loss" },
     { type: "pred", data: userPredictions, title: "Your Predictions" },
   ];
 

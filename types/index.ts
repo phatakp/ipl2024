@@ -133,23 +133,12 @@ export type StatsResult = {
   t2_last5: MatchHistoryAPIResult[];
 };
 
-export type CarouselItemDataType =
-  | "pred"
-  | "user"
-  | "result"
-  | "matchpred"
-  | "team";
+export type CarouselItemDataType = "pred" | "user" | "result" | "matchpred";
 
 export type StatsType = {
   title: string;
   amount: number;
   icon?: ReactNode;
-};
-
-export type CarouselTeamItems = {
-  data: Team[];
-  title: string;
-  type: "team";
 };
 
 export type CarouselPredItems = {
@@ -179,7 +168,6 @@ export type CarouselUserItems = {
 export type CarouselItemType = { type: CarouselItemDataType } & (
   | CarouselUserItems
   | CarouselPredItems
-  | CarouselTeamItems
   | CarouselResultItems
   | CarouselMatchPredItems
 );

@@ -6,11 +6,13 @@ import {
   PredictionResultAPIType,
   UserAPIResult,
 } from "@/types";
-import { PredictionStatus, Team, UserRole } from "@prisma/client";
+import { PredictionStatus, UserRole } from "@prisma/client";
 import { ShieldHalfIcon } from "lucide-react";
 import { Session } from "next-auth";
+import Link from "next/link";
 import { ReactNode } from "react";
 import { FormGuide } from "../form-guide";
+import { Button, buttonVariants } from "../ui/button";
 import { CardHeader } from "../ui/card";
 import { CarouselCardAmount } from "./carousel-card-amount";
 import { CarouselCardDesc } from "./carousel-card-desc";
@@ -29,7 +31,6 @@ export const CarouselCardHeader = ({
 }: CarouselCardHeaderProps) => {
   let teamShortName: string | undefined = undefined;
   let amount = 0;
-  let nrr = 0;
   let text1 = "#####";
   let text2 = "##";
   let node: ReactNode;
@@ -62,11 +63,19 @@ export const CarouselCardHeader = ({
         text1 =
           (data as PredictionResultAPIType).user.profile?.firstName ?? "User";
         text2 = (data as PredictionResultAPIType).user.profile?.lastName ?? "1";
-        node = `${
-          (data as PredictionResultAPIType).match?.team1?.shortName ?? "TBC"
-        } vs ${
-          (data as PredictionResultAPIType).match?.team2?.shortName ?? "TBC"
-        }`;
+        node = (
+          <Link
+            href={`/matches/${(data as PredictionResultAPIType).match?.num}`}
+            className={cn(
+              buttonVariants({ variant: "success" }),
+              "font-semibold hover:bg-success w-fit text-base"
+            )}
+          >
+            {(data as PredictionResultAPIType).match?.team1?.shortName ?? "TBC"}{" "}
+            vs{" "}
+            {(data as PredictionResultAPIType).match?.team2?.shortName ?? "TBC"}
+          </Link>
+        );
       }
       break;
     case "matchpred":
@@ -78,7 +87,14 @@ export const CarouselCardHeader = ({
         text1 =
           (data as PredictionAPIResult).user.name?.split(" ")?.[0] ?? "User";
         text2 = (data as PredictionAPIResult).user.name?.split(" ")?.[1] ?? "1";
-        node = `Stake : ${(data as PredictionAPIResult).amount.toFixed()}`;
+        node = (
+          <Button
+            variant="success"
+            className="font-semibold hover:bg-success w-fit text-base cursor-default"
+          >
+            Stake : {(data as PredictionAPIResult).amount.toFixed()}
+          </Button>
+        );
         isDouble = (data as PredictionAPIResult).isDouble;
       }
       break;
@@ -90,22 +106,16 @@ export const CarouselCardHeader = ({
         result = (data as PredictionAPIResult).status;
         text1 = "IPL";
         text2 = "Winner";
-        node = `Stake : ${(data as PredictionAPIResult).amount.toFixed()}`;
+        node = (
+          <Button
+            variant="success"
+            className="font-semibold hover:bg-success w-fit text-base cursor-default"
+          >
+            Stake : {(data as PredictionAPIResult).amount.toFixed()}
+          </Button>
+        );
       }
       break;
-    case "team":
-      node = <FormGuide header={true} type="team" id={""} />;
-      if (!!data) {
-        teamShortName = (data as Team).shortName;
-        amount = (data as Team).points;
-        const names = (data as Team).longName.split(" ");
-        text1 = names.length > 2 ? `${names[0]} ${names[1]}` : names[0];
-        text2 = names.at(-1)!;
-        nrr = (data as Team).nrr;
-        node = <FormGuide header={true} type="team" id={(data as Team).id} />;
-      }
-      break;
-
     default:
       break;
   }
@@ -141,7 +151,6 @@ export const CarouselCardHeader = ({
           type={type}
           header={true}
           amount={amount}
-          nrr={nrr}
           team={teamShortName}
           result={result}
           isDouble={isDouble}

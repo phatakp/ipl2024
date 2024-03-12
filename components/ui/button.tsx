@@ -14,6 +14,7 @@ const buttonVariants = cva(
           "enabled:animate-shimmer  disabled:bg-muted border border-input enabled:bg-[linear-gradient(110deg,#ef4444,45%,#ff2631,55%,#af2326)] bg-[length:200%_100%] text-primary focus:ring-slate-400 focus:ring-offset-slate-50",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        success: "bg-success text-success-foreground hover:bg-success/90",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:

@@ -172,6 +172,42 @@ export async function getHighestWins() {
   return users;
 }
 
+export async function getBiggestLoss() {
+  const users = await prisma.prediction.findMany({
+    where: { status: PredictionStatus.LOST },
+    orderBy: [{ result: "asc" }],
+    take: 10,
+    include: {
+      team: TEAM_SHORT_DETAILS,
+      match: {
+        select: {
+          num: true,
+          team1: TEAM_SHORT_DETAILS,
+          team2: TEAM_SHORT_DETAILS,
+          winner: TEAM_SHORT_DETAILS,
+        },
+      },
+      user: {
+        select: {
+          name: true,
+          profile: {
+            select: {
+              firstName: true,
+              lastName: true,
+              userId: true,
+              teamId: true,
+              isPaid: true,
+              team: TEAM_SHORT_DETAILS,
+            },
+          },
+        },
+      },
+    },
+  });
+
+  return users;
+}
+
 export async function getUserById(id: string) {
   const user = await prisma.user.findUnique({
     where: { id },

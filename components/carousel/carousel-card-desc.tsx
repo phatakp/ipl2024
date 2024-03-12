@@ -41,20 +41,10 @@ export const CarouselCardDesc = ({
           )}
         </>
       )}
-
-      {["pred", "matchpred", "result"].includes(type) ? (
-        <span
-          className={cn(
-            "h-8 mt-2",
-            header
-              ? "font-semibold bg-success text-muted text-center rounded-md leading-5 py-1.5"
-              : "h-4 text-muted-foreground text-sm"
-          )}
-        >
-          {node}
-        </span>
+      {header ? (
+        node
       ) : (
-        <>{node}</>
+        <span className="text-muted-foreground text-sm">{node}</span>
       )}
     </div>
   );
