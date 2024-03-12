@@ -89,11 +89,9 @@ export const PredictionForm = ({
   };
 
   if (
-    !(
-      match.status === MatchStatus.SCHEDULED &&
-      !isDoubleCutoffPassed(match.date) &&
-      !!session?.user.profile.teamId
-    )
+    match.status !== MatchStatus.SCHEDULED ||
+    !session?.user.profile.teamId ||
+    isDoubleCutoffPassed(match.date)
   )
     return null;
 
