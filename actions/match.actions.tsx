@@ -14,7 +14,7 @@ import {
   updateTeamsForCompletedMatch,
 } from "@/actions/settlement.actions";
 import { prisma } from "@/lib/db";
-import { PredictionAPIResult } from "@/types";
+import { MatchAPIResult, PredictionAPIResult } from "@/types";
 import {
   UpdateMatchFormData,
   UpdateMatchFormSchema,
@@ -35,14 +35,6 @@ type ReturnType = {
   data: string;
 };
 
-export async function getMatches() {
-  const matches = await prisma.match.findMany({
-    orderBy: [{ num: "asc" }],
-    include: INCLUDE_MATCH_DETAILS,
-  });
-  return matches;
-}
-
 export async function getMatchFixtures() {
   const matches = await prisma.match.findMany({
     where: { status: MatchStatus.SCHEDULED },
@@ -62,18 +54,10 @@ export async function getMatchResults() {
   return matches;
 }
 
-export async function getMatchResultsAll() {
-  const matches = await prisma.match.findMany({
-    where: { NOT: { status: MatchStatus.SCHEDULED } },
-    orderBy: [{ num: "desc" }],
-    include: INCLUDE_MATCH_DETAILS,
-  });
-  return matches;
-}
-
 export async function getMatchCarouselData() {
+  const completed = await getMatchResults();
+  const lastMatch = completed?.[0] ?? ({} as MatchAPIResult);
   const istDate = DateTime.fromISO(new Date().toISOString())
-    .minus({ days: 1 })
     .setZone("Asia/Kolkata")
     .toISO();
   const matches = await prisma.match.findMany({
@@ -81,7 +65,8 @@ export async function getMatchCarouselData() {
     orderBy: [{ num: "asc" }],
     include: INCLUDE_MATCH_DETAILS,
   });
-  return matches;
+  if (!!lastMatch) return [lastMatch, ...matches];
+  else return matches;
 }
 
 export async function getMatchById(id: string) {

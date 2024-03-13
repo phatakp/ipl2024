@@ -1,6 +1,7 @@
 "use server";
 
 import { prisma } from "@/lib/db";
+import { isIPLWinnerUpdatable } from "@/lib/utils";
 import { ActionResp } from "@/types";
 import {
   IsPaidFormData,
@@ -25,6 +26,9 @@ export async function updateProfile(
     const prediction = await prisma.prediction.findFirst({
       where: { userId, matchId: null },
     });
+
+    if (prediction?.teamId !== data.teamId && !isIPLWinnerUpdatable())
+      return { success: false, data: "IPL Winner cannot be changed now" };
 
     const user = await prisma.user.update({
       where: { id: userId },

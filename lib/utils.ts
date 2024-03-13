@@ -1,4 +1,4 @@
-import { getMatchResultsAll } from "@/actions/match.actions";
+import { getMatchResults } from "@/actions/match.actions";
 import { clsx, type ClassValue } from "clsx";
 import { DateTime } from "luxon";
 import { twMerge } from "tailwind-merge";
@@ -94,7 +94,7 @@ export function isDoubleCutoffPassed(matchDate: string) {
 }
 
 export async function isIPLWinnerUpdatable() {
-  const completed = await getMatchResultsAll();
+  const completed = await getMatchResults();
   return completed?.[0]?.num < 35;
 }
 
