@@ -7,8 +7,18 @@ import {
   isValidT2Score,
   isValidWinner,
 } from "@/lib/validators/match.validators";
-import { MatchStatus } from "@prisma/client";
+import { MatchStatus, MatchType } from "@prisma/client";
 import { z } from "zod";
+
+export const AddMatchFormSchema = z.object({
+  num: z.string().min(0, "Min value 0"),
+  type: z.nativeEnum(MatchType),
+  date: z.string(),
+  venue: z.string(),
+  minStake: z.enum(["50", "100", "200"]),
+  team1Id: z.string(),
+  team2Id: z.string(),
+});
 
 export const UpdateMatchFormSchema = z
   .object({
@@ -75,4 +85,5 @@ export const UpdateMatchFormSchema = z
     }
   );
 
+export type AddMatchFormData = z.infer<typeof AddMatchFormSchema>;
 export type UpdateMatchFormData = z.infer<typeof UpdateMatchFormSchema>;

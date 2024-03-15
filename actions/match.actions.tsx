@@ -16,6 +16,8 @@ import {
 import { prisma } from "@/lib/db";
 import { MatchAPIResult, PredictionAPIResult } from "@/types";
 import {
+  AddMatchFormData,
+  AddMatchFormSchema,
   UpdateMatchFormData,
   UpdateMatchFormSchema,
 } from "@/zodSchemas/match.schema";
@@ -148,6 +150,30 @@ export async function updateMatchDB(
   } catch (error) {
     console.error(error);
   }
+}
+
+export async function addMatch(
+  formData: AddMatchFormData
+): Promise<ReturnType> {
+  const values = AddMatchFormSchema.safeParse(formData);
+  if (!values.success) return { success: false, data: "Invalid input" };
+  const { date, num, type, minStake, team1Id, team2Id, venue } = values.data;
+
+  const match = await prisma.match.create({
+    data: {
+      date,
+      num: parseInt(num),
+      type,
+      minStake: parseInt(minStake),
+      team1Id,
+      team2Id,
+      venue,
+    },
+  });
+  revalidatePath("/dashboard");
+  revalidatePath("/matches");
+
+  return { success: true, data: match.id };
 }
 
 export async function updateMatch(

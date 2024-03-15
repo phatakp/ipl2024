@@ -1,6 +1,9 @@
 import { getMatchResults } from "@/actions/match.actions";
 import { TeamStickers } from "@/app/(00home)/_components/team-stickers";
+import { AddMatchForm } from "@/app/(protected)/_components/forms/add-match-form";
+import { getAuthServerSession } from "@/lib/auth";
 import { cn } from "@/lib/utils";
+import { UserRole } from "@prisma/client";
 import { ReactNode } from "react";
 import { BackgroundBeams } from "./ui/background-beams";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
@@ -15,6 +18,8 @@ export const PageHeader = async ({
   component?: ReactNode;
 }) => {
   const matches = await getMatchResults();
+  const session = await getAuthServerSession();
+
   return (
     <div className="min-h-48 w-full rounded-md bg-backround/90 relative flex flex-col antialiased max-w-6xl mx-auto">
       <div className="max-w-2xl p-4 mx-auto">
@@ -42,6 +47,9 @@ export const PageHeader = async ({
         )}
       </div>
       {title === "Dashboard" && <TeamStickers />}
+      {title === "Dashboard" && session?.user.role === UserRole.ADMIN && (
+        <AddMatchForm />
+      )}
       <BackgroundBeams />
     </div>
   );
