@@ -38,7 +38,8 @@ export const CarouselCard = ({ type, data }: CarouselCardProps) => {
     topData = data[0];
     if (type === "pred")
       pageData = (pageData as PredictionAPIResult[]).filter((d) => !!d.matchId);
-    else pageData = pageData.filter((d, i) => i > 0);
+    else
+      pageData = pageData.filter((d, i) => (page === 1 && i > 0) || page > 1);
   }
 
   return (
@@ -55,7 +56,11 @@ export const CarouselCard = ({ type, data }: CarouselCardProps) => {
               type={type}
               data={pageItem}
               index={i}
-              rank={`${(page - 1) * PAGE_SIZE + i + 2}`}
+              rank={
+                page === 1
+                  ? `${(page - 1) * PAGE_SIZE + i + 2}`
+                  : `${(page - 1) * PAGE_SIZE + i + 1}`
+              }
               session={session}
             />
           );
