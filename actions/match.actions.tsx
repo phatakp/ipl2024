@@ -80,7 +80,7 @@ export async function getMatchById(id: string) {
 }
 
 export async function getMatchByNum(num: number) {
-  if (!num) return;
+  if (num === undefined || num === null) return;
   const match = await prisma.match.findFirst({
     where: { num },
     include: INCLUDE_MATCH_DETAILS,

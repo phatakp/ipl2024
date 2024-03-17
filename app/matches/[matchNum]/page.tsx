@@ -20,6 +20,7 @@ const MatchDetailPage = async ({
 }: MatchDetailPageProps) => {
   const session = await getAuthServerSession();
   const match = await getMatchByNum(parseInt(matchNum));
+
   if (!match) return;
   let predictions = await getMatchPredictions({
     matchId: match.id,
