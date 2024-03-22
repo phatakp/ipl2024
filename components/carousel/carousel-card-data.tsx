@@ -1,4 +1,3 @@
-import { PaidForm } from "@/app/(protected)/_components/forms/is-paid-form";
 import { cn } from "@/lib/utils";
 import {
   CarouselItemDataType,
@@ -6,7 +5,7 @@ import {
   PredictionResultAPIType,
   UserAPIResult,
 } from "@/types";
-import { PredictionStatus, UserRole } from "@prisma/client";
+import { PredictionStatus } from "@prisma/client";
 import { Session } from "next-auth";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -108,12 +107,12 @@ export const CarouselCardData = ({
       key={index}
       className={cn("flex items-center justify-between gap-4 px-4 py-2")}
     >
-      {!!data && type === "user" && session?.user.role === UserRole.ADMIN && (
+      {/* {!!data && type === "user" && session?.user.role === UserRole.ADMIN && (
         <PaidForm
           userId={(data as UserAPIResult).id}
           isPaid={!!(data as UserAPIResult).profile?.isPaid}
         />
-      )}
+      )} */}
       <span className="w-6">
         {type === "pred" && !!data
           ? `#${(data as PredictionAPIResult).match?.num}`

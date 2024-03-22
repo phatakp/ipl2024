@@ -2,6 +2,7 @@
 import {
   getFormattedDate,
   getFormattedTime,
+  isMatchStarted,
   isToday,
   isTomorrow,
 } from "@/lib/utils";
@@ -13,7 +14,9 @@ export const MatchCardResult = () => {
   return (
     <div className="text-sm font-over px-1 font-semibold">
       {match.status === MatchStatus.SCHEDULED
-        ? isToday(match.date)
+        ? isMatchStarted(match.date)
+          ? "Match In Progress"
+          : isToday(match.date)
           ? `Today, ${getFormattedTime(match.date)} IST`
           : isTomorrow(match.date)
           ? `Tomorrow, ${getFormattedTime(match.date)} IST`

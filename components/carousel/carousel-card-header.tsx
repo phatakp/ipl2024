@@ -1,4 +1,3 @@
-import { PaidForm } from "@/app/(protected)/_components/forms/is-paid-form";
 import { cn } from "@/lib/utils";
 import {
   CarouselItemDataType,
@@ -6,7 +5,7 @@ import {
   PredictionResultAPIType,
   UserAPIResult,
 } from "@/types";
-import { PredictionStatus, UserRole } from "@prisma/client";
+import { PredictionStatus } from "@prisma/client";
 import { ShieldHalfIcon } from "lucide-react";
 import { Session } from "next-auth";
 import Link from "next/link";
@@ -130,14 +129,14 @@ export const CarouselCardHeader = ({
         <div className="font-semibold inline-flex items-center gap-2">
           <ShieldHalfIcon className="size-4" />
           <span className="text-xl font-semibold">1</span>
-          {!!data &&
+          {/* {!!data &&
             type === "user" &&
             session?.user.role === UserRole.ADMIN && (
               <PaidForm
                 userId={(data as UserAPIResult).id}
                 isPaid={!!(data as UserAPIResult).profile?.isPaid}
               />
-            )}
+            )} */}
         </div>
         <CarouselCardDesc
           header={true}
