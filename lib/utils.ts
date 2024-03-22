@@ -110,8 +110,7 @@ export function transformOvers(overs: string) {
 }
 
 export function getFormattedTime(matchDate: string) {
-  const date = DateTime.fromISO(matchDate);
-  return `${date.toFormat("h")}:${date.toFormat("mm")} ${date.toFormat("a")}`;
+  return matchDate.slice(11, 16);
 }
 
 export function getFormattedDate(matchDate: string) {
