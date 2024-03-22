@@ -70,6 +70,7 @@ export function isMatchStarted(matchDate: string) {
   const currDate = DateTime.fromISO(new Date().toISOString()).setZone(
     "Asia/Kolkata"
   );
+
   return currDate! >= DateTime.fromISO(matchDate).setZone("Asia/Kolkata");
 }
 
@@ -106,4 +107,16 @@ export function transformOvers(overs: string) {
     return `${numR}.${denR}`;
   }
   return overs;
+}
+
+export function getFormattedTime(matchDate: string) {
+  const date = DateTime.fromISO(matchDate);
+  return `${date.toFormat("h")}:${date.toFormat("mm")} ${date.toFormat("a")}`;
+}
+
+export function getFormattedDate(matchDate: string) {
+  const date = DateTime.fromISO(matchDate);
+  return `${date.toFormat("ccc")}, ${date.toFormat("LLL")} ${date.toFormat(
+    "dd"
+  )}, ${getFormattedTime(matchDate)}`;
 }

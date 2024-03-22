@@ -7,11 +7,17 @@ import { buttonVariants } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
 import { getAuthServerSession } from "@/lib/auth";
-import { cn, isMatchStarted, isToday, isTomorrow } from "@/lib/utils";
+import {
+  cn,
+  getFormattedDate,
+  getFormattedTime,
+  isMatchStarted,
+  isToday,
+  isTomorrow,
+} from "@/lib/utils";
 import { MatchAPIResult, StatsResult } from "@/types";
 import { MatchStatus, MatchType, UserRole } from "@prisma/client";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
-import { DateTime } from "luxon";
 import Link from "next/link";
 import { MatchBannerTeam } from "./match-banner-team";
 
@@ -40,10 +46,10 @@ export const MatchDetailBanner = async ({ match }: MatchDetailBannerProps) => {
         </div>
         <div className="text-xs text-muted-foreground my-2">
           {isToday(match.date)
-            ? `Today, ${DateTime.fromISO(match.date).toFormat("t")}`
+            ? `Today, ${getFormattedTime(match.date)}`
             : isTomorrow(match.date)
-            ? `Tomorrow, ${DateTime.fromISO(match.date).toFormat("t")}`
-            : DateTime.fromISO(match.date).toFormat("ff")}{" "}
+            ? `Tomorrow, ${getFormattedTime(match.date)}`
+            : getFormattedDate(match.date)}{" "}
           IST
         </div>
         <Separator className="bg-muted-foreground" />

@@ -1,7 +1,11 @@
 "use client";
-import { isToday, isTomorrow } from "@/lib/utils";
+import {
+  getFormattedDate,
+  getFormattedTime,
+  isToday,
+  isTomorrow,
+} from "@/lib/utils";
 import { MatchStatus } from "@prisma/client";
-import { DateTime } from "luxon";
 import { useMatchContext } from "../../_context/match-context";
 
 export const MatchCardResult = () => {
@@ -10,10 +14,10 @@ export const MatchCardResult = () => {
     <div className="text-sm font-over px-1 font-semibold">
       {match.status === MatchStatus.SCHEDULED
         ? isToday(match.date)
-          ? `Today, ${DateTime.fromISO(match.date).toFormat("t")} IST`
+          ? `Today, ${getFormattedTime(match.date)} IST`
           : isTomorrow(match.date)
-          ? `Tomorrow, ${DateTime.fromISO(match.date).toFormat("t")} IST`
-          : `${DateTime.fromISO(match.date).toFormat("ff")} IST`
+          ? `Tomorrow, ${getFormattedTime(match.date)} IST`
+          : `${getFormattedDate(match.date)} IST`
         : match.status === MatchStatus.COMPLETED
         ? `${match.winner?.shortName} won by ${match.result}`
         : "Match Abandoned"}

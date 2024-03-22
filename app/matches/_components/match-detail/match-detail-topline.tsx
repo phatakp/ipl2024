@@ -1,7 +1,11 @@
-import { isToday, isTomorrow } from "@/lib/utils";
+import {
+  getFormattedDate,
+  getFormattedTime,
+  isToday,
+  isTomorrow,
+} from "@/lib/utils";
 import { MatchAPIResult } from "@/types";
 import { MatchType } from "@prisma/client";
-import { DateTime } from "luxon";
 
 export const MatchDetailTopLine = ({ match }: { match: MatchAPIResult }) => {
   return (
@@ -16,10 +20,10 @@ export const MatchDetailTopLine = ({ match }: { match: MatchAPIResult }) => {
         <span className="hidden md:flex text-muted-foreground">|</span>
         <span className="text-xs text-muted-foreground ">
           {isToday(match.date)
-            ? `Today, ${DateTime.fromISO(match.date).toFormat("t")}`
+            ? `Today, ${getFormattedTime(match.date)}`
             : isTomorrow(match.date)
-            ? `Tomorrow, ${DateTime.fromISO(match.date).toFormat("t")}`
-            : DateTime.fromISO(match.date).toFormat("ff")}{" "}
+            ? `Tomorrow, ${getFormattedTime(match.date)}`
+            : getFormattedDate(match.date)}{" "}
           IST
         </span>
       </div>
