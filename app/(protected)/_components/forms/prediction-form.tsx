@@ -136,9 +136,10 @@ export const PredictionForm = ({
 
                 <Slider
                   defaultValue={[match.minStake]}
-                  max={match.minStake * 10}
+                  max={match.minStake * 20}
                   min={prediction?.amount ?? match.minStake}
                   step={10}
+                  value={[amount]}
                   onValueChange={(val) => form.setValue("amount", val[0])}
                   disabled={isDisabled}
                 />

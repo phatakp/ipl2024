@@ -59,7 +59,9 @@ export async function getMatchResults() {
 export async function getMatchCarouselData() {
   const completed = await getMatchResults();
   const lastMatch = completed?.[0] ?? ({} as MatchAPIResult);
-  const istDate = DateTime.fromISO(new Date().toISOString())
+  const date = new Date();
+  date.setHours(0, 0, 0, 0);
+  const istDate = DateTime.fromISO(date.toISOString())
     .setZone("Asia/Kolkata")
     .toISO();
   const matches = await prisma.match.findMany({
