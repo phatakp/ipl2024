@@ -62,6 +62,7 @@ export const CarouselCardHeader = ({
         text1 =
           (data as PredictionResultAPIType).user.profile?.firstName ?? "User";
         text2 = (data as PredictionResultAPIType).user.profile?.lastName ?? "1";
+        isDouble = (data as PredictionResultAPIType).isDouble;
         node = (
           <Link
             href={`/matches/${(data as PredictionResultAPIType).match?.num}`}
@@ -105,6 +106,7 @@ export const CarouselCardHeader = ({
         result = (data as PredictionAPIResult).status;
         text1 = "IPL";
         text2 = "Winner";
+        isDouble = (data as PredictionAPIResult).isDouble;
         node = (
           <Button
             variant="success"
