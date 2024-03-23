@@ -108,7 +108,7 @@ export async function predictionDBUpdate(data: PredictionFormData) {
       const existingDouble = await db.prediction.findFirst({
         where: { matchId, isDouble: true },
       });
-      if (!!existingDouble) {
+      if (!!existingDouble && existingDouble.userId !== userId) {
         await db.user.update({
           where: { id: existingDouble.userId },
           data: {
@@ -122,14 +122,16 @@ export async function predictionDBUpdate(data: PredictionFormData) {
           },
         });
       }
-      await db.user.update({
-        where: { id: userId },
-        data: { doublesLeft: { decrement: 1 } },
-      });
-      await db.match.update({
-        where: { id: matchId },
-        data: { isDoublePlayed: true },
-      });
+      if (!existingDouble || existingDouble.userId !== userId) {
+        await db.user.update({
+          where: { id: userId },
+          data: { doublesLeft: { decrement: 1 } },
+        });
+        await db.match.update({
+          where: { id: matchId },
+          data: { isDoublePlayed: true },
+        });
+      }
     }
     const prediction = await db.prediction.upsert({
       where: { matchId_userId: { matchId, userId } },
