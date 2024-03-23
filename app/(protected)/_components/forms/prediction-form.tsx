@@ -175,7 +175,7 @@ export const PredictionForm = ({
                   <Button
                     isLoading={form.formState.isSubmitting}
                     type="submit"
-                    disabled={isDisabled}
+                    disabled={!teamId || isDisabled}
                     size="sm"
                   >
                     Submit

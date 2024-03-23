@@ -65,7 +65,7 @@ export async function getMatchCarouselData() {
     .setZone("Asia/Kolkata")
     .toISO();
   const matches = await prisma.match.findMany({
-    where: { date: { gte: istDate! } },
+    where: { date: { gte: istDate! }, status: MatchStatus.SCHEDULED },
     orderBy: [{ num: "asc" }],
     include: INCLUDE_MATCH_DETAILS,
   });

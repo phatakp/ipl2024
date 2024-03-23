@@ -26,6 +26,7 @@ export type ProfileInfo = Pick<
 
 export type UserAPIResult = User & {
   profile: ProfileInfo | null;
+  predictions: Prediction[];
 };
 
 export function isUserType(object: unknown): object is UserAPIResult {

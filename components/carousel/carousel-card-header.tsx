@@ -48,7 +48,7 @@ export const CarouselCardHeader = ({
           <FormGuide
             header={true}
             type="user"
-            id={(data as UserAPIResult).id}
+            data={(data as UserAPIResult).predictions}
           />
         );
       }
@@ -122,7 +122,7 @@ export const CarouselCardHeader = ({
   return (
     <CardHeader
       className={cn(
-        `flex flex-row items-center justify-between border-b ${teamShortName} p-0 rounded-t-xl h-[265px] w-full`
+        `flex flex-row items-center justify-between border-b ${teamShortName} p-0 rounded-t-xl h-[265px] w-full relative`
       )}
     >
       <div className="flex flex-col justify-between gap-4 p-4 h-full flex-1">

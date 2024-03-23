@@ -32,7 +32,10 @@ export function isValidTeam(data: PredictionFormData, match: MatchAPIResult) {
   return [match.team1Id, match.team2Id].includes(data.teamId);
 }
 
-export function isValidDouble(data: PredictionFormData, user: UserAPIResult) {
+export function isValidDouble(
+  data: PredictionFormData,
+  user: Omit<UserAPIResult, "predictions">
+) {
   if (!data.isDouble) return true;
 
   return (

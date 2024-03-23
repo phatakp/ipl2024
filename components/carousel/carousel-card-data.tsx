@@ -48,7 +48,7 @@ export const CarouselCardData = ({
           <FormGuide
             header={false}
             type="user"
-            id={(data as UserAPIResult).id}
+            data={(data as UserAPIResult).predictions}
           />
         );
       }
@@ -60,6 +60,7 @@ export const CarouselCardData = ({
         amount = (data as PredictionResultAPIType).result;
         result = (data as PredictionResultAPIType).status;
         text1 = (data as PredictionResultAPIType).user.name ?? `User ${rank}`;
+        isDouble = (data as PredictionResultAPIType).isDouble;
         node = (
           <Link
             href={`/matches/${(data as PredictionResultAPIType).match?.num}`}
@@ -92,6 +93,7 @@ export const CarouselCardData = ({
         teamShortName = (data as PredictionAPIResult).team?.shortName;
         amount = (data as PredictionAPIResult).result;
         result = (data as PredictionAPIResult).status;
+        isDouble = (data as PredictionAPIResult).isDouble;
         text1 = `${
           (data as PredictionAPIResult).match?.team1?.shortName ?? "TBC"
         } vs ${(data as PredictionAPIResult).match?.team2?.shortName ?? "TBC"}`;

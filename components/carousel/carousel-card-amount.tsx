@@ -24,16 +24,18 @@ export const CarouselCardAmount = ({
   return (
     <div
       className={cn(
-        "inline-flex items-center justify-end gap-1 font-semibold text-lg font-over relative text-right",
-        amount < 0
+        "inline-flex items-center justify-end gap-1 font-semibold text-lg font-over text-right",
+        amount < 0 && team !== "PBKS"
           ? "text-destructive"
+          : amount < 0 && header
+          ? "text-orange-500"
           : ["pred", "matchpred", "result"].includes(type) &&
             result === PredictionStatus.NORESULT
           ? "text-muted-foreground"
           : header
-          ? `text-${team}-foreground`
+          ? `text-${team}-foreground `
           : "text-success",
-        header && `font-extrabold text-6xl text-left justify-start`
+        header && `font-extrabold text-6xl text-left justify-start w-full`
       )}
     >
       <IndianRupeeIcon
@@ -48,10 +50,7 @@ export const CarouselCardAmount = ({
         </span>
       )}
       {header && isDouble && (
-        <Badge
-          variant="success"
-          className="absolute right-0 top-1/2 -translate-y-1/2"
-        >
+        <Badge variant="success" className="absolute right-4 top-4 text-lg">
           Double
         </Badge>
       )}

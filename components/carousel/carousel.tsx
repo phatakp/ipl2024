@@ -52,7 +52,7 @@ export function Carousel<T>({
               return <MatchCard key={item.id} match={item} index={index} />;
             else if (isCarouselDataType(item))
               return (
-                <div key={index} className="grid gap-4">
+                <div key={index} className="grid gap-4 w-full">
                   <div className="title font-over text-2xl font-bold px-4">
                     {item.title}
                   </div>

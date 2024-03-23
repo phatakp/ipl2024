@@ -31,7 +31,6 @@ export async function addDefaultersForMatch(
     amount: match.minStake,
     status: PredictionStatus.DEFAULT,
   }));
-  console.log("defaulters", defaultData);
 
   await prisma.prediction.createMany({
     data: defaultData,

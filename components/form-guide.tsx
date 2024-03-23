@@ -11,11 +11,17 @@ import { Skeleton } from "./ui/skeleton";
 type FormGuideProps = {
   header?: boolean;
   type: "user" | "team";
-  id: string;
+  id?: string;
+  data?: Prediction[];
 };
 
-export const FormGuide = ({ type, id, header = false }: FormGuideProps) => {
-  const { data: last5, isLoading } = useFormGuide(type, id);
+export const FormGuide = ({
+  type,
+  data,
+  id,
+  header = false,
+}: FormGuideProps) => {
+  const { data: last5, isLoading } = useFormGuide(data, id);
 
   if (isLoading)
     return (
@@ -29,6 +35,20 @@ export const FormGuide = ({ type, id, header = false }: FormGuideProps) => {
     );
   return (
     <div className="flex items-center gap-1 flex-nowrap shrink-0 mt-2">
+      {!!last5 &&
+        last5.length < 5 &&
+        Array.from(Array(5 - last5.length).keys()).map((i) => (
+          <span
+            key={i}
+            className={cn(
+              "rounded-full flex items-center justify-center text-xs bg-input text-muted-foreground opacity-80",
+              header ? "size-8" : "size-4"
+            )}
+          >
+            -
+          </span>
+        ))}
+
       {last5?.map((item) => {
         const isWon =
           type === "team"
@@ -62,19 +82,7 @@ export const FormGuide = ({ type, id, header = false }: FormGuideProps) => {
           </span>
         );
       })}
-      {!!last5 &&
-        last5.length < 5 &&
-        Array.from(Array(5 - last5.length).keys()).map((i) => (
-          <span
-            key={i}
-            className={cn(
-              "rounded-full flex items-center justify-center text-xs bg-input text-muted-foreground opacity-80",
-              header ? "size-8" : "size-4"
-            )}
-          >
-            -
-          </span>
-        ))}
+
       {!last5 &&
         Array.from(Array(5).keys()).map((i) => (
           <span

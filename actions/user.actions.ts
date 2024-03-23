@@ -132,7 +132,7 @@ export async function getUsers() {
         where: {
           match: { NOT: { status: MatchStatus.SCHEDULED } },
         },
-        orderBy: [{ match: { date: "desc" } }],
+        orderBy: [{ match: { num: "desc" } }],
         take: 5,
       },
     },

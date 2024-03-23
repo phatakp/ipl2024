@@ -133,7 +133,7 @@ export async function predictionDBUpdate(data: PredictionFormData) {
     }
     const prediction = await db.prediction.upsert({
       where: { matchId_userId: { matchId, userId } },
-      create: { teamId, amount, userId, matchId },
+      create: { teamId, amount, userId, matchId, isDouble },
       update: { teamId, isDouble, amount, isUpdated: true },
     });
 
