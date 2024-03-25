@@ -5,7 +5,7 @@ const MatchDetailLoading = () => {
   return (
     <>
       <div className="w-screen h-60 p-4">
-        <div className="w-full max-w-6xl p-4 mx-auto flex flex-col items-center justify-center space-y-8">
+        <div className="w-full max-w-7xl p-4 mx-auto flex flex-col items-center justify-center space-y-8">
           <Skeleton className="w-20 h-10" />
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center justify-center gap-8">
@@ -24,7 +24,7 @@ const MatchDetailLoading = () => {
           <Skeleton className="w-20 h-10" />
         </div>
       </div>
-      <div className="mt-24 w-full max-w-6xl mx-auto">
+      <div className="mt-24 w-full max-w-7xl mx-auto">
         <StatsLoading />
       </div>
     </>

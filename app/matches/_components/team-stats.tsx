@@ -14,7 +14,7 @@ export const TeamStats = async ({ match }: TeamStatsProps) => {
   if (!stats) return;
 
   return (
-    <div className="w-full max-w-6xl mx-auto p-4 space-y-16">
+    <div className="w-full max-w-7xl mx-auto p-4 space-y-16">
       <HeadtoHeadStats match={match} stats={stats} />
       <OverallStats match={match} stats={stats} />
       <RecentEncounter matches={stats.recentBetween} />

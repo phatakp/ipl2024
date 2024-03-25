@@ -21,7 +21,7 @@ export const PageHeader = async ({
   const session = await getAuthServerSession();
 
   return (
-    <div className="min-h-48 w-full rounded-md bg-backround/90 relative flex flex-col antialiased max-w-6xl mx-auto">
+    <div className="min-h-48 w-full rounded-md bg-backround/90 relative flex flex-col antialiased max-w-7xl mx-auto">
       <div className="max-w-2xl p-4 mx-auto">
         <TextGenerateEffect
           words={title}

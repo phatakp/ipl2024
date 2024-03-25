@@ -9,7 +9,7 @@ const RulesPage = () => {
         title="Game Rules"
         desc="Predict the winner of every IPL game and earn big !!"
       />
-      <div className={`relative w-full max-w-6xl mx-auto px-4 md:px-8`}>
+      <div className={`relative w-full max-w-7xl mx-auto px-4 md:px-8`}>
         <ul className="leading-loose space-y-16">
           <Card>
             <CardHeader className="text-3xl font-over title mb-4">

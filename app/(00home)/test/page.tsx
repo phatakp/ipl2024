@@ -1,36 +1,18 @@
-import { getMatchByNum } from "@/actions/match.actions";
-import { getMatchPredictions } from "@/actions/prediction.actions";
-import { getDefaultersForMatch } from "@/actions/settlement.actions";
+import { prisma } from "@/lib/db";
 
 const TestPage = async () => {
-  const match = await getMatchByNum(19);
-  if (!match) return null;
-  const defaulters = await getDefaultersForMatch(match.id);
-  const matchPredictions = await getMatchPredictions({
-    matchId: match.id,
-    fetchAll: true,
+  const doubles = await prisma.prediction.findMany({
+    where: { isDouble: true },
+    include: { match: true, team: true, user: true },
   });
-
-  const winners = matchPredictions.filter(
-    (pred) => pred.teamId === "cltcycmy80008dui0mmeiygp6"
-  );
-
-  const losers = matchPredictions
-    .filter((pred) => !!pred.teamId && pred.teamId !== match.winnerId)
-    .map((pred) =>
-      pred.isDouble ? { ...pred, amount: pred.amount * 2 } : pred
-    );
-
-  const totalWon = winners.reduce((acc, b) => acc + b.amount, 0);
-  let totalLost = losers.reduce((acc, b) => acc + b.amount, 0);
-  if (totalWon > 0) {
-    totalLost += defaulters.length * match.minStake;
-  } else totalLost = defaulters.length * match.minStake;
-
+  const summary = doubles.map((d) => ({
+    match: d.match?.num,
+    user: d.user.name,
+    team: d.team?.shortName,
+  }));
   return (
-    <pre className="mx-auto max-w-6xl w-full">
-      {JSON.stringify(totalWon, null, 4)}
-      {JSON.stringify(totalLost, null, 4)}
+    <pre className="mx-auto max-w-7xl w-full">
+      {JSON.stringify(summary, null, 4)}
     </pre>
   );
 };

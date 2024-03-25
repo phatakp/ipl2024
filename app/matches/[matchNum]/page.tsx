@@ -38,7 +38,7 @@ const MatchDetailPage = async ({
   return (
     <div className="w-screen pb-8">
       <MatchDetailBanner match={match} />
-      <div className="mt-16 w-full max-w-6xl mx-auto">
+      <div className="mt-16 w-full max-w-7xl mx-auto">
         <Tabs
           defaultValue={
             !!session?.user.id &&

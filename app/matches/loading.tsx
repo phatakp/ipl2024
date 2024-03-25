@@ -5,7 +5,7 @@ const MatchesLoading = () => {
   return (
     <>
       <Skeleton className={"w-screen relative h-48"}>
-        <div className="max-w-6xl m-auto flex items-center justify-between p-4 h-full">
+        <div className="max-w-7xl m-auto flex items-center justify-between p-4 h-full">
           <h1 className="text-3xl sr-only">Matches</h1>
         </div>
       </Skeleton>
@@ -14,7 +14,7 @@ const MatchesLoading = () => {
           <Skeleton className="h-10 w-20" />
           <Skeleton className="h-10 w-20" />
         </div>
-        <Card className="w-full p-0 md:p-4 max-w-6xl mx-auto">
+        <Card className="w-full p-0 md:p-4 max-w-7xl mx-auto">
           <CardContent className="space-y-8 p-0 md:p-4">
             {Array.from(Array(5).keys()).map((i) => (
               <div

@@ -34,7 +34,7 @@ export const MatchDetailBanner = async ({ match }: MatchDetailBannerProps) => {
 
   return (
     <div className="w-full rounded-md bg-backround/90 relative flex flex-col items-center justify-center antialiased py-8">
-      <div className="w-full max-w-6xl p-4 mx-auto flex flex-col items-center justify-center">
+      <div className="w-full max-w-7xl p-4 mx-auto flex flex-col items-center justify-center">
         <div className="text-sm flex flex-col md:flex-row items-center justify-center gap-2">
           <span>
             {match.type === MatchType.LEAGUE
@@ -105,7 +105,7 @@ const MatchBannerResult = ({ match }: { match: MatchAPIResult }) => (
 );
 
 const MatchStatsIndicator = ({ stats }: { stats: StatsResult }) => (
-  <div className="flex flex-col my-4 w-full max-w-6xl mx-auto px-4">
+  <div className="flex flex-col my-4 w-full max-w-7xl mx-auto px-4">
     <div className="flex items-center justify-between text-xl font-bold">
       <span>{stats.pct}%</span>
       <span className="text-sm text-muted-foreground font-over ">

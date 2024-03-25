@@ -22,7 +22,7 @@ const MatchListPage = async () => {
       <div className="pt-16 px-4 min-h-screen">
         <Tabs
           defaultValue={MATCHLIST_TYPES[0].value}
-          className="w-full max-w-6xl mx-auto"
+          className="w-full max-w-7xl mx-auto"
         >
           <TabsList>
             {MATCHLIST_TYPES.map((type) => (
@@ -33,7 +33,7 @@ const MatchListPage = async () => {
           </TabsList>
           {MATCHLIST_TYPES.map((type) => (
             <TabsContent key={type.value} value={type.value}>
-              <div className="w-full max-w-6xl mx-auto grid gap-4">
+              <div className="w-full max-w-7xl mx-auto grid gap-4">
                 <Card className="w-full">
                   <CardContent className="space-y-8 px-0 md:px-4">
                     {type.data.length === 0 && (

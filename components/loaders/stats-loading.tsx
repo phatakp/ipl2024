@@ -3,7 +3,7 @@ import { Skeleton } from "../ui/skeleton";
 
 export const StatsLoading = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto p-4 space-y-16">
+    <div className="w-full max-w-7xl mx-auto p-4 space-y-16">
       {Array.from(Array(3).keys()).map((a) => (
         <div
           key={a}

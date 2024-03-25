@@ -12,7 +12,7 @@ export const TopBar = async () => {
           : "bg-background text-foreground "
       )}
     >
-      <div className="max-w-6xl font-bold px-4 mx-auto text-sm pt-1 font-over">
+      <div className="max-w-7xl font-bold px-4 mx-auto text-sm pt-1 font-over">
         FPL @2024
       </div>
     </div>

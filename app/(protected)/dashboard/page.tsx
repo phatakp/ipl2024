@@ -106,7 +106,7 @@ const DashboardPage = async () => {
         }
       />
 
-      <div className="flex flex-col space-y-16 w-full max-w-6xl mx-auto py-16 px-4">
+      <div className="flex flex-col space-y-16 w-full max-w-7xl mx-auto py-16 px-4">
         <div className="flex flex-col gap-4">
           <h1 className="px-4 title text-3xl font-bold font-over">
             Next Schedule

@@ -25,7 +25,7 @@ export const Navbar = () => {
         background: `url(/nav.png) left/contain no-repeat,url(/nav-rotate.png) right/contain no-repeat #000`,
       }}
     >
-      <nav className="max-w-6xl mx-auto px-4 py-2">
+      <nav className="max-w-7xl mx-auto px-4 py-2">
         <div className="flex justify-between items-center">
           <Link href="/">
             <Image src="/logo.png" alt="logo" width={100} height={50} />

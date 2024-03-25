@@ -3,7 +3,7 @@ import { Skeleton } from "../ui/skeleton";
 
 export const TableCardLoading = () => {
   return (
-    <div className="w-[370px] sm:w-full max-w-6xl mx-auto text-center">
+    <div className="w-[370px] sm:w-full max-w-7xl mx-auto text-center">
       <Card className="w-[370px] sm:w-[448px] p-0 rounded-xl">
         <CardHeader
           className={`flex flex-row items-center justify-between border-b p-0 rounded-t-xl`}

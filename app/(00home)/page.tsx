@@ -4,7 +4,7 @@ import { PointsTable } from "./_components/points-table";
 
 export default async function Home() {
   return (
-    <section className="w-full max-w-6xl mx-auto py-8 px-4 sm:px-0 space-y-8 -mt-8">
+    <section className="w-full max-w-7xl mx-auto py-8 px-4 sm:px-0 space-y-8 -mt-8">
       <div className="h-[25rem] w-full rounded-md flex md:items-center md:justify-center bg-background/90 antialiased bg-grid-white/[0.02] relative overflow-hidden">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
