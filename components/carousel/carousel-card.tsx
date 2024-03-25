@@ -43,7 +43,7 @@ export const CarouselCard = ({ type, data }: CarouselCardProps) => {
   }
 
   return (
-    <Card className={cn("p-0 rounded-xl w-[360px] md:w-[450px] mx-4")}>
+    <Card className={cn("p-0 rounded-xl w-[346px] md:w-[450px] mr-2")}>
       <CarouselCardHeader session={session} type={type} data={topData} />
 
       <CardContent

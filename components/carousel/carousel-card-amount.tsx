@@ -35,7 +35,8 @@ export const CarouselCardAmount = ({
           : header
           ? `text-${team}-foreground `
           : "text-success",
-        header && `font-extrabold text-6xl text-left justify-start w-full`
+        header &&
+          `font-extrabold text-5xl md:text-6xl text-left justify-start w-full`
       )}
     >
       <IndianRupeeIcon

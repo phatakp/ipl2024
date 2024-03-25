@@ -107,7 +107,7 @@ export const CarouselCardData = ({
   return (
     <div
       key={index}
-      className={cn("flex items-center justify-between gap-4 px-4 py-2")}
+      className={cn("flex items-center justify-between gap-4 md:px-4 p-2")}
     >
       {/* {!!data && type === "user" && session?.user.role === UserRole.ADMIN && (
         <PaidForm

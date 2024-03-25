@@ -51,19 +51,19 @@ export const MatchCard = ({ match, index }: MatchCardProps) => {
           className="opacity-80 hover:opacity-100 transition ease-in-out duration-300 group"
         >
           <Card
-            className={`px-0 pb-2 relative w-[370px] h-[225px] mx-4 group-hover:bg-accent  shadow-xl shadow-${session?.user.profile.team?.shortName}`}
+            className={`px-0 pb-2 relative w-[346px] h-[225px] mr-2 group-hover:bg-accent shadow-lg shadow-${session?.user.profile.team?.shortName}`}
           >
             <MatchCardPredBadge />
 
             <MatchCardTopLine />
 
-            <CardContent className="flex flex-col space-y-2 px-2 pb-1 md:pb-3 rounded-none">
+            <CardContent className="flex flex-col space-y-2 px-4 pb-1 md:pb-3 rounded-none">
               <MatchCardTeam t="1" />
               <MatchCardTeam t="2" />
               <MatchCardResult />
             </CardContent>
 
-            <CardFooter className="pb-1 flex items-center justify-between px-3">
+            <CardFooter className="pb-1 flex items-center justify-between px-4">
               <MatchCardScheduleLink />
               {match.isDoublePlayed && (
                 <Badge variant="success">Double Played</Badge>

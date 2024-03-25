@@ -41,8 +41,8 @@ export const FormGuide = ({
           <span
             key={i}
             className={cn(
-              "rounded-full flex items-center justify-center text-xs bg-input text-muted-foreground opacity-80",
-              header ? "size-8" : "size-4"
+              "rounded-full flex items-center justify-center text-[10px] bg-input text-muted-foreground opacity-80",
+              header ? "size-6" : "size-4"
             )}
           >
             -
@@ -63,7 +63,7 @@ export const FormGuide = ({
             key={item.id}
             className={cn(
               "rounded-full flex items-center justify-center ",
-              header ? "size-8 text-lg" : "size-4 text-[9px]",
+              header ? "size-6 text-[10px] " : "size-4 text-[9px]",
               isWon
                 ? "bg-success text-success-foreground"
                 : isLost
@@ -88,8 +88,8 @@ export const FormGuide = ({
           <span
             key={i}
             className={cn(
-              "rounded-full flex items-center justify-center text-xs bg-input text-muted-foreground opacity-80",
-              header ? "size-8" : "size-4"
+              "rounded-full flex items-center justify-center text-[10px] bg-input text-muted-foreground opacity-80",
+              header ? "size-6" : "size-4"
             )}
           >
             -
