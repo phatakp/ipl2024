@@ -25,7 +25,7 @@ export const CarouselCardAmount = ({
     <div
       className={cn(
         "inline-flex items-center justify-end gap-1 font-semibold text-lg font-over text-right",
-        amount < 0 && team !== "PBKS"
+        amount < 0 && (team !== "PBKS" || !header)
           ? "text-destructive"
           : amount < 0 && header
           ? "text-orange-500"
