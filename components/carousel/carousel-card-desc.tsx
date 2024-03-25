@@ -34,9 +34,9 @@ export const CarouselCardDesc = ({
           {isDouble && (
             <Badge
               variant="success"
-              className="absolute right-4 top-1/2 -translate-y-1/2"
+              className="absolute right-0 top-1/2 -translate-y-1/2"
             >
-              Double
+              D
             </Badge>
           )}
         </>
