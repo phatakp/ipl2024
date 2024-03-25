@@ -9,12 +9,7 @@ export const CarouselCardTeamLogo = ({
   team: string | undefined;
 }) => {
   return (
-    <div
-      className={cn(
-        "relative",
-        header ? "w-32 h-32" : "w-10 h-10 sm:w-12 sm:h-12"
-      )}
-    >
+    <div className={cn("relative", header ? "size-32" : "size-10 sm:size-12")}>
       <Image src={`/${team ?? "default"}outline.png`} alt="logo" fill />
     </div>
   );

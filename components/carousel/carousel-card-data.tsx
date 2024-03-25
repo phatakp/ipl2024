@@ -115,7 +115,7 @@ export const CarouselCardData = ({
           isPaid={!!(data as UserAPIResult).profile?.isPaid}
         />
       )} */}
-      <span className="w-6">
+      <span className="w-4">
         {type === "pred" && !!data
           ? `#${(data as PredictionAPIResult).match?.num}`
           : rank}

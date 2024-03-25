@@ -34,9 +34,9 @@ export const CarouselCardDesc = ({
           {isDouble && (
             <Badge
               variant="success"
-              className="absolute right-0 top-1/2 -translate-y-1/2"
+              className="absolute right-0 bottom-0 size-4 p-0 text-xs -translate-y-1/2"
             >
-              D
+              &nbsp;D
             </Badge>
           )}
         </>
@@ -64,7 +64,7 @@ export const CarouselCardTitle = ({
         ? "font-bold text-2xl"
         : type === "2"
         ? "font-extrabold text-4xl"
-        : "text-sm opacity-90"
+        : "text-sm opacity-90 truncate"
     )}
   >
     {title}
