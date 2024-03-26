@@ -48,8 +48,8 @@ export function MatchScheduleCarousel({ matches }: Props) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="hidden md:flex" />
-      <CarouselNext className="hidden md:flex" />
+      <CarouselPrevious />
+      <CarouselNext className="right-0 lg:-right-12" />
     </Carousel>
   );
 }
