@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter, Overpass } from "next/font/google";
+import { headers } from "next/headers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,6 +36,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const hdr = headers();
+  const url = hdr.get("x-url");
+  const isMatchList = url?.includes("/matches");
+
   return (
     <html lang="en">
       <body className={`${inter.variable} ${over.variable} dark`}>
@@ -42,7 +47,9 @@ export default function RootLayout({
           <TopBar />
           <Navbar />
           <main className="min-h-screen flex flex-col bg-dot-white/[0.2] relative">
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+            {!isMatchList && (
+              <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+            )}
             {children}
           </main>
           <Toaster />

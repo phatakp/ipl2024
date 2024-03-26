@@ -22,7 +22,7 @@ export const StatsCard = ({ title, amount, icon }: StatsType) => {
 
   return (
     <Card
-      className={`w-[240px] h-[145px] shadow-lg shadow-${teamName}-secondary mx-4 shrink-0`}
+      className={`w-[270px] h-[145px] shadow-lg shadow-${teamName}-secondary shrink-0`}
     >
       <CardHeader className="space-y-0">
         <CardTitle

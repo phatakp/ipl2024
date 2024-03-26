@@ -51,7 +51,7 @@ export const MatchCard = ({ match, index }: MatchCardProps) => {
           className="opacity-80 hover:opacity-100 transition ease-in-out duration-300 group"
         >
           <Card
-            className={`px-0 pb-2 relative w-[346px] h-[225px] mr-2 group-hover:bg-accent shadow-lg shadow-${session?.user.profile.team?.shortName}`}
+            className={`px-0 pb-2 relative w-[346px] h-[225px] group-hover:bg-accent shadow-lg shadow-${session?.user.profile.team?.shortName}`}
           >
             <MatchCardPredBadge />
 

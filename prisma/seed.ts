@@ -1,5 +1,5 @@
 import { prisma } from ".";
-import { loadHistory } from "./match-history";
+import { loadMatches } from "./schedule";
 
 const teamDetails = [
   { shortName: "CSK", longName: "Chennai SuperKings" },
@@ -26,10 +26,10 @@ async function main() {
   // await prisma.user.deleteMany();
   // await loadTeams();
   // console.log("Teams loaded");
-  // await loadMatches();
-  // console.log("Matches loaded");
-  await loadHistory();
-  console.log("History loaded");
+  await loadMatches();
+  console.log("Matches loaded");
+  // await loadHistory();
+  // console.log("History loaded");
   // await loadPredictions();
   // console.log("Data loaded");
 }

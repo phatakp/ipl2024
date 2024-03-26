@@ -1,4 +1,4 @@
-import { getMatchCarouselData } from "@/actions/match.actions";
+import { getMatches } from "@/actions/match.actions";
 import {
   getStatsForUser,
   getUserPredictions,
@@ -22,6 +22,8 @@ import {
   ShieldIcon,
 } from "lucide-react";
 import { ProfileForm } from "../_components/forms/profile-form";
+import { MatchScheduleCarousel } from "../_components/match-schedule-carousel";
+import { StatsCarousel } from "../_components/stats-carousel";
 
 const classNames =
   "text-CSK text-MI text-GT text-RR text-RCB text-LSG text-SRH text-DC text-KKR text-PBKS";
@@ -30,7 +32,9 @@ const DashboardPage = async () => {
   const session = await getAuthServerSession();
   if (!session?.user.id) return null;
 
-  const matches: MatchAPIResult[] = await getMatchCarouselData();
+  const matches: MatchAPIResult[] = await getMatches();
+
+  //For Stats
   const users = await getUsers();
   const wins = await getHighestWins();
   const losses = await getBiggestLoss();
@@ -109,16 +113,16 @@ const DashboardPage = async () => {
       <div className="flex flex-col space-y-16 w-full max-w-7xl mx-auto py-16 px-4">
         <div className="flex flex-col gap-4">
           <h1 className="px-4 title text-3xl font-bold font-over">
-            Next Schedule
+            Match Schedule
           </h1>
-          <Carousel data={matches} />
+          <MatchScheduleCarousel matches={matches} />
         </div>
 
         <div className="flex flex-col gap-4">
           <h1 className="px-4 title text-3xl font-bold font-over">
             Your stats
           </h1>
-          <Carousel data={stats} />
+          <StatsCarousel stats={stats} />
         </div>
 
         <Carousel data={items} />

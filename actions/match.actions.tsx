@@ -37,9 +37,22 @@ type ReturnType = {
   data: string;
 };
 
-export async function getMatchFixtures() {
+export async function getMatches() {
   const matches = await prisma.match.findMany({
-    where: { status: MatchStatus.SCHEDULED },
+    orderBy: [{ num: "asc" }],
+    include: INCLUDE_MATCH_DETAILS,
+  });
+
+  return matches;
+}
+export async function getMatchFixtures(teamId?: string | null) {
+  let filter = {};
+  if (!!teamId) filter = { OR: [{ team1Id: teamId }, { team2Id: teamId }] };
+  const matches = await prisma.match.findMany({
+    where: {
+      status: MatchStatus.SCHEDULED,
+      ...filter,
+    },
     orderBy: [{ num: "asc" }],
     include: INCLUDE_MATCH_DETAILS,
   });
@@ -47,9 +60,11 @@ export async function getMatchFixtures() {
   return matches;
 }
 
-export async function getMatchResults() {
+export async function getMatchResults(teamId?: string | null) {
+  let filter = {};
+  if (!!teamId) filter = { OR: [{ team1Id: teamId }, { team2Id: teamId }] };
   const matches = await prisma.match.findMany({
-    where: { NOT: { status: MatchStatus.SCHEDULED } },
+    where: { NOT: { status: MatchStatus.SCHEDULED }, ...filter },
     orderBy: [{ num: "desc" }],
     include: INCLUDE_MATCH_DETAILS,
   });

@@ -44,7 +44,14 @@ export const IsPaidFormSchema = z.object({
   isPaid: z.boolean(),
 });
 
+export const TeamSelectFormSchema = z.object({
+  teamId: z
+    .string({ required_error: "Team is required" })
+    .min(25, { message: "Team must be at least 25 characters" }),
+});
+
 export type RegisterFormData = z.infer<typeof RegisterSchema>;
 export type LoginFormData = z.infer<typeof LoginSchema>;
 export type ProfileFormData = z.infer<typeof ProfileFormSchema>;
 export type IsPaidFormData = z.infer<typeof IsPaidFormSchema>;
+export type TeamSelectData = z.infer<typeof TeamSelectFormSchema>;

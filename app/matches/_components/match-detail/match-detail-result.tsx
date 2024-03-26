@@ -20,7 +20,7 @@ export const MatchDetailResult = async ({
   return (
     <div
       className={cn(
-        "text-sm ",
+        "text-sm",
         screen === "small"
           ? "col-span-5  md:hidden"
           : "md:col-span-2  hidden md:flex"

@@ -8,7 +8,7 @@ export const MatchDetailButton = ({ matchNum }: { matchNum: number }) => {
       <Link
         href={`/matches/${matchNum}`}
         className={cn(
-          buttonVariants({ size: "sm", variant: "secondary" }),
+          buttonVariants({ size: "sm", variant: "destructive" }),
           "text-sm"
         )}
       >
