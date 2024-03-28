@@ -90,7 +90,7 @@ export async function validatePrediction(data: PredictionFormData) {
         data: `Prediction cannot be changed. Only double allowed`,
       };
 
-    if (pred.teamId !== data.teamId && data.amount <= pred.amount * 2)
+    if (pred.teamId !== data.teamId && data.amount < pred.amount * 2)
       return {
         success: false,
         data: `Minimum stake Rs.${pred.amount * 2}/- for team change`,
