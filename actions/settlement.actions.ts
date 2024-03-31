@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/db";
-import { computeNrr } from "@/lib/utils";
+import { computeNrr, transformOvers } from "@/lib/utils";
 import { Match, PredictionStatus } from "@prisma/client";
 
 export type PredReturnType = {
@@ -205,29 +205,12 @@ export async function updateTeamsForAbandonedMatch({
 }: {
   match: Match;
 }) {
-  await prisma.match.update({
-    where: { id: match.id },
+  await prisma.team.updateMany({
+    where: { OR: [{ id: match.team1Id! }, { id: match.team2Id! }] },
     data: {
-      team1: {
-        update: {
-          where: { id: match.team1Id! },
-          data: {
-            played: { increment: 1 },
-            points: { increment: 1 },
-            draw: { increment: 1 },
-          },
-        },
-      },
-      team2: {
-        update: {
-          where: { id: match.team2Id! },
-          data: {
-            played: { increment: 1 },
-            points: { increment: 1 },
-            draw: { increment: 1 },
-          },
-        },
-      },
+      played: { increment: 1 },
+      points: { increment: 1 },
+      draw: { increment: 1 },
     },
   });
 }
@@ -237,64 +220,56 @@ export async function updateTeamsForCompletedMatch({
 }: {
   match: Match;
 }) {
-  const nrr1 = await computeNrrForTeam(match, match.team1Id!);
-  const nrr2 = await computeNrrForTeam(match, match.team2Id!);
+  const {
+    nrr: nrr1,
+    forOvers: for1,
+    againstOvers: against1,
+  } = await computeNrrForTeam(match, match.team1Id!);
+  const {
+    nrr: nrr2,
+    forOvers: for2,
+    againstOvers: against2,
+  } = await computeNrrForTeam(match, match.team2Id!);
 
-  return await prisma.match.update({
-    where: { id: match.id },
+  await prisma.team.update({
+    where: { id: match.team1Id! },
     data: {
-      team1: {
-        update: {
-          where: { id: match.team1Id! },
-          data: {
-            played: { increment: 1 },
-            won: {
-              increment: match.winnerId === match.team1Id ? 1 : 0,
-            },
-            points: {
-              increment: match.winnerId === match.team1Id ? 2 : 0,
-            },
-            lost: {
-              increment: match.winnerId === match.team2Id ? 1 : 0,
-            },
-            forRuns: { increment: match.team1Runs },
-            forOvers: {
-              increment: match.team1Wickets === 10 ? 20.0 : match.team1Overs,
-            },
-            againstRuns: { increment: match.team2Runs },
-            againstOvers: {
-              increment: match.team2Wickets === 10 ? 20.0 : match.team2Overs,
-            },
-            nrr: nrr1,
-          },
-        },
+      played: { increment: 1 },
+      won: {
+        increment: match.winnerId === match.team1Id ? 1 : 0,
       },
-      team2: {
-        update: {
-          where: { id: match.team2Id! },
-          data: {
-            played: { increment: 1 },
-            won: {
-              increment: match.winnerId === match.team2Id ? 1 : 0,
-            },
-            points: {
-              increment: match.winnerId === match.team2Id ? 2 : 0,
-            },
-            lost: {
-              increment: match.winnerId === match.team1Id ? 1 : 0,
-            },
-            forRuns: { increment: match.team2Runs },
-            forOvers: {
-              increment: match.team2Wickets === 10 ? 20.0 : match.team2Overs,
-            },
-            againstRuns: { increment: match.team1Runs },
-            againstOvers: {
-              increment: match.team1Wickets === 10 ? 20.0 : match.team1Overs,
-            },
-            nrr: nrr2,
-          },
-        },
+      points: {
+        increment: match.winnerId === match.team1Id ? 2 : 0,
       },
+      lost: {
+        increment: match.winnerId === match.team2Id ? 1 : 0,
+      },
+      forRuns: { increment: match.team1Runs },
+      forOvers: parseFloat(for1),
+      againstRuns: { increment: match.team2Runs },
+      againstOvers: parseFloat(against1),
+      nrr: nrr1,
+    },
+  });
+
+  await prisma.team.update({
+    where: { id: match.team2Id! },
+    data: {
+      played: { increment: 1 },
+      won: {
+        increment: match.winnerId === match.team2Id ? 1 : 0,
+      },
+      points: {
+        increment: match.winnerId === match.team2Id ? 2 : 0,
+      },
+      lost: {
+        increment: match.winnerId === match.team1Id ? 1 : 0,
+      },
+      forRuns: { increment: match.team2Runs },
+      forOvers: parseFloat(for2),
+      againstRuns: { increment: match.team1Runs },
+      againstOvers: parseFloat(against2),
+      nrr: nrr2,
     },
   });
 }
@@ -312,10 +287,10 @@ export async function computeNrrForTeam(match: Match, teamId: string) {
     (teamId === match.team1Id && match.team1Wickets === 10
       ? 20.0
       : teamId === match.team1Id
-      ? match.team1Overs
-      : teamId === match.team2Id && match.team2Wickets === 10
-      ? 20.0
-      : match.team2Overs);
+        ? match.team1Overs
+        : teamId === match.team2Id && match.team2Wickets === 10
+          ? 20.0
+          : match.team2Overs);
   const againstRuns =
     (team!.againstRuns ?? 0) +
     (teamId === match.team1Id ? match.team2Runs : match.team1Runs);
@@ -324,12 +299,16 @@ export async function computeNrrForTeam(match: Match, teamId: string) {
     (teamId === match.team1Id && match.team2Wickets === 10
       ? 20.0
       : teamId === match.team1Id
-      ? match.team2Overs
-      : teamId === match.team2Id && match.team1Wickets === 10
-      ? 20.0
-      : match.team1Overs);
+        ? match.team2Overs
+        : teamId === match.team2Id && match.team1Wickets === 10
+          ? 20.0
+          : match.team1Overs);
 
-  return computeNrr(forOvers, forRuns, againstOvers, againstRuns);
+  return {
+    nrr: computeNrr(forOvers, forRuns, againstOvers, againstRuns),
+    forOvers: transformOvers(forOvers.toFixed(1)),
+    againstOvers: transformOvers(againstOvers.toFixed(1)),
+  };
 }
 
 export async function updateNoIPLWinner() {

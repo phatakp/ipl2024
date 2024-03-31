@@ -9,6 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 export const PointsTable = async () => {
@@ -51,7 +52,13 @@ export const PointsTable = async () => {
         </TableHeader>
         <TableBody>
           {teams.map((team, index) => (
-            <TableRow key={team.id}>
+            <TableRow
+              key={team.id}
+              className={cn(
+                index === 3 && "border-success",
+                index < 4 && "font-semibold text-base"
+              )}
+            >
               <TableCell className="font-semibold text-right w-fit">
                 {index + 1}
               </TableCell>
