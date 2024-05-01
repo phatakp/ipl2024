@@ -1,4 +1,4 @@
-import { getMatches } from "@/actions/match.actions";
+import { getMatchResults, getMatches } from "@/actions/match.actions";
 import {
   getStatsForUser,
   getUserPredictions,
@@ -33,6 +33,8 @@ const DashboardPage = async () => {
   if (!session?.user.id) return null;
 
   const matches: MatchAPIResult[] = await getMatches();
+  const completed = await getMatchResults();
+  const isWinnerChangeAllowed = completed[0].num < 35;
 
   //For Stats
   const users = await getUsers();
@@ -106,6 +108,7 @@ const DashboardPage = async () => {
           <ProfileForm
             profile={session.user.profile}
             userId={session.user.id}
+            isWinnerChangeAllowed={isWinnerChangeAllowed}
           />
         }
       />

@@ -29,9 +29,14 @@ import { useForm } from "react-hook-form";
 type ProfileFormProps = {
   profile: ProfileInfo;
   userId: string;
+  isWinnerChangeAllowed: boolean;
 };
 
-export const ProfileForm = ({ userId, profile }: ProfileFormProps) => {
+export const ProfileForm = ({
+  userId,
+  profile,
+  isWinnerChangeAllowed,
+}: ProfileFormProps) => {
   const { data: teamOptions, isLoading } = useTeamOptions();
   const { toast } = useToast();
   const [open, setOpen] = useState(!profile.teamId);
@@ -94,6 +99,7 @@ export const ProfileForm = ({ userId, profile }: ProfileFormProps) => {
                   type="button"
                   variant={team.shortName as any}
                   onClick={() => form.setValue("teamId", team.id)}
+                  disabled={!isWinnerChangeAllowed}
                   className={cn(
                     "relative p-0 m-0 aspect-square opacity-20 size-16 hover:opacity-80",
                     team.id === teamId && "border-2 border-success opacity-100"
