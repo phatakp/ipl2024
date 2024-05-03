@@ -71,6 +71,12 @@ export async function validatePrediction(data: PredictionFormData) {
       };
     }
 
+    if (user.doublesLeft <= 0)
+      return {
+        success: false,
+        data: "No doubles left",
+      };
+
     const maxAmt = await getHighestPredictionForMatch(match);
     if (data.amount <= maxAmt)
       return {
